@@ -4,7 +4,7 @@ import BlackFridayDealsTemplate from '../../../components/templates/blackFridayD
 import { getDealsProps } from '@/lib/helpers/deals';
 
 const BlackFridayPage = (props) => {
-  return <BlackFridayDealsTemplate {...props} darkMode={props.darkMode} />;
+  return <BlackFridayDealsTemplate {...props} />;
 };
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {

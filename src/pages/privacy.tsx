@@ -17,7 +17,6 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { PrivacyText } from '@/assets/types/privacy';
 import { GetStaticPropsContext } from 'next';
 interface PrivacyProps {
-  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   textContent: PrivacyText;
   navbarLang: NavigationBarText;
@@ -25,7 +24,7 @@ interface PrivacyProps {
   lang: string;
 }
 
-const Privacy = ({ darkMode = false, metatagsDescriptions, textContent, navbarLang, footerLang, lang }: PrivacyProps): JSX.Element => {
+const Privacy = ({ metatagsDescriptions, textContent, navbarLang, footerLang, lang }: PrivacyProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy');
   const langForLink = lang === 'en' ? '' : lang;
   const CTA_URL = `https://internxt.com/${langForLink}/pricing`;
@@ -58,7 +57,7 @@ const Privacy = ({ darkMode = false, metatagsDescriptions, textContent, navbarLa
 
         <CtaSection textContent={textContent.CtaSection} url={CTA_URL} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Privacy', url: '/privacy' }]} darkMode={darkMode} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Internxt Privacy', url: '/privacy' }]} />
       </Layout>
     </>
   );

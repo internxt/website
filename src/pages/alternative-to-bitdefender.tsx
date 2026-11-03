@@ -12,7 +12,6 @@ const bitdefenderComparison = (props: any) => (
     segmentName="Bitdefender Comparison"
     logo="/images/comparison/bitdefender-Letters.webp"
     couponCodeName={PromoCodeName.BITDEFENDER85}
-    darkMode={props.darkMode}
   />
 );
 

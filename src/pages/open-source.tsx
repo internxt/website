@@ -17,7 +17,7 @@ const CTA_SIGNUP_URL = `https://drive.internxt.com/new`;
 
 const GITHUB_URL = 'https://github.com/internxt';
 
-const OpenSource = ({ darkMode = false, lang, metatagsDescriptions, langJson, navbarLang, footerLang, download }) => {
+const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLang, download }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'open-source');
   return (
     <>
@@ -42,9 +42,9 @@ const OpenSource = ({ darkMode = false, lang, metatagsDescriptions, langJson, na
 
       <CtaSection textContent={langJson.CtaSection2} url={CTA_SIGNUP_URL} />
 
-      <ExploreOurOSS textContent={langJson.ExploreOurOSS} download={download} darkMode={darkMode} />
+      <ExploreOurOSS textContent={langJson.ExploreOurOSS} download={download} />
 
-      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Open source cloud storage', url: '/open-source' }]} darkMode={darkMode} />
+      <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'Open source cloud storage', url: '/open-source' }]} />
     </Layout>
     </>
   );

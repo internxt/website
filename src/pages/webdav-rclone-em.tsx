@@ -9,7 +9,6 @@ const WebDAVEmLP = (props: WebdavRcloneTemplateProps) => (
     couponCodeForLifetime={PromoCodeName.seolp}
     hidePriceTable
     robots="noindex,follow"
-    darkMode={props.darkMode}
   />
 );
 

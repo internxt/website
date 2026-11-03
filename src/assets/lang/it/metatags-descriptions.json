@@ -115,6 +115,16 @@
     "description": "Black Friday Internxt 2026 - 87% di sconto su archiviazione cloud, Antivirus, Cleaner, VPN, Meet e Mail."
   },
   {
+    "id": "black-month",
+    "title": "Internxt – Offerta Black Month 2026",
+    "description": "Black Month Internxt 2026 - 87% di sconto su archiviazione cloud, Antivirus, Cleaner, VPN, Meet e Mail."
+  },
+  {
+    "id": "cyber-week",
+    "title": "Internxt – Offerta Cyber Week 2026",
+    "description": "Cyber Week Internxt 2026 - 90% di sconto su archiviazione cloud, Antivirus, Cleaner, VPN, Meet e Mail."
+  },
+  {
     "id": "black-friday-cloud-storage",
     "title": "Offerta di archiviazione cloud Black Friday di Internxt",
     "description": "Risparmia alla grande con le offerte di archiviazione cloud Black Friday di Internxt! Drive, VPN, Meet, Mail, Photos e molto altro!"
@@ -597,7 +607,7 @@
     "description": "Le soluzioni di backup con cloud storage di Internxt utilizzano una crittografia pluripremiata e la ridondanza che protegge te e la tua azienda dalla perdita di dati."
   },
   {
-    "id": "thankyou",
+    "id": "notification",
     "title": "Lista d'attesa offerta speciale — Internxt",
     "description": "Iscriviti a Internxt per ricevere il tuo sconto esclusivo sull'archiviazione cloud privata e crittografata di cui puoi fidarti."
   },

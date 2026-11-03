@@ -23,7 +23,6 @@ const MenuItems = {
 };
 
 const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
-  const bgClass = 'bg-gray-10 dark:bg-gray-71';
   const [legalCheckbox, setLegalCheckbox] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -62,21 +61,17 @@ const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
   };
 
   return (
-    <section id="discountCard" className="bg-gray-1 dark:bg-gray-105">
+    <section id="discountCard" className="bg-gray-1">
       <div className="flex flex-col items-center space-y-20 py-20 px-5">
         <div className="flex max-w-[774px] flex-col space-y-6 text-center">
-          <h2 className="text-5xl font-semibold text-gray-100 dark:text-white-95">
-            {textContent.title}
-          </h2>
-          <p className="text-2xl font-semibold text-gray-80 dark:text-cool-gray-30">
-            {textContent.subtitle}
-          </p>
+          <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
+          <p className="text-2xl font-semibold text-gray-80">{textContent.subtitle}</p>
           <RenderDescription fontSize="text-xl" description={textContent.paragraph} />
         </div>
-        <div className="flex flex-row space-x-20 rounded-[32px] bg-white dark:bg-gray-95">
+        <div className="flex flex-row space-x-20 rounded-[32px] bg-white">
           {/* Text Card */}
           <div className="flex flex-col justify-center space-y-6 py-[50px] px-16 lg:pl-[60px]">
-            <p className="max-w-[450px] text-center text-5xl font-semibold text-gray-100 dark:text-white-95 lg:text-left">
+            <p className="max-w-[450px] text-center text-5xl font-semibold text-gray-100 lg:text-left">
               {cardTitle1} <span className="text-primary">{blueTextCardTitle}</span>
               {cardTitle2}
             </p>
@@ -85,9 +80,7 @@ const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
             <div>
               <div className="flex flex-col space-y-6">
                 <div className="flex flex-col space-y-1">
-                  <p className="text-sm text-gray-80 dark:text-cool-gray-30">
-                    {textContent.card.institutionName}
-                  </p>
+                  <p className="text-sm text-gray-80">{textContent.card.institutionName}</p>
                   <TextInput
                     onChange={(e) => {
                       setName(e.target.value);
@@ -96,9 +89,7 @@ const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
                   />
                 </div>
                 <div className="flex flex-col space-y-1">
-                  <p className="text-sm text-gray-80 dark:text-cool-gray-30">
-                    {textContent.card.institutionEmail}
-                  </p>
+                  <p className="text-sm text-gray-80">{textContent.card.institutionEmail}</p>
                   <TextInput
                     onChange={(e) => {
                       setEmail(e.target.value);
@@ -107,7 +98,7 @@ const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
                   />
                 </div>
                 <CheckboxItem
-                  textColor="text-gray-100 dark:text-white-95"
+                  textColor="text-gray-100"
                   checked={legalCheckbox}
                   setCheckbox={setLegalCheckbox}
                   label={textContent.privacyCheckbox}
@@ -118,7 +109,9 @@ const ClaimYourDiscountSection = ({ textContent, openBanner }) => {
                     handleCreatingTicket({ name, email });
                   }}
                   disabled={isButtonDisabled}
-                  className={`flex w-full justify-center ${isButtonDisabled ? `${bgClass} text-gray-40` : 'bg-primary text-white hover:bg-primary-dark'} rounded-lg px-5 py-3 text-lg font-medium lg:w-max`}
+                  className={`flex w-full justify-center ${
+                    isButtonDisabled ? 'bg-gray-10 text-gray-40' : 'bg-primary text-white hover:bg-primary-dark'
+                  } rounded-lg px-5 py-3 text-lg font-medium lg:w-max`}
                 >
                   {textContent.cta}
                 </button>

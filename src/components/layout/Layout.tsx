@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
 import TopBanner from '@/components/banners/TopBanner';
-import { INTERNXT_URL } from '@/constants';
+import { EXCLUDED_PATHS_FOR_TOP_BANNER, INTERNXT_URL } from '@/constants';
 import { handleImpact } from '@/services/impact.service';
 import { saveGclidToCookie, saveTrackingParamsToCookies } from '@/lib/cookies';
 import { isDarkModePage } from '@/theme.config';
@@ -45,6 +45,7 @@ export default function Layout({
   const lang = router.locale;
   const langToUpperCase = lang?.toLocaleUpperCase() as string;
   const imagePreview = imageLang.has(langToUpperCase) ? langToUpperCase : 'EN';
+  const showTopBanner = !EXCLUDED_PATHS_FOR_TOP_BANNER.includes(router.pathname);
 
   // THIS USE EFFECT SHOULD NOT BE REMOVED OR MODIFIED IN ANY WAY BECAUSE IT IS USED TO SEE THE NUMBER OF VISITS TO THE WEBSITE FROM AFFILIATES IN IMPACT
   useEffect(() => {
@@ -166,9 +167,9 @@ export default function Layout({
         `}
       </Script>
 
-      <TopBanner />
+      {showTopBanner && <TopBanner />}
 
-      <div className="flex flex-col pt-[64px] lg:pt-[54px]">{children}</div>
+      <div className={`flex flex-col ${showTopBanner ? 'pt-[64px] lg:pt-[54px]' : ''}`}>{children}</div>
 
       {/* <BFBanner /> */}
     </>

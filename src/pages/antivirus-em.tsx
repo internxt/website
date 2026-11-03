@@ -2,9 +2,7 @@ import { GetStaticPropsContext } from 'next';
 import { AntivirusTemplate, AntivirusTemplateProps } from '@/components/templates/antivirusTemplate';
 import { downloadDriveLinks } from '@/lib/get-download-url';
 
-const AntivirusEmPage = (props: AntivirusTemplateProps) => (
-  <AntivirusTemplate {...props} robots="noindex,follow" darkMode={props.darkMode} />
-);
+const AntivirusEmPage = (props: AntivirusTemplateProps) => <AntivirusTemplate {...props} robots="noindex,follow" />;
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {
   const download = await downloadDriveLinks();

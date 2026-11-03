@@ -1,7 +1,7 @@
 import { Photos, PhotosProps } from '@/components/templates/photosTemplate';
 import { GetStaticPropsContext } from 'next';
 
-const PhotosLP = (props: PhotosProps) => <Photos {...props} darkMode={props.darkMode} />;
+const PhotosLP = (props: PhotosProps) => <Photos {...props} />;
 
 export function getStaticProps(ctx: GetStaticPropsContext) {
   const locale = ctx.locale as string;

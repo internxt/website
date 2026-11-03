@@ -13,7 +13,6 @@ import Script from 'next/script';
 
 
 const FileConverter = ({
-  darkMode = false,
   metatagsDescriptions,
   navbarLang,
   textContent,
@@ -38,7 +37,6 @@ const FileConverter = ({
         textContent={textContent.FeaturesSection}
         bannerText={bannerLang.SignUpFileCompressorBanner}
         lang={lang}
-        darkMode={darkMode}
       />
 
       <CtaSection
@@ -49,9 +47,9 @@ const FileConverter = ({
 
       <ToolsSection textContent={toolsContent} lang={lang} />
 
-      <QASection textContent={textContent.QASection} darkMode={darkMode} />
+      <QASection textContent={textContent.QASection} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'File compressor', url: '/file-compressor' }]} darkMode={darkMode} />
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'File compressor', url: '/file-compressor' }]} />
     </Layout>
   </>);
 };

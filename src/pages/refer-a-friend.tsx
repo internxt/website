@@ -14,7 +14,6 @@ import RewardSection from '@/components/refer-a-friend/RewardSection';
 import HowItWorksSection from '@/components/refer-a-friend/HowItWorksSection';
 
 interface ReferAFriendProps {
-  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -23,7 +22,6 @@ interface ReferAFriendProps {
 }
 
 const ReferAFriendPage = ({
-  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -96,13 +94,12 @@ const ReferAFriendPage = ({
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        backgroundGradientColor="bg-[linear-gradient(360deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#0D0D0D_100%)]"
-        darkMode={darkMode}
+        backgroundGradientColor="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
       />
 
-      <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
+      <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
-      <Footer textContent={footerLang} lang={locale} darkMode={darkMode} />
+      <Footer textContent={footerLang} lang={locale} />
     </Layout>
   );
 };

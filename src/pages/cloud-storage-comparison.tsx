@@ -21,7 +21,7 @@ import usePricing from '@/hooks/usePricing';
 
 const URL_REDIRECT = '#billingButtons';
 
-const CloudStorageComparison = ({ darkMode = false, metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
+const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'comparison');
 
   const cardsData = [
@@ -122,9 +122,8 @@ const CloudStorageComparison = ({ darkMode = false, metatagsDescriptions, langJs
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           popularPlanBySize="5TB"
-          sectionDetails={`${darkMode ? 'bg-gray-95' : 'bg-white dark:bg-gray-95'} lg:py-20`}
+          sectionDetails="bg-white lg:py-20"
           hideFreeCard
-          darkMode={darkMode}
         />
 
         <InfoSection textContent={langJson.InfoSection} lang={lang} redirect="/privacy" cards={cardsData} />
@@ -133,18 +132,18 @@ const CloudStorageComparison = ({ darkMode = false, metatagsDescriptions, langJs
 
         <TestimonialsSection textContent={langJson.TestimonialsSection} />
 
-        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
+        <FAQSection textContent={langJson.FaqSection} />
 
         <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
 
         <Footer
           textContent={footerLang}
           lang={lang}
+          darkMode={false}
           breadcrumbItems={[
             { name: 'Encrypted Cloud Storage', url: '/' },
             { name: 'Cloud storage comparison', url: '/cloud-storage-comparison' },
           ]}
-          darkMode={darkMode}
         />
       </Layout>
     </>

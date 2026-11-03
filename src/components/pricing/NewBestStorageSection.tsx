@@ -7,7 +7,6 @@ interface Feature {
 }
 
 interface BestStorageSectionProps {
-  darkMode?: boolean;
   textContent: {
     card1: { title: string };
     card2: { title: string };
@@ -17,7 +16,7 @@ interface BestStorageSectionProps {
   };
 }
 
-const BestStorageSection = ({ darkMode = false, textContent }: BestStorageSectionProps): JSX.Element => {
+const BestStorageSection = ({ textContent }: BestStorageSectionProps): JSX.Element => {
   const features: Feature[] = [
     {
       icon: Database,
@@ -59,13 +58,11 @@ const BestStorageSection = ({ darkMode = false, textContent }: BestStorageSectio
   };
 
   const FeatureItem = ({
-    
     feature,
     iconSize,
     containerWidth,
     textSize,
   }: {
-    darkMode?: boolean;
     feature: Feature;
     iconSize: number;
     containerWidth: string;
@@ -76,14 +73,12 @@ const BestStorageSection = ({ darkMode = false, textContent }: BestStorageSectio
         size={iconSize}
         className="mb-2 text-primary transition-colors duration-200 hover:text-primary/80"
       />
-      <p className={`${textSize} font-medium text-gray-100 dark:text-white-95`}>
-        {formatText(feature.title)}
-      </p>
+      <p className={`${textSize} font-medium text-gray-100`}>{formatText(feature.title)}</p>
     </div>
   );
 
   return (
-    <section className="overflow-hidden bg-neutral-17 dark:bg-gray-105">
+    <section className="overflow-hidden bg-neutral-17">
       <div className="hidden items-center justify-center py-16 lg:flex">
         <div className="flex w-full max-w-4xl flex-row justify-between gap-4 px-4">
           {features.map((feature, index) => (
@@ -93,7 +88,6 @@ const BestStorageSection = ({ darkMode = false, textContent }: BestStorageSectio
               iconSize={32}
               containerWidth="w-[370px]"
               textSize="text-lg"
-              darkMode={darkMode}
             />
           ))}
         </div>
@@ -108,7 +102,6 @@ const BestStorageSection = ({ darkMode = false, textContent }: BestStorageSectio
               iconSize={24}
               containerWidth="flex-1 max-w-[74px]"
               textSize="text-xs"
-              darkMode={darkMode}
             />
           ))}
         </div>
@@ -121,7 +114,6 @@ const BestStorageSection = ({ darkMode = false, textContent }: BestStorageSectio
               iconSize={24}
               containerWidth="flex-1 max-w-[74px]"
               textSize="text-xs"
-              darkMode={darkMode}
             />
           ))}
         </div>

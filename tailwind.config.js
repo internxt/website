@@ -1,4 +1,16 @@
 /* eslint-disable no-dupe-keys */
+const withVar = (name) => `rgb(var(--${name}) / <alpha-value>)`;
+const fullVar = (name) => `var(--${name})`;
+const flipColors = (theme, prefix, groups, full = {}) => {
+  const colors = { ...theme('colors') };
+  for (const [fn, entries] of [[withVar, groups], [fullVar, full]]) {
+    for (const [group, keys] of Object.entries(entries)) {
+      colors[group] = keys === true ? fn(`${prefix}-${group}`) : { ...colors[group], ...Object.fromEntries(keys.map((key) => [key, fn(`${prefix}-${group}-${key}`)])) };
+    }
+  }
+  return colors;
+};
+
 module.exports = {
   content: [
     './src/**',
@@ -17,8 +29,8 @@ module.exports = {
       'white-95': 'rgb(250,250,250)',
       'white-summer-2': 'rgb(255, 255, 255, 0.3)',
       // NEW DESIGN SYSTEM
-      primary: 'rgb(0,102,255)',
-      'primary-dark': 'rgb(0,88,219)',
+      primary: withVar('color-primary'),
+      'primary-dark': withVar('color-primary-dark'),
       red: 'rgb(255,13,0)',
       'red-dark': 'rgb(230,11,0)',
       orange: 'rgb(255,149,0)',
@@ -190,6 +202,13 @@ module.exports = {
         100: 'rgb(8,45,102,1)',
       },
     },
+    textColor: ({ theme }) => flipColors(theme, 'text', { black: true, gray: [55, 60, 70, 80, 95, 100, 105], 'cool-gray': [50, 60, 80, 90, 100], neutral: [700, 900] }),
+    backgroundColor: ({ theme }) => flipColors(theme, 'bg', { white: true, 'white-95': true, gray: [1, 5, 10, 20], 'cool-gray': [5, 10], neutral: [10, 15, 16, 17, 20, 25, 35, 37, 250], blue: [10, 20], 'red-old': [10], green: [120] }, { 'white-summer': true, 'red-old': [15, 25], green: [100, 110] }),
+    borderColor: ({ theme }) => ({ ...flipColors(theme, 'border', { gray: [5, 10, 20, 30, 40], 'cool-gray': [10, 20, 30], neutral: [20, 25, 35], green: [120], blue: [20] }, { highlight: true }), DEFAULT: 'currentColor' }),
+    ringColor: ({ theme }) => ({ ...flipColors(theme, 'ring', { gray: [10], neutral: [25], green: [120], blue: [20] }), DEFAULT: '#3b82f6' }),
+    outlineColor: ({ theme }) => flipColors(theme, 'outline', { neutral: [25] }),
+    placeholderColor: ({ theme }) => flipColors(theme, 'placeholder', { gray: [30] }),
+    gradientColorStops: ({ theme }) => flipColors(theme, 'bg', { white: true, gray: [1], neutral: [10, 17], blue: [20] }),
     extend: {
       screens: {
         'mobile-sm': '360px',

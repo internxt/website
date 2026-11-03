@@ -20,7 +20,6 @@ import { sm_breadcrumb_list } from '@/components/utils/schema-markup-generator';
 import { getMinimumPrice } from '@/utils/priceHelper';
 
 interface HomeProps {
-  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -28,14 +27,7 @@ interface HomeProps {
   footerLang: FooterText;
 }
 
-const HomePage = ({
-  darkMode = false,
-  metatagsDescriptions,
-  textContent,
-  lang,
-  navbarLang,
-  footerLang,
-}: HomeProps): JSX.Element => {
+const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'coupons');
 
   const {
@@ -97,7 +89,7 @@ const HomePage = ({
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
 
-      <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
+      <ReviewsSection textContent={textContent.ReviewSection} />
 
       <PricingSectionWrapper
         textContent={textContent.tableSection}
@@ -110,17 +102,16 @@ const HomePage = ({
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize="2TB"
-        sectionDetails="lg:py-20 dark:bg-gray-95"
+        sectionDetails="lg:py-20"
         couponCodeName={individualCoupon?.name}
-        backgroundGradientColor="bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]"
-        darkMode={darkMode}
+        backgroundGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
       />
 
       <RedeemCouponsSection textContent={textContent.howToRedeemSection} />
 
       <HorizontalScrollableSection
         textContent={textContent.NextGenSection}
-        bgGradient="bg-[linear-gradient(180deg,#F4F8FF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#0D0D0D_0%,#1C1C1C_100%)]"
+        bgGradient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
       <FloatingCtaSectionv2
@@ -128,18 +119,18 @@ const HomePage = ({
         url={'/pricing'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
+            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
               {textContent.ctaSection.title}
             </p>
-            <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl">
+            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
               {textContent.ctaSection.description}
             </p>
           </div>
         }
-        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:pb-20 pb-20 p-10"
-        bgGradientColor="bg-[linear-gradient(0deg,#E5EFFF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(0deg,#082D66_0%,#1C1C1C_100%)]"
+        bgGradientColor="linear-gradient(0deg, #E5EFFF 0%, #FFFFFF 100%)"
       />
 
       <HorizontalScrollableSectionWithPhotosSection textContent={textContent.WhatsIncludedSection} />
@@ -149,19 +140,20 @@ const HomePage = ({
         url={'/pricing'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 dark:text-white-95 lg:text-4xl">
+            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
               {textContent.ctaSectionV2.title}
             </p>
-            <p className="text-base font-normal leading-tight text-gray-55 dark:text-green-120 lg:w-[633px] lg:text-center lg:text-xl">
+            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
               {textContent.ctaSectionV2.description}
             </p>
           </div>
         }
+        bgGradientContainerColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgPadding="lg:pb-20 pb-20 p-10"
       />
 
-      <FAQSection textContent={textContent.FaqSection} darkMode={darkMode} />
+      <FAQSection textContent={textContent.FaqSection} />
 
       <Footer
         textContent={footerLang}
@@ -171,7 +163,6 @@ const HomePage = ({
           { name: 'Secure cloud storage', url: '/drive' },
           { name: 'Internxt Coupons', url: '/coupons' },
         ]}
-        darkMode={darkMode}
       />
     </Layout>
   );

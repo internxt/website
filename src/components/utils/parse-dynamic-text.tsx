@@ -5,14 +5,8 @@ export type Replacements = Record<string, string | number | undefined>;
 const isPending = (value: string | number | undefined) =>
   value === undefined || value === null || value === '' || String(value) === '0';
 
-export const ValueSkeleton = ({
-  
-  className = 'h-4 w-12',
-}: {
-  darkMode?: boolean;
-  className?: string;
-}) => (
-  <span className={`inline-block animate-pulse rounded bg-gray-10 dark:bg-gray-71 align-middle ${className}`} />
+export const ValueSkeleton = ({ className = 'h-4 w-12' }: { className?: string }) => (
+  <span className={`inline-block animate-pulse rounded bg-gray-10 align-middle ${className}`} />
 );
 
 /**
@@ -24,7 +18,6 @@ export const ValueSkeleton = ({
 export const parseDynamicText = (
   text: unknown,
   replacements: Replacements,
-  darkMode = false,
   skeletonClassName?: string,
 ): ReactNode => {
   if (typeof text !== 'string') return text as ReactNode;
@@ -40,7 +33,7 @@ export const parseDynamicText = (
 
         const value = replacements[match[1]];
         return isPending(value) ? (
-          <ValueSkeleton key={index} className={skeletonClassName} darkMode={darkMode} />
+          <ValueSkeleton key={index} className={skeletonClassName} />
         ) : (
           <Fragment key={index}>{String(value)}</Fragment>
         );

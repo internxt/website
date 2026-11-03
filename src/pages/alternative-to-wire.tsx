@@ -12,7 +12,6 @@ const WireComparison = (props: any) => (
     segmentName="Wire Comparison"
     logo="/images/comparison/wire_Letters.webp"
     couponCodeName={PromoCodeName.WIRE}
-    darkMode={props.darkMode}
   />
 );
 

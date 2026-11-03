@@ -15,7 +15,6 @@ import HorizontalScrollableSection from '@/components/home/HorizontalScrollableS
 import TrustedSection from '@/components/home/TrustedSection';
 
 export interface UltimateAnnualTemplateProps {
-  darkMode?: boolean;
   lang: GetServerSidePropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -24,8 +23,7 @@ export interface UltimateAnnualTemplateProps {
   couponCodeForLifetime?: PromoCodeName;
 }
 
-export const UltimateAnnualTemplate = ({
-    darkMode = false,
+export const UltimateAnnualTemplate = ({ 
     metatagsDescriptions,
     langJson,
     lang, 
@@ -48,10 +46,10 @@ export const UltimateAnnualTemplate = ({
       <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Home" lang={lang}>
         <Navbar lang={locale} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink />
 
-        <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} showSubtitle={false} darkMode={darkMode} />
+        <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} showSubtitle={false} />
 
         {ultimatePlan && (
-          <div className="flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24 dark:bg-gray-95" id="priceCard">
+          <div className="flex w-full justify-center px-6 py-12 lg:px-0 lg:py-24" id="priceCard">
             <HorizontalPriceCard
               decimalDiscountValue={decimalDiscountForLifetime || undefined}
               storage={ultimatePlan.storage}
@@ -66,11 +64,11 @@ export const UltimateAnnualTemplate = ({
           </div>
         )}
 
-        <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} download={false} showLastSection={false} darkMode={darkMode} />
+        <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} download={false} showLastSection={false} />
 
-        <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} darkMode={darkMode} />
+        <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
 
-        <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={darkMode} />
+        <HorizontalScrollableSection textContent={langJson.NextGenSection} />
 
         <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
       </Layout>

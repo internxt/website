@@ -33,7 +33,6 @@ interface TextContent {
 }
 
 interface DownloadComponentProps {
-  darkMode?: boolean;
   textContent: TextContent;
   lang: string;
   download: DownloadLinks;
@@ -87,23 +86,21 @@ const DownloadLink: React.FC<{
   </a>
 );
 
-const SecondaryLink: React.FC<{ darkMode?: boolean; href: string; children: React.ReactNode }> = ({
-  
-  href,
-  children,
-}) => (
-  <a className="font-medium text-gray-80 dark:text-cool-gray-30 underline hover:no-underline" href={href} target="_blank" rel="noreferrer">
+const SecondaryLink: React.FC<{
+  href: string;
+  children: React.ReactNode;
+}> = ({ href, children }) => (
+  <a className="font-medium text-gray-80 underline hover:no-underline" href={href} target="_blank" rel="noreferrer">
     {children}
   </a>
 );
 
 const SecondaryDownloads: React.FC<{
-  darkMode?: boolean;
   OS: OSType;
   textContent: TextContent;
   download: DownloadLinks;
   isChinese: boolean;
-}> = ({ darkMode = false, OS, textContent, download, isChinese }) => {
+}> = ({ OS, textContent, download, isChinese }) => {
   const getSecondaryPlatforms = () => {
     switch (OS) {
       case 'MacOS':
@@ -124,29 +121,19 @@ const SecondaryDownloads: React.FC<{
   const { first, second } = platforms;
 
   return (
-    <div className="text-lg font-semibold text-gray-80 dark:text-cool-gray-30">
+    <div className="text-lg font-semibold text-gray-80">
       {isChinese ? (
         <>
           {textContent.orDownloadFor.split('<>')[0]}
-          <SecondaryLink href={download[first]} darkMode={darkMode}>
-            {textContent[first].split(' ')[0]}
-          </SecondaryLink>{' '}
-          {textContent.or}{' '}
-          <SecondaryLink href={download[second]} darkMode={darkMode}>
-            {textContent[second]}
-          </SecondaryLink>
+          <SecondaryLink href={download[first]}>{textContent[first].split(' ')[0]}</SecondaryLink> {textContent.or}{' '}
+          <SecondaryLink href={download[second]}>{textContent[second]}</SecondaryLink>
           <span>{textContent.orDownloadFor.split('<>')[1]}</span>
         </>
       ) : (
         <>
           {textContent.orDownloadFor}{' '}
-          <SecondaryLink href={download[first]} darkMode={darkMode}>
-            {textContent[first].split(' ')[0]}
-          </SecondaryLink>{' '}
-          {textContent.or}{' '}
-          <SecondaryLink href={download[second]} darkMode={darkMode}>
-            {textContent[second]}
-          </SecondaryLink>
+          <SecondaryLink href={download[first]}>{textContent[first].split(' ')[0]}</SecondaryLink> {textContent.or}{' '}
+          <SecondaryLink href={download[second]}>{textContent[second]}</SecondaryLink>
         </>
       )}
     </div>
@@ -154,38 +141,32 @@ const SecondaryDownloads: React.FC<{
 };
 
 const DesktopSection: React.FC<{
-  darkMode?: boolean;
   OS: OSType;
   textContent: TextContent;
   download: DownloadLinks;
   isChinese: boolean;
-}> = ({ darkMode = false, OS, textContent, download, isChinese }) => (
+}> = ({ OS, textContent, download, isChinese }) => (
   <div className="flex flex-1 flex-grow flex-row justify-end">
     <div className="flex flex-col items-center gap-6">
-      <p className="text-3xl font-medium text-black dark:text-white-95 lg:text-30">
-        {textContent.Desktop}
-      </p>
+      <p className="text-3xl font-medium text-black lg:text-30">{textContent.Desktop}</p>
       <DownloadLink href={download[OS]}>
         {formatTextWithPlaceholder(textContent.downloadFor, textContent[OS], isChinese)}
       </DownloadLink>
 
-      <SecondaryDownloads
-        OS={OS}
-        textContent={textContent}
-        download={download}
-        isChinese={isChinese}
-        darkMode={darkMode}
-      />
+      <SecondaryDownloads OS={OS} textContent={textContent} download={download} isChinese={isChinese} />
     </div>
   </div>
 );
 
-const WebSection: React.FC<{ darkMode?: boolean; textContent: TextContent }> = ({ textContent }) => (
+const WebSection: React.FC<{ textContent: TextContent }> = ({ textContent }) => (
   <div className="flex flex-col items-center justify-between">
-    <p className="pb-6 text-3xl font-medium text-black dark:text-white-95 lg:text-30">
-      {textContent.Web}
-    </p>
-    <a className="hidden flex-row items-center space-x-1 text-lg font-semibold text-primary hover:underline lg:flex" href="https://drive.internxt.com/app" target="_blank" rel="noreferrer">
+    <p className="pb-6 text-3xl font-medium text-black lg:text-30">{textContent.Web}</p>
+    <a
+      className="hidden flex-row items-center space-x-1 text-lg font-semibold text-primary hover:underline lg:flex"
+      href="https://drive.internxt.com/app"
+      target="_blank"
+      rel="noreferrer"
+    >
       <span>{textContent.openDriveWeb}</span>
       <CaretRight size={16} weight="bold" />
     </a>
@@ -224,19 +205,16 @@ const MobileBadges: React.FC<{
 };
 
 const MobileSection: React.FC<{
-  darkMode?: boolean;
   OS: OSType;
   textContent: TextContent;
   download: DownloadLinks;
   isChinese: boolean;
-}> = ({ darkMode = false, OS, textContent, download, isChinese }) => {
+}> = ({ OS, textContent, download, isChinese }) => {
   const showAppleFirst = OS === 'MacOS';
 
   return (
     <div className="flex flex-col items-center gap-6">
-      <p className="text-3xl font-medium text-black dark:text-white-95 lg:text-30">
-        {textContent.Mobile}
-      </p>
+      <p className="text-3xl font-medium text-black lg:text-30">{textContent.Mobile}</p>
 
       {showAppleFirst ? (
         <>
@@ -244,47 +222,42 @@ const MobileSection: React.FC<{
             {formatTextWithPlaceholder(textContent.downloadOnThe, textContent.iPhone, isChinese)}
           </DownloadLink>
 
-          <div className="text-lg font-semibold text-gray-80 dark:text-cool-gray-30">
+          <div className="text-lg font-semibold text-gray-80">
             {isChinese ? (
               <>
                 {textContent.orGetOn.split('<>')[0]}{' '}
-                <SecondaryLink href={download.Android} darkMode={darkMode}>
-                  {textContent.Android}
-                </SecondaryLink>
+                <SecondaryLink href={download.Android}>{textContent.Android}</SecondaryLink>
                 <span>{textContent.orGetOn.split('<>')[1]}</span>
               </>
             ) : (
               <>
-                {textContent.orGetOn}{' '}
-                <SecondaryLink href={download.Android} darkMode={darkMode}>
-                  {textContent.Android}
-                </SecondaryLink>
+                {textContent.orGetOn} <SecondaryLink href={download.Android}>{textContent.Android}</SecondaryLink>
               </>
             )}
           </div>
         </>
       ) : (
         <>
-          <a className="flex flex-row items-center space-x-1 text-lg font-semibold text-primary" href={download.Android} target="_blank" rel="noreferrer">
+          <a
+            className="flex flex-row items-center space-x-1 text-lg font-semibold text-primary"
+            href={download.Android}
+            target="_blank"
+            rel="noreferrer"
+          >
             {formatTextWithPlaceholder(textContent.getOn, textContent.Android, isChinese)}
             <CaretRight size={16} weight="bold" />
           </a>
 
-          <div className="text-base font-semibold text-gray-80 dark:text-cool-gray-30">
+          <div className="text-base font-semibold text-gray-80">
             {isChinese ? (
               <>
                 {textContent.orDownloadOnThe.split('<>')[0]}{' '}
-                <SecondaryLink href={download.iPhone} darkMode={darkMode}>
-                  {textContent.iPhone}
-                </SecondaryLink>
+                <SecondaryLink href={download.iPhone}>{textContent.iPhone}</SecondaryLink>
                 <span>{textContent.orDownloadOnThe.split('<>')[1]}</span>
               </>
             ) : (
               <>
-                {textContent.orDownloadOnThe}{' '}
-                <SecondaryLink href={download.iPhone} darkMode={darkMode}>
-                  {textContent.iPhone}
-                </SecondaryLink>
+                {textContent.orDownloadOnThe} <SecondaryLink href={download.iPhone}>{textContent.iPhone}</SecondaryLink>
               </>
             )}
           </div>
@@ -294,7 +267,7 @@ const MobileSection: React.FC<{
   );
 };
 
-const DownloadComponent: React.FC<DownloadComponentProps> = ({ darkMode = false, textContent, lang, download }) => {
+const DownloadComponent: React.FC<DownloadComponentProps> = ({ textContent, lang, download }) => {
   const router = useRouter();
   const [OS, setOS] = useState<OSType>('');
   const isChinese = router.locale === 'zh';
@@ -304,28 +277,20 @@ const DownloadComponent: React.FC<DownloadComponentProps> = ({ darkMode = false,
   }, []);
 
   return (
-    <section className="hidden w-full flex-col items-center justify-center gap-16 p-20 lg:flex dark:bg-gray-95">
-      <div className="absolute bg-neutral-35 dark:bg-gray-71 lg:bottom-0 lg:left-32 lg:right-32 lg:h-[1px]" />
-      <p className="text-center text-2xl font-semibold text-gray-100 dark:text-white-95 lg:text-4xl">
-        {textContent.downloadTitle}
-      </p>
+    <section className="hidden w-full flex-col items-center justify-center gap-16 p-20 lg:flex">
+      <div className="absolute bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32 lg:h-[1px]" />
+      <p className="text-center text-2xl font-semibold text-gray-100 lg:text-4xl">{textContent.downloadTitle}</p>
 
       <div className="flex w-full flex-row items-center justify-between px-5 lg:items-start lg:px-10 xl:px-32 3xl:px-80 ">
         {!isMobile && (
           <div className="hidden lg:flex">
-            <DesktopSection
-              OS={OS}
-              textContent={textContent}
-              download={download}
-              isChinese={isChinese}
-              darkMode={darkMode}
-            />
+            <DesktopSection OS={OS} textContent={textContent} download={download} isChinese={isChinese} />
           </div>
         )}
 
         {!isMobile && (
           <div className="hidden lg:flex">
-            <WebSection textContent={textContent} darkMode={darkMode} />
+            <WebSection textContent={textContent} />
           </div>
         )}
 
@@ -333,13 +298,7 @@ const DownloadComponent: React.FC<DownloadComponentProps> = ({ darkMode = false,
           {isMobile ? (
             <MobileBadges OS={OS} lang={lang} download={download} />
           ) : (
-            <MobileSection
-              OS={OS}
-              textContent={textContent}
-              download={download}
-              isChinese={isChinese}
-              darkMode={darkMode}
-            />
+            <MobileSection OS={OS} textContent={textContent} download={download} isChinese={isChinese} />
           )}
         </div>
       </div>

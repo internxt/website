@@ -12,7 +12,6 @@ const copilotComparison = (props) => (
     segmentName="Copilot Comparison"
     logo="/images/comparison/copilot-Letters.webp"
     couponCodeName={PromoCodeName.COPILOT85}
-    darkMode={props.darkMode}
   />
 );
 

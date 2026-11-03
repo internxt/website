@@ -1,3 +1,5 @@
+import { Campaign } from '@/lib/helpers/campaigns';
+
 export interface HomeText {
   HeroSection: HeroSection;
   tableSection: TableSection;
@@ -41,6 +43,7 @@ export interface HeroSection {
   subtitle: Subtitle;
   description: string;
   descriptionNormal: string;
+  campaigns?: Partial<Record<Campaign, Pick<HeroSection, 'title' | 'description'>>>;
   features: string[];
   giftDescription: GiftDescription;
   startFrom: StartFrom;

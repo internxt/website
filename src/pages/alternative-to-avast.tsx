@@ -12,7 +12,6 @@ const avastComparison = (props: any) => (
     segmentName="Avast Comparison"
     logo="/images/comparison/avast-Letters.webp"
     couponCodeName={PromoCodeName.AVAST85}
-    darkMode={props.darkMode}
   />
 );
 

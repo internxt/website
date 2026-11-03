@@ -110,6 +110,16 @@
     "description": "Internxt 2026年黑色星期五 – 云存储、杀毒软件、清理工具、VPN、Meet 和 Mail 享 87% 折扣。"
   },
   {
+    "id": "black-month",
+    "title": "Internxt – 2026年黑色购物月优惠",
+    "description": "Internxt 2026年黑色购物月 – 云存储、杀毒软件、清理工具、VPN、Meet 和 Mail 享 87% 折扣。"
+  },
+  {
+    "id": "cyber-week",
+    "title": "Internxt – 2026年网络周优惠",
+    "description": "Internxt 2026年网络周 – 云存储、杀毒软件、清理工具、VPN、Meet 和 Mail 享 90% 折扣。"
+  },
+  {
     "id": "black-friday-cloud-storage",
     "title": "Internxt 黑色星期五云存储优惠",
     "description": "通过 Internxt 黑色星期五云存储优惠大省一笔！Drive、VPN、Meet、Mail、Photos 等等！"
@@ -582,7 +592,7 @@
     "description": "成为面向企业的 Internxt S3 对象存储的经销商。热云存储，比 AWS、Azure 和 Google Cloud 更便宜。"
   },
   {
-    "id": "thankyou",
+    "id": "notification",
     "title": "特别优惠候补名单 — Internxt",
     "description": "订阅 Internxt，获取私密、加密云存储的专属折扣，值得信赖。"
   },

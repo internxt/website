@@ -313,7 +313,6 @@ const IntegratedCheckout = ({ textContent }: IntegratedCheckoutProps): JSX.Eleme
               onRemoveAppliedCouponCode={() => setCoupon(undefined)}
               showCouponCode={coupon !== undefined}
               couponCodeName={coupon?.name}
-              darkMode={darkMode}
             />
           </Elements>
         ) : (

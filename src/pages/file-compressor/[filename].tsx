@@ -11,7 +11,6 @@ import { FeaturesSection } from '@/components/file-compressor/FeaturesSection';
 import CtaSection from '@/components/file-compressor/CtaSection';
 
 const FileConverter = ({
-  darkMode = false,
   metatagsDescriptions,
   navbarLang,
   textContent,
@@ -47,12 +46,11 @@ const FileConverter = ({
         textContent={textContent.FeaturesSection}
         bannerText={bannerLang.SignUpFileCompressorBanner}
         lang={lang}
-        darkMode={darkMode}
       />
 
       <ToolsSection textContent={toolsContent} lang={lang} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} darkMode={darkMode} />
+      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
     </Layout>
   );
 };

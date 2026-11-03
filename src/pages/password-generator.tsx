@@ -10,10 +10,10 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import { sm_breadcrumb, sm_faq } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
+
 const DRIVE_URL = 'https://drive.internxt.com/new';
 
 const PasswordGenerator = ({
-  darkMode = false,
   metatagsDescriptions,
   toolsContent,
   langJson,
@@ -45,15 +45,15 @@ const PasswordGenerator = ({
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
         <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
-        <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} lang={lang} darkMode={darkMode} />
+        <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} lang={lang} />
 
-        <ToolsSection textContent={toolsContent} lang={lang} bgColor="bg-gray-1 dark:bg-gray-105" />
+        <ToolsSection textContent={toolsContent} lang={lang} bgColor="bg-gray-1" />
 
         <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
 
-        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
+        <FAQSection textContent={langJson.FaqSection} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Password generator', url: '/password-generator' }]} darkMode={darkMode} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Password generator', url: '/password-generator' }]} />
       </Layout>
     </>
   );

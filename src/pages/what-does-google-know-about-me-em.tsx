@@ -11,7 +11,6 @@ const WhatDoesGoogleKnowAboutMeEm = (props: WhatDoesGoogleKnowAboutMeTemplatePro
     couponCode={PromoCodeName.FreePlanUpsell}
     couponCodeForLifetime={PromoCodeName.FreePlanUpsell}
     robots="noindex,follow"
-    darkMode={props.darkMode}
   />
 );
 

@@ -1,17 +1,14 @@
 import Link from 'next/link';
 
-const DARK_CONTAINER_GRADIENT =
-  'dark:bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]';
-
 const FloatingCtaSectionv2 = ({
   textContent,
   url,
   target,
   customText,
-  bgGradientContainerColor = '',
-  bgGradientColor = '',
-  containerDetails = '',
-  bgPadding = '',
+  bgGradientContainerColor,
+  bgGradientColor,
+  containerDetails,
+  bgPadding,
 }: {
   textContent: any;
   url?: string;
@@ -24,10 +21,12 @@ const FloatingCtaSectionv2 = ({
 }) => {
   return (
     <section
-      className={`flex h-min w-full items-center justify-center px-6 ${bgPadding} ${bgGradientColor} xl:px-32 3xl:px-80`}
+      className={`flex h-min w-full items-center justify-center px-6 ${bgPadding} xl:px-32 3xl:px-80`}
+      style={{ background: bgGradientColor }}
     >
       <div
-        className={`z-10 flex h-auto w-full flex-col items-center justify-center gap-6 rounded-20 py-6 text-center dark:text-white lg:w-full lg:py-10 ${bgGradientContainerColor} ${DARK_CONTAINER_GRADIENT} ${containerDetails}`}
+        className={`z-10 flex h-auto w-full flex-col items-center justify-center gap-6 rounded-20 py-6 text-center lg:w-full lg:py-10 ${containerDetails}`}
+        style={{ background: bgGradientContainerColor }}
       >
         {customText}
         {url && (

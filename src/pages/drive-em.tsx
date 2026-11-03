@@ -10,7 +10,6 @@ const DriveEmLP = (props: DriveTemplateProps) => (
     couponCodeForLifetime={PromoCodeName.OFFLFT}
     hidePriceTable
     robots="noindex,follow"
-    darkMode={props.darkMode}
   />
 );
 

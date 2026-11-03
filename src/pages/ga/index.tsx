@@ -18,7 +18,6 @@ import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
 interface HomeProps {
-  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -26,14 +25,7 @@ interface HomeProps {
   footerLang: FooterText;
 }
 
-const HomePage = ({
-  darkMode = false,
-  metatagsDescriptions,
-  textContent,
-  lang,
-  navbarLang,
-  footerLang,
-}: HomeProps): JSX.Element => {
+const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
 
   const {
@@ -94,7 +86,7 @@ const HomePage = ({
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
 
-      <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
+      <ReviewsSection textContent={textContent.ReviewSection} />
 
       <PricingSectionWrapper
         textContent={textContent.tableSection}
@@ -108,13 +100,12 @@ const HomePage = ({
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize="2TB"
-        sectionDetails="bg-white dark:bg-gray-95 lg:py-20 xl:py-32"
+        sectionDetails="bg-white lg:py-20 xl:py-32"
         freePlanNeedsH2
         hideFreeCard
-        darkMode={darkMode}
       />
 
-      <TrustedSection textContent={textContent.TrustedBySection} darkMode={darkMode} />
+      <TrustedSection textContent={textContent.TrustedBySection} />
 
       <AwardWinningSection textContent={textContent.AwardWinningSection} />
 
@@ -122,21 +113,16 @@ const HomePage = ({
         textContent={textContent.OfficalCloudProvider}
         lang={locale}
         partner="levante"
-        bgColor="bg-neutral-17 dark:bg-gray-100"
+        bgColor="bg-neutral-17"
       />
 
-      <HorizontalScrollableSection
-        textContent={textContent.NextGenSection}
-        bgGradient="bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#18181B_100%)]"
-        darkMode={darkMode}
-      />
+      <HorizontalScrollableSection textContent={textContent.NextGenSection} />
 
       <FAQSection
         textContent={textContent.EncryptedStorageSeoSection}
         needsH2
         needsH3
-        bgGradient="bg-[linear-gradient(360deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#18181B_100%)]"
-        darkMode={darkMode}
+        bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
       />
 
       <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />

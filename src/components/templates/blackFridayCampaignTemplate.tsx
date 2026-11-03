@@ -20,7 +20,7 @@ const PERCENT_PLACEHOLDER = /\{\{(?:percentage|discount)\}\}/g;
 const renderWithDiscount = (text: string, discount: string | null): string =>
   typeof text === 'string' ? text.replace(PERCENT_PLACEHOLDER, discount ?? '') : text;
 
-interface BlackFridayPpcConfig {
+interface BlackFridayCampaignConfig {
   heroImage: string;
   metatagsId: string;
   couponCode?: PromoCodeName;
@@ -28,25 +28,25 @@ interface BlackFridayPpcConfig {
   popularPlanSize?: string;
 }
 
-interface BlackFridayPpcTemplateProps {
-  darkMode?: boolean;
+interface BlackFridayCampaignTemplateProps {
   lang: string;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   textContent: BlackFridayPpcText;
   footerLang: FooterText;
-  config: BlackFridayPpcConfig;
+  config: BlackFridayCampaignConfig;
+  hideLanguage?: boolean;
 }
 
-const BlackFridayPpcTemplate = ({
-  darkMode = false,
+const BlackFridayCampaignTemplate = ({
   lang,
   metatagsDescriptions,
   navbarLang,
   textContent,
   footerLang,
   config,
-}: BlackFridayPpcTemplateProps): JSX.Element => {
+  hideLanguage,
+}: BlackFridayCampaignTemplateProps): JSX.Element => {
   const metatags = metatagsDescriptions.find((desc) => desc.id === config.metatagsId);
 
   const {
@@ -102,7 +102,7 @@ const BlackFridayPpcTemplate = ({
       lang={lang}
       robots="noindex, follow"
     >
-      <Navbar textContent={navbarLang} lang={lang} cta={['chooseStorage']} fixed />
+      <Navbar textContent={navbarLang} lang={lang} cta={['chooseStorage']} fixed hideLanguage={hideLanguage} />
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} darkMode image={config.heroImage} />
 
@@ -118,7 +118,7 @@ const BlackFridayPpcTemplate = ({
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize={config.popularPlanSize ?? '5TB'}
-        sectionDetails="bg-gray-95 lg:py-20"
+        sectionDetails="bg-[#1C1C1C] lg:py-20"
         darkMode
         hideFreeCard
       />
@@ -143,24 +143,23 @@ const BlackFridayPpcTemplate = ({
           </div>
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(255,255,255,0.3)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
-        bgPadding="py-10 lg:py-20 bg-gray-95"
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        bgPadding="py-10 lg:py-20 bg-[#1C1C1C]"
       />
 
       <FAQSection
         textContent={textContent.FaqSection}
-        bgColor="bg-gray-95 text-white"
-        cardColor="bg-gray-95"
+        bgColor="bg-[#1C1C1C] text-white"
+        cardColor="bg-[#1C1C1C]"
         textColor="text-white"
         percentageDiscount={percentOff}
         needsH2
-        darkMode={darkMode}
       />
 
       <MinimalFooter
         footerLang={footerLang.FooterSection}
         lang={lang}
-        bgColor="bg-gray-95"
+        bgColor="bg-[#1C1C1C]"
         logoColor="white"
         textColor="text-gray-50"
       />
@@ -168,4 +167,4 @@ const BlackFridayPpcTemplate = ({
   );
 };
 
-export default BlackFridayPpcTemplate;
+export default BlackFridayCampaignTemplate;

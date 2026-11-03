@@ -12,7 +12,6 @@ const SecureFileTransferEmLP = (props: SecureFileTransferTemplateProps) => (
     couponCodeForLifetime={PromoCodeName.seolp}
     hidePriceTable
     robots="noindex,follow"
-    darkMode={props.darkMode}
   />
 );
 

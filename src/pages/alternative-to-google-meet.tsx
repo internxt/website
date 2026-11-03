@@ -12,7 +12,6 @@ const GoogleMeetComparison = (props) => (
     segmentName="GoogleMeet Comparison"
     logo="/images/comparison/google-meet-Letters.webp"
     couponCodeName={PromoCodeName.GOOGLEMEET}
-    darkMode={props.darkMode}
   />
 );
 

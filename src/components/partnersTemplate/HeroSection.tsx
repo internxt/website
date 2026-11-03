@@ -14,14 +14,6 @@ import Link from 'next/link';
 import { currencyService } from '@/services/currency.service';
 import { useEffect, useState } from 'react';
 import { HighlightText } from '../components/HighlightText';
-import { DARK_MODE_LOGO_FILTER } from '@/theme.config';
-
-const VALENTINES_GRADIENT_DARK = 'bg-[linear-gradient(180deg,#2A1420_0%,#1C1C1C_100.01%)]';
-const VALENTINES_GRADIENT_LIGHT =
-  'bg-[linear-gradient(180deg,#FFF2F8_0%,#FFFFFF_100.01%)] dark:bg-[linear-gradient(180deg,#2A1420_0%,#1C1C1C_100.01%)]';
-const HERO_GRADIENT_DARK = 'bg-[linear-gradient(180deg,#082D66_0%,#1C1C1C_100%)]';
-const HERO_GRADIENT_LIGHT =
-  'bg-[linear-gradient(180deg,#E5EFFF_0%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#082D66_0%,#1C1C1C_100%)]';
 
 interface HeroSectionForPartnerProps {
   textContent: any;
@@ -94,12 +86,17 @@ export default function HeroSection({
   };
 
   const heroImage = heroImageMap[image] ?? image;
-  const valentinesGradient = darkMode ? VALENTINES_GRADIENT_DARK : VALENTINES_GRADIENT_LIGHT;
-  const heroGradient = darkMode ? HERO_GRADIENT_DARK : HERO_GRADIENT_LIGHT;
 
   return (
     <section
-      className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[657px] lg:justify-between lg:pl-10 lg:pr-4 xl:pl-32 xl:pr-16 3xl:pl-80 3xl:pr-60 ${isValentinesMode ? valentinesGradient : heroGradient}`}
+      className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[657px] lg:justify-between lg:pl-10 lg:pr-4 xl:pl-32 xl:pr-16 3xl:pl-80 3xl:pr-60`}
+      style={{
+        background: isValentinesMode
+          ? 'linear-gradient(180deg, #FFF2F8 0%, #FFFFFF 100.01%)'
+          : darkMode
+          ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
+          : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
+      }}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[392px] lg:w-[606px] lg:justify-between">
         {cloudWards && (
@@ -109,13 +106,12 @@ export default function HeroSection({
               width={117}
               height={27}
               alt="Brave logo"
-              className={DARK_MODE_LOGO_FILTER}
             />
             <X size={16} />
             <Image
               loading="lazy"
-              className={`select-none ${darkMode ? '' : 'dark:brightness-0 dark:invert'}`}
-              src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
+              className="select-none"
+              src={getImage('/logos/internxt/cool-gray-90.svg')}
               alt="Internxt logo"
               width={130}
               height={16}
@@ -129,8 +125,8 @@ export default function HeroSection({
             <X size={16} />
             <Image
               loading="lazy"
-              className={`select-none ${darkMode ? '' : 'dark:brightness-0 dark:invert'}`}
-              src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
+              className="select-none"
+              src={getImage('/logos/internxt/cool-gray-90.svg')}
               alt="Internxt logo"
               width={130}
               height={16}
@@ -144,8 +140,8 @@ export default function HeroSection({
             <X size={16} />
             <Image
               loading="lazy"
-              className={`select-none ${darkMode ? '' : 'dark:brightness-0 dark:invert'}`}
-              src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
+              className="select-none"
+              src={getImage('/logos/internxt/cool-gray-90.svg')}
               alt="Internxt logo"
               width={130}
               height={16}
@@ -155,12 +151,17 @@ export default function HeroSection({
 
         {isPrivacyTutor && (
           <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
-            <Image src={getImage('/images/partnerships/PrivacyTutor.webp')} width={140} height={16} alt="Privacy Tutor logo" />
+            <Image
+              src={getImage('/images/partnerships/PrivacyTutor.webp')}
+              width={140}
+              height={16}
+              alt="Privacy Tutor logo"
+            />
             <X size={16} />
             <Image
               loading="lazy"
-              className={`select-none ${darkMode ? '' : 'dark:brightness-0 dark:invert'}`}
-              src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
+              className="select-none"
+              src={getImage('/logos/internxt/cool-gray-90.svg')}
               alt="Internxt logo"
               width={130}
               height={16}
@@ -170,12 +171,17 @@ export default function HeroSection({
 
         {isWpcdrive && (
           <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
-            <Image src={getImage('/images/partnerships/wpcoupons-logo.webp')} width={140} height={16} alt="WPC drive coupon logo" />
+            <Image
+              src={getImage('/images/partnerships/wpcoupons-logo.webp')}
+              width={140}
+              height={16}
+              alt="WPC drive coupon logo"
+            />
             <X size={16} />
             <Image
               loading="lazy"
-              className={`select-none ${darkMode ? '' : 'dark:brightness-0 dark:invert'}`}
-              src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
+              className="select-none"
+              src={getImage('/logos/internxt/cool-gray-90.svg')}
               alt="Internxt logo"
               width={130}
               height={16}
@@ -185,12 +191,17 @@ export default function HeroSection({
 
         {isBpdrive && (
           <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
-            <Image src={getImage('/images/influencers/bloggerspassoin.webp')} width={140} height={16} alt="BP drive coupon logo" />
+            <Image
+              src={getImage('/images/influencers/bloggerspassoin.webp')}
+              width={140}
+              height={16}
+              alt="BP drive coupon logo"
+            />
             <X size={16} />
             <Image
               loading="lazy"
-              className={`select-none ${darkMode ? '' : 'dark:brightness-0 dark:invert'}`}
-              src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
+              className="select-none"
+              src={getImage('/logos/internxt/cool-gray-90.svg')}
               alt="Internxt logo"
               width={130}
               height={16}
@@ -202,11 +213,15 @@ export default function HeroSection({
           {products.map((feature, index) => (
             <div
               key={index}
-              className={`flex h-6 w-min flex-row items-center justify-center gap-1 rounded ${darkMode ? 'bg-white/10' : 'bg-white/50 dark:bg-white/10'}  px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1`}
+              className={`flex h-6 w-min flex-row items-center justify-center gap-1 rounded ${
+                darkMode ? 'bg-white/10' : 'bg-white/50'
+              }  px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1`}
             >
               <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
               <p
-                className={`whitespace-nowrap text-sm font-medium leading-tight lg:pt-[2px] ${darkMode ? 'text-white' : 'text-gray-80 dark:text-white'}`}
+                className={`whitespace-nowrap text-sm font-medium leading-tight lg:pt-[2px] ${
+                  darkMode ? 'text-neutral-37' : 'text-gray-80'
+                }`}
               >
                 {feature.text}
               </p>
@@ -214,7 +229,7 @@ export default function HeroSection({
           ))}
         </div>
         <h1
-          className={`text-30 font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:text-5xl`}
+          className={`text-30 font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}
         >
           {isValentinesMode ? (
             <HighlightText text={textContent.valentinesTitle} />
@@ -226,13 +241,17 @@ export default function HeroSection({
           <div className="flex flex-col justify-center gap-4">
             {percentOff !== '0' && !isUltimatePlan && (
               <span
-                className={`flex w-min flex-row items-center gap-1 whitespace-nowrap rounded-2 px-1 py-0.5 text-base font-semibold leading-tight lg:text-xl ${darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary dark:bg-purple-100 dark:text-purple-8'}`}
+                className={`flex w-min flex-row items-center gap-1 whitespace-nowrap rounded-2 px-1 py-0.5 text-base font-semibold leading-tight lg:text-xl ${
+                  darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary'
+                }`}
               >
                 <span>{parsePercentText(textContent.subtitle)}</span>
               </span>
             )}
             <p
-              className={`font-regular ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} text-lg leading-tight lg:text-xl`}
+              className={`font-regular ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              } text-lg leading-tight lg:text-xl`}
             >
               {parsePercentText(textContent.description)}
             </p>
@@ -251,7 +270,9 @@ export default function HeroSection({
         </div>
       </div>
 
-      <div className={`${isValentinesMode ? 'h-[580px] w-[582px]' : ' h-[500px] w-[562px]'} hidden justify-center lg:flex`}>
+      <div
+        className={`${isValentinesMode ? 'h-[580px] w-[582px]' : ' h-[500px] w-[562px]'} hidden justify-center lg:flex`}
+      >
         <Image
           src={getImage(`/images/influencers/${heroImage}.webp`)}
           alt="Internxt Partners HeroSection Image"

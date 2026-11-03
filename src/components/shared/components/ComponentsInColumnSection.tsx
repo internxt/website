@@ -7,7 +7,7 @@ interface ComponentsInColumnSectionSectionProps {
 }
 
 export const ComponentsInColumnSection = ({
-  backgroundColor = 'dark:bg-gray-95',
+  backgroundColor,
   FirstComponent,
   SecondComponent,
 }: ComponentsInColumnSectionSectionProps): JSX.Element => {

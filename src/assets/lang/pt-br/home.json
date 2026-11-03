@@ -46,6 +46,11 @@
     },
     "description": "Ganhe {{discount}}% de desconto",
     "descriptionNormal": "em todos os planos",
+    "campaigns": {
+      "campaign2": { "title": "Oferta de **Early Black Friday** da Internxt", "description": "{{discount}}% DE DESCONTO" },
+      "blackFriday": { "title": "Oferta de **Black Friday** da Internxt", "description": "{{discount}}% DE DESCONTO — O MELHOR PREÇO DO ANO" },
+      "cyberWeek": { "title": "Oferta de **Cyber Week** da Internxt", "description": "{{discount}}% DE DESCONTO — ÚLTIMA CHANCE DE GARANTIR O MELHOR PREÇO DO ANO" }
+    },
     "features": ["Suíte completa de privacidade", "Criptografia pós-quântica", "Código aberto e auditado"],
     "giftDescription": {
       "line1": "Participe do nosso sorteio de Natal e ganhe até € 1000!",

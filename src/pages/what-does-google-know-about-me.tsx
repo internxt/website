@@ -10,7 +10,6 @@ const WhatDoesGoogleKnowAboutMe = (props: WhatDoesGoogleKnowAboutMeTemplateProps
     {...props}
     couponCode={PromoCodeName.seolp}
     couponCodeForLifetime={PromoCodeName.seolp}
-    darkMode={props.darkMode}
   />
 );
 

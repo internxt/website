@@ -2,7 +2,7 @@ import { GetStaticPropsContext } from 'next';
 import VPNPage, { getStaticProps as vpnGetStaticProps } from './vpn';
 
 export default function GetVPNPage(props: any) {
-  return <VPNPage {...props} isGetVPN={true} darkMode={props.darkMode} />;
+  return <VPNPage {...props} isGetVPN={true} />;
 }
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {

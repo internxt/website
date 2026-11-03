@@ -2,13 +2,10 @@ import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const CTA_BG =
-  'bg-[radial-gradient(ellipse_at_center,#E5EFFF_25%,#F9F9FC_100%)] dark:bg-[radial-gradient(ellipse_at_center,#082D66_25%,#0D0D0D_100%)]';
-
 const CtaSection = ({
   textContent,
   url,
-  maxWidth = '',
+  maxWidth,
   target,
   bgImage,
   image,
@@ -24,11 +21,15 @@ const CtaSection = ({
 }) => {
   return (
     <section
-      style={bgImage ? { background: `url(${getImage(bgImage)})` } : undefined}
-      className={`overflow-hidden bg-primary bg-cover px-5 py-14 ${bgImage ? '' : CTA_BG}`}
+      style={{
+        background: bgImage
+          ? `url(${getImage(bgImage)})`
+          : 'radial-gradient(ellipse at center, #E5EFFF 25%, #F9F9FC 100%)',
+      }}
+      className="overflow-hidden bg-primary bg-cover px-5 py-14"
     >
       <div className="flex flex-col items-center justify-center space-y-8 text-center">
-        <div className={`flex ${maxWidth} flex-col items-center space-y-4 text-center text-black dark:text-white-95`}>
+        <div className={`flex ${maxWidth} flex-col items-center space-y-4 text-center text-black`}>
           {image ? (
             <Image src={getImage(image)} alt="Internxt Logo" draggable={false} loading="lazy" width={262} height={32} />
           ) : (

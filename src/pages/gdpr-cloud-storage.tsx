@@ -22,8 +22,8 @@ import { stripeService } from '@/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 
+
 interface PrivacyProps {
-  darkMode?: boolean;
   metatagsDescriptions: MetatagsDescription[];
   textContent: gdprCloudStorageText;
   navbarLang: NavigationBarText;
@@ -34,7 +34,6 @@ interface PrivacyProps {
 }
 
 const PrivateCloudStorageSolutions = ({
-  darkMode = false,
   metatagsDescriptions,
   textContent,
   navbarLang,
@@ -187,9 +186,8 @@ const PrivateCloudStorageSolutions = ({
                 loadingCards={loadingCards}
                 onCheckoutButtonClicked={onCheckoutButtonClicked}
                 popularPlanBySize="5TB"
-                sectionDetails="bg-white dark:bg-gray-95 lg:py-20"
+                sectionDetails="bg-white lg:py-20"
                 hideFreeCard
-                darkMode={darkMode}
             />
 
         <CtaSection
@@ -221,11 +219,11 @@ const PrivateCloudStorageSolutions = ({
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection3.description}</p>}
         />
 
-        <FAQSection textContent={textContent.FaqSection} needsH3={false} darkMode={darkMode} />
+        <FAQSection textContent={textContent.FaqSection} needsH3={false} />
 
         <RelationalLinks textContent={relationalLinksText} />
 
-        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'GDPR compliant cloud storage', url: '/gdpr-cloud-storage' }]} darkMode={darkMode} />
+        <Footer textContent={footerLang} lang={lang} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Secure cloud storage', url: '/drive' }, { name: 'GDPR compliant cloud storage', url: '/gdpr-cloud-storage' }]} />
       </Layout>
     </>
   );

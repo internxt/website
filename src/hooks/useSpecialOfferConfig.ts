@@ -210,6 +210,9 @@ export const ALLOWED_PATHS = [
   'negocios',
   'lucas',
   'youensina',
+  'sc90',
+  'gpes85',
+  'gpit85',
   'bfcmrec87',
   'bfcmrec90',
 ];
@@ -302,6 +305,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   tdes85: 'es',
   naseros: 'es',
   roxana: 'es',
+  gpes85: 'es',
 
   // fr
   benjamin: 'fr',
@@ -330,6 +334,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   gian: 'it',
   pietro: 'it',
   tdit85: 'it',
+  gpit85: 'it',
 
   // zh
   madmoneylabs: 'zh',
@@ -378,11 +383,12 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'thelinuxexp',
   'simon42',
   'ition',
+  'luca',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
 export const ANNUAL_PLANS_PATHS = new Set<string>(['annual', 'ultimate']);
-export const ANNUAL_FIRST_PLANS_PATHS = new Set<string>(['utsav', 'nextuniverz', 'thelinuxexp']);
+export const ANNUAL_FIRST_PLANS_PATHS = new Set<string>(['utsav', 'nextuniverz', 'thelinuxexp',]);
 export const LIFETIME_PLANS_PATHS = new Set<string>(['lifetime', 'einfach']);
 export const URGENT_CHECKOUT_PATHS = new Set<string>([
   'bjoern',
@@ -577,6 +583,9 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'negocios',
   'lucas',
   'youensina',
+  'sc90',
+  'gpes85',
+  'gpit85',
   'bfcmrec87',
   'bfcmrec90',
 ]);
@@ -789,6 +798,9 @@ export const COUPON_CODES = {
   negocios: PromoCodeName.negocios,
   lucas: PromoCodeName.lucas,
   youensina: PromoCodeName.youensina,
+  sc90: PromoCodeName.sc90,
+  gpes85: PromoCodeName.gpes85,
+  gpit85: PromoCodeName.gpit85,
   bfcmrec87: PromoCodeName.bfcmrec87,
   bfcmrec90: PromoCodeName.bfcmrec90,
 };
@@ -812,14 +824,14 @@ interface OfferConfig {
   redirectToUrgentCheckout: boolean;
 }
 
-export const useOfferConfig = (pathname: string, darkMode = false): OfferConfig => {
+export const useOfferConfig = (pathname: string): OfferConfig => {
   return useMemo(() => {
     const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
 
     if (!selectedPathname) {
       return {
         selectedPathname: null,
-        isDarkMode: darkMode,
+        isDarkMode: false,
         alternateRecommendedPlan: false,
         couponCode: undefined,
         alternativeImages: null,
@@ -837,7 +849,7 @@ export const useOfferConfig = (pathname: string, darkMode = false): OfferConfig 
       };
     }
 
-    const isDarkMode = darkMode || DARK_MODE_PATHS.has(selectedPathname);
+    const isDarkMode = DARK_MODE_PATHS.has(selectedPathname);
     const alternateRecommendedPlan = !ALTERNATE_RECOMENDATED_PLAN_PATHS.has(selectedPathname);
     const couponCode = COUPON_CODES[selectedPathname as keyof typeof COUPON_CODES];
     const onlyUltimatePlan = ONLY_ULTIMATE_PLANS_PATHS.has(selectedPathname);

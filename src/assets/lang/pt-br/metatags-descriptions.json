@@ -225,6 +225,16 @@
     "description": "Black Friday Internxt 2026 – 87% de desconto em armazenamento em nuvem, Antivírus, Limpador, VPN, Meet e Mail."
   },
   {
+    "id": "black-month",
+    "title": "Internxt – Oferta de Black Month 2026",
+    "description": "Black Month Internxt 2026 – 87% de desconto em armazenamento em nuvem, Antivírus, Limpador, VPN, Meet e Mail."
+  },
+  {
+    "id": "cyber-week",
+    "title": "Internxt – Oferta de Cyber Week 2026",
+    "description": "Cyber Week Internxt 2026 – 90% de desconto em armazenamento em nuvem, Antivírus, Limpador, VPN, Meet e Mail."
+  },
+  {
     "id": "black-friday-cloud-storage",
     "title": "Oferta de Armazenamento na Nuvem da Black Friday da Internxt",
     "description": "Economize muito com as ofertas de armazenamento na nuvem da Black Friday da Internxt! Drive, VPN, Meet, Mail, Photos e muito mais!"
@@ -755,7 +765,7 @@
     "description": "Torne-se revendedor do armazenamento de objetos Internxt S3 para empresas. Armazenamento na nuvem de acesso imediato e mais barato que AWS, Azure e Google Cloud."
   },
   {
-    "id": "thankyou",
+    "id": "notification",
     "title": "Lista de espera de oferta especial — Internxt",
     "description": "Assine a Internxt para receber seu desconto exclusivo em armazenamento em nuvem privado e criptografado no qual você pode confiar."
   },

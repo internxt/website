@@ -4,7 +4,7 @@ import { PromoCodeName } from '@/lib/types';
 import BlackFridayDealsTemplate from '../../../components/templates/blackFridayDealsTemplate';
 
 const BlackFridayPage = (props) => {
-  return <BlackFridayDealsTemplate {...props} darkMode={props.darkMode} />;
+  return <BlackFridayDealsTemplate {...props} />;
 };
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {

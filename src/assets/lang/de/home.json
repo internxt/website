@@ -46,6 +46,11 @@
     },
     "description": "Erhalten Sie {{discount}}% Rabatt",
     "descriptionNormal": "auf alle Pläne",
+    "campaigns": {
+      "campaign2": { "title": "**Early Black Friday** Internxt Angebot", "description": "{{discount}}% RABATT" },
+      "blackFriday": { "title": "**Black Friday** Internxt Angebot", "description": "{{discount}}% RABATT — BESTER PREIS DES JAHRES" },
+      "cyberWeek": { "title": "**Cyber Week** Internxt Angebot", "description": "{{discount}}% RABATT — LETZTE CHANCE AUF DEN BESTEN PREIS DES JAHRES" }
+    },
     "giftDescription": {
       "line1": "Gewinne einen Gutschein bis zu 1.000 €!",
       "line2": "Mach mit beim Internxt-Weihnachtsgewinnspiel"

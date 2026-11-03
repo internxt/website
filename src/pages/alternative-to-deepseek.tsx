@@ -12,7 +12,6 @@ const DeepSeekComparison = (props) => (
     segmentName="DeepSeek Comparison"
     logo="/images/comparison/deepseek-Letters.webp"
     couponCodeName={PromoCodeName.DEEPSEEK85}
-    darkMode={props.darkMode}
   />
 );
 

@@ -14,7 +14,6 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 
 
 const Scan = ({
-  darkMode = false,
   metatagsDescriptions,
   langJson,
   toolsContent,
@@ -48,16 +47,15 @@ const Scan = ({
           textContent={langJson.FeaturesSection}
           bannerText={bannerLang.SignUpVirusScannerBanner}
           lang={lang}
-          darkMode={darkMode}
         />
 
         <ToolsSection textContent={toolsContent} lang={lang} />
 
         <CtaSection textContent={langJson.CtaSection} />
 
-        <FAQSection textContent={langJson.FaqSection} darkMode={darkMode} />
+        <FAQSection textContent={langJson.FaqSection} />
 
-        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Virus scanner online', url: '/virus-scanner' }]} darkMode={darkMode} />
+        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} breadcrumbItems={[{ name: 'Encrypted Cloud Storage', url: '/' }, { name: 'Virus scanner online', url: '/virus-scanner' }]} />
       </Layout>
     </>
   );

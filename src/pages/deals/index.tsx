@@ -4,7 +4,7 @@ import DealsTemplate from '@/components/templates/dealsTemplate';
 import { getDealsProps } from '@/lib/helpers/deals';
 
 const DealsPage = (props) => {
-  return <DealsTemplate {...props} darkMode={props.darkMode} />;
+  return <DealsTemplate {...props} />;
 };
 
 export async function getStaticProps(ctx: GetStaticPropsContext) {

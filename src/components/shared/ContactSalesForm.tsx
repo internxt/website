@@ -128,7 +128,6 @@ export const ContactSalesForm = ({
   needsTopDivider = true,
   needsBottomDivider = true,
 }: ContactSalesFormProps) => {
-  const textClass = 'text-gray-100 dark:text-white-95';
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -154,8 +153,8 @@ export const ContactSalesForm = ({
     })
     .catch(() => {
       // No OP
-    });
-  }, []);
+    })
+  },[])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
@@ -224,25 +223,23 @@ export const ContactSalesForm = ({
   };
 
   return (
-    <section className="overflow-hidden px-8 py-10 lg:px-0 lg:py-20 dark:bg-gray-95" id="contactSalesForm">
+    <section className="overflow-hidden px-8 py-10 lg:px-0 lg:py-20" id="contactSalesForm">
       {needsTopDivider && (
-        <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"></div>
+        <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
       )}
       {needsBottomDivider && (
-        <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32"></div>
+        <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
       )}
       <div className="flex flex-col items-center gap-6 text-center ">
-        <p className="text-30 font-semibold leading-tight text-gray-100 dark:text-white-95 lg:text-3xl">
-          {textContent.title}
-        </p>
-        <p className="max-w-[774px] px-10 text-lg leading-tight text-gray-80 dark:text-cool-gray-30 lg:px-0" id="contactSales">
+        <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</p>
+        <p className="max-w-[774px] px-10 text-lg leading-tight text-gray-80 lg:px-0" id="contactSales">
           {textContent.description}
         </p>
       </div>
 
       <div className="flex items-center justify-center py-8 ">
         <div className="flex w-[636px]">
-          <div className="flex-1 rounded-32 bg-neutral-17 dark:bg-gray-105 p-10 text-gray-100 dark:text-white-95">
+          <div className="flex-1 rounded-32 bg-neutral-17 p-10 text-gray-100">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="flex flex-col space-y-6 lg:flex-row lg:space-x-4 lg:space-y-0">
                 <div className="w-full lg:w-1/2">
@@ -253,7 +250,7 @@ export const ContactSalesForm = ({
                     id="name"
                     type="text"
                     placeholder={textContent.form.name}
-                    className="w-full rounded-lg border border-highlight dark:border-gray-71 dark:bg-gray-95 dark:text-white px-3 py-2 outline-none"
+                    className="w-full rounded-lg border border-highlight px-3 py-2 outline-none"
                     value={formData.name}
                     onChange={handleChange}
                   />
@@ -266,7 +263,7 @@ export const ContactSalesForm = ({
                     id="company"
                     type="text"
                     placeholder={textContent.form.company}
-                    className="w-full rounded-lg border border-highlight dark:border-gray-71 dark:bg-gray-95 dark:text-white px-3 py-2 focus:outline-none"
+                    className="w-full rounded-lg border border-highlight px-3 py-2 focus:outline-none  "
                     value={formData.company}
                     onChange={handleChange}
                   />
@@ -282,7 +279,7 @@ export const ContactSalesForm = ({
                     id="email"
                     type="email"
                     placeholder={textContent.form.email}
-                    className="w-full rounded-lg border border-highlight dark:border-gray-71 dark:bg-gray-95 dark:text-white px-3 py-2 focus:outline-none"
+                    className="w-full rounded-lg border border-highlight px-3 py-2 focus:outline-none "
                     value={formData.email}
                     onChange={handleChange}
                   />
@@ -291,12 +288,12 @@ export const ContactSalesForm = ({
                   <label className="mb-1 block text-sm" htmlFor="phone">
                     {textContent.form.phone}
                   </label>
-                  <div className="flex overflow-hidden rounded-lg border border-highlight dark:border-gray-71 dark:bg-gray-95 dark:text-white">
+                  <div className="flex overflow-hidden rounded-lg border border-highlight">
                     <select
                       id="phonePrefix"
                       value={phonePrefix}
                       onChange={(e) => setPhonePrefix(e.target.value)}
-                      className="cursor-pointer appearance-none border-r border-highlight bg-white dark:border-gray-71 dark:bg-gray-95 px-2 py-2 text-sm text-gray-100 dark:text-white-95 focus:outline-none"
+                      className="cursor-pointer appearance-none border-r border-highlight bg-white px-2 py-2 text-sm text-gray-100 focus:outline-none"
                     >
                       {PHONE_PREFIXES.map(({ code, flag, label }) => (
                         <option key={code} value={code}>
@@ -308,7 +305,7 @@ export const ContactSalesForm = ({
                       id="phone"
                       type="tel"
                       placeholder={textContent.form.phone}
-                      className="flex-1 bg-white dark:bg-gray-95 px-3 py-2 focus:outline-none"
+                      className="flex-1 bg-white px-3 py-2 focus:outline-none"
                       value={formData.phone}
                       onChange={handleChange}
                     />
@@ -322,7 +319,9 @@ export const ContactSalesForm = ({
                 </label>
                 <select
                   id="storage"
-                  className={`w-full appearance-none rounded-lg border border-highlight bg-white dark:border-gray-71 dark:bg-gray-95 px-3 py-2 ${formData.storage === '' ? 'text-gray-40' : textClass}`}
+                  className={`w-full appearance-none rounded-lg border border-highlight bg-white px-3 py-2 ${
+                    formData.storage === '' ? 'text-gray-40' : 'text-gray-100'
+                  }`}
                   value={formData.storage}
                   onChange={handleChange}
                 >
@@ -330,14 +329,14 @@ export const ContactSalesForm = ({
                     <option
                       key={index}
                       value={index === 0 ? '' : option}
-                      className={index === 0 ? 'text-gray-40' : textClass}
+                      className={index === 0 ? 'text-gray-40' : 'text-gray-100'}
                     >
                       {option}
                     </option>
                   ))}
                 </select>
 
-                <CaretDown className="pointer-events-none absolute right-6 top-1/2 h-6 w-6 transform text-gray-100 dark:text-white-95" />
+                <CaretDown className="pointer-events-none absolute right-6 top-1/2 h-6 w-6 transform text-gray-100" />
               </div>
 
               <div>
@@ -350,14 +349,16 @@ export const ContactSalesForm = ({
                   maxLength={1000}
                   value={formData.help}
                   onChange={handleChange}
-                  className="h-32 w-full resize-none rounded-lg border border-highlight dark:border-gray-71 dark:bg-gray-95 dark:text-white px-3 py-2 focus:outline-none"
+                  className="h-32 w-full resize-none rounded-lg border border-highlight px-3 py-2 focus:outline-none "
                 />
               </div>
 
               <div className="flex">
                 <button
                   type="submit"
-                  className={`w-full rounded-md px-6 py-4 text-white transition lg:w-1/3 ${isFormValid ? 'bg-primary' : 'cursor-not-allowed bg-primary/40'}`}
+                  className={`w-full rounded-md px-6 py-4 text-white transition lg:w-1/3 ${
+                    isFormValid ? 'bg-primary' : 'cursor-not-allowed bg-primary/40'
+                  }`}
                   disabled={!isFormValid || isSubmitting}
                 >
                   {isSubmitting ? textContent.form.ctaSending : textContent.form.cta}
@@ -365,20 +366,16 @@ export const ContactSalesForm = ({
               </div>
 
               {formStatus === 'success' && (
-                <div className="flex items-center justify-center rounded-md border border-highlight bg-white dark:border-gray-71 dark:bg-gray-95 px-5 py-2">
+                <div className="flex items-center justify-center rounded-md border border-highlight bg-white px-5 py-2">
                   <CheckCircle height={24} width={24} weight="fill" className="text-green-1" />
-                  <p className="ml-2 text-sm text-gray-80 dark:text-cool-gray-30">
-                    {textContent.form.successMessage}
-                  </p>
+                  <p className="ml-2 text-sm text-gray-80">{textContent.form.successMessage}</p>
                 </div>
               )}
 
               {formStatus === 'error' && (
-                <div className="flex items-center justify-center rounded-md border border-highlight bg-white dark:border-gray-71 dark:bg-gray-95 px-5 py-2">
+                <div className="flex items-center justify-center rounded-md border border-highlight bg-white px-5 py-2">
                   <WarningCircle height={24} width={24} weight="fill" className="text-red" />
-                  <p className="ml-2 text-sm text-gray-80 dark:text-cool-gray-30">
-                    {textContent.form.errorMessage}
-                  </p>
+                  <p className="ml-2 text-sm text-gray-80">{textContent.form.errorMessage}</p>
                 </div>
               )}
             </form>

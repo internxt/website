@@ -228,11 +228,6 @@ module.exports = {
         permanent: false,
       },
       {
-        source: '/black-friday',
-        destination: '/deals/black-friday-internxt',
-        permanent: false,
-      },
-      {
         source: '/black-friday-internxt',
         destination: '/deals/black-friday-internxt',
         permanent: false,

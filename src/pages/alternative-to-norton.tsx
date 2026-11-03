@@ -12,7 +12,6 @@ const nortonComparison = (props: any) => (
     segmentName="Norton Comparison"
     logo="/images/comparison/norton-Letters.webp"
     couponCodeName={PromoCodeName.NORTON85}
-    darkMode={props.darkMode}
   />
 );
 

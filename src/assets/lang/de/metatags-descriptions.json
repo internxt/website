@@ -115,6 +115,16 @@
     "description": "Black Friday Internxt 2026 - 87 % Rabatt auf Cloud-Speicher, Antivirus, Cleaner, VPN, Meet und Mail."
   },
   {
+    "id": "black-month",
+    "title": "Internxt – Black Month Angebot 2026",
+    "description": "Black Month Internxt 2026 - 87 % Rabatt auf Cloud-Speicher, Antivirus, Cleaner, VPN, Meet und Mail."
+  },
+  {
+    "id": "cyber-week",
+    "title": "Internxt – Cyber Week Angebot 2026",
+    "description": "Cyber Week Internxt 2026 - 90 % Rabatt auf Cloud-Speicher, Antivirus, Cleaner, VPN, Meet und Mail."
+  },
+  {
     "id": "black-friday-cloud-storage",
     "title": "Internxt Black Friday Cloud-Speicher-Angebot",
     "description": "Sparen Sie groß mit den Black Friday Cloud-Speicher-Angeboten von Internxt! Drive, VPN, Meet, Mail, Photos und vieles mehr!"
@@ -567,7 +577,7 @@
     "description": "Werden Sie Wiederverkäufer für Internxt S3 Objektspeicher für Unternehmen. Heißer Cloud-Speicher und günstiger als AWS, Azure und Google Cloud."
   },
   {
-    "id": "thankyou",
+    "id": "notification",
     "title": "Warteliste für Sonderangebot — Internxt",
     "description": "Abonnieren Sie Internxt und erhalten Sie Ihren exklusiven Rabatt auf privaten, verschlüsselten Cloud-Speicher, dem Sie vertrauen können."
   },

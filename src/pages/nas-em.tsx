@@ -9,7 +9,6 @@ const NASEmPage = (props: NasTemplateProps) => (
     couponCodeForLifetime={PromoCodeName.seolp}
     hidePriceTable
     robots="noindex,follow"
-    darkMode={props.darkMode}
   />
 );
 

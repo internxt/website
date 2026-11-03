@@ -16,7 +16,7 @@ interface TextAndImageColumnSectionProps {
 export const TextAndImageColumnSection = ({
   TextComponent,
   imageProperties,
-  background = 'dark:bg-gray-95',
+  background,
 }: TextAndImageColumnSectionProps): JSX.Element => {
   const { src, alt, width, height, className } = imageProperties;
 

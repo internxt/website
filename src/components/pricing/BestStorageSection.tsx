@@ -5,10 +5,7 @@ interface BestStorageSectionProps {
   hideTitleAndDescription?: boolean;
 }
 
-const BestStorageSection = ({
-  textContent,
-  hideTitleAndDescription,
-}: BestStorageSectionProps): JSX.Element => {
+const BestStorageSection = ({ textContent, hideTitleAndDescription }: BestStorageSectionProps): JSX.Element => {
   const features = [
     {
       icon: Database,
@@ -45,7 +42,7 @@ const BestStorageSection = ({
           {features.map((feature, index) => (
             <div className="flex w-full max-w-[120px] flex-col items-center space-y-3 pt-16 text-center" key={index}>
               <feature.icon size={40} className="text-primary" />
-              <p className="text-xl font-medium text-gray-100 dark:text-white-95">{feature.title}</p>
+              <p className="text-xl font-medium text-gray-100">{feature.title}</p>
             </div>
           ))}
         </div>

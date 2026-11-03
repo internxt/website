@@ -12,15 +12,12 @@ import { notificationService } from '@/components/Snackbar';
 import { FooterText } from '@/assets/types/layout/types';
 import { getImage } from '@/lib/getImage';
 import { Breadcrumb, BreadcrumbItem } from '@/components/shared/Breadcrumb';
-import { DARK_MODE_LOGO_FILTER } from '@/theme.config';
-
-const SOCIAL_ICON_DARK_FILTER = 'dark:[filter:brightness(0)_invert(0.78)]';
 
 export default function Footer({
   textContent,
   lang,
   hideNewsletter,
-  darkMode = false,
+  darkMode,
   breadcrumbItems,
 }: Readonly<{
   textContent: FooterText;
@@ -72,14 +69,16 @@ export default function Footer({
       });
   };
 
-  const mobileResourcesHeaderClass = `${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`;
-  const mobileResourcesPanelDarkClass = darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60 dark:bg-gray-71 dark:text-green-120';
+  const mobileResourcesHeaderClass = `${
+    darkMode ? 'text-gray-1' : 'text-gray-100'
+  } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`;
+  const mobileResourcesPanelDarkClass = darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60';
   const antivirusExpandClass = isAntivirusAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0';
 
   return (
     <section
       id="footer"
-      className={`flex w-full flex-col overflow-hidden  ${darkMode ? 'bg-gray-95 text-white' : 'dark:bg-gray-95 dark:text-white'}`}
+      className={`flex w-full flex-col overflow-hidden  ${darkMode ? 'bg-[#1C1C1C] text-white' : ''}`}
     >
       {lang === 'es' && (
         <div className="flex w-full flex-col items-center justify-center pt-10 sm:py-12 lg:px-10 lg:pt-16 xl:px-32 3xl:px-80">
@@ -91,12 +90,15 @@ export default function Footer({
           />
         </div>
       )}
-      <div className={`flex w-full flex-col items-center justify-center pt-10 sm:py-12 lg:px-10 lg:pt-10 xl:px-32 3xl:px-56 ${darkMode ? '' : 'bg-[linear-gradient(180deg,#FFFFFF_0%,#E5EFFF_100%)] dark:bg-none'}`}>
-        <div className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10 dark:bg-cool-gray-90'} h-[1px] lg:mb-10`} />
+      <div
+        className="flex w-full flex-col items-center justify-center pt-10 sm:py-12 lg:px-10 lg:pt-10 xl:px-32 3xl:px-56"
+        style={{ background: darkMode ? '' : 'linear-gradient(180deg, #FFFFFF 0%, #E5EFFF 100%)' }}
+      >
+        <div className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'} h-[1px] lg:mb-10`} />
         {breadcrumbItems && breadcrumbItems.length > 0 && (
           <Breadcrumb
             items={breadcrumbItems}
-            className={`flex w-full py-3 pb-10 text-xs  ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}
+            className={`flex w-full py-3 pb-10 text-xs  ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
           />
         )}
 
@@ -105,7 +107,7 @@ export default function Footer({
             <div className="flex flex-1 flex-col items-start justify-between gap-9">
               <div className="flex flex-col gap-2">
                 <p className="text-lg font-medium">{textContent.DownloadApp.title}</p>
-                <p className={`max-w-[380px] text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}>
+                <p className={`max-w-[380px] text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
                   {textContent.DownloadApp.description}
                 </p>
               </div>
@@ -158,7 +160,7 @@ export default function Footer({
             <div className="flex w-full flex-col gap-3 lg:w-1/3 2xl:w-1/3">
               <div className="flex flex-col gap-1">
                 <p className="text-lg font-medium">{textContent.NewsletterSection.title}</p>
-                <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`}>
+                <p className={`text-sm ${darkMode ? 'text-cool-gray-30' : 'text-gray-80'}`}>
                   {textContent.NewsletterSection.description}
                 </p>
               </div>
@@ -178,7 +180,11 @@ export default function Footer({
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={textContent.NewsletterSection.input}
                   className={`flex-1 rounded-lg border px-4 py-2.5 text-base outline-none transition-all
-            ${darkMode ? 'border-cool-gray-70 bg-cool-gray-90 focus:border-primary' : 'border-cool-gray-20 bg-white focus:border-blue-50 dark:border-cool-gray-70 dark:bg-cool-gray-90 dark:focus:border-primary'} focus:ring focus:ring-primary focus:ring-opacity-20`}
+            ${
+              darkMode
+                ? 'border-cool-gray-70 bg-cool-gray-90 focus:border-primary'
+                : 'border-cool-gray-20 bg-white focus:border-blue-50'
+            } focus:ring focus:ring-primary focus:ring-opacity-20`}
                   required
                 />
                 <button
@@ -201,17 +207,19 @@ export default function Footer({
           )}
         </div>
 
-        <div className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10 dark:bg-cool-gray-90'} h-[1px] lg:my-10`} />
+        <div className={`w-full bg-green-120 ${darkMode ? 'bg-cool-gray-90' : 'bg-cool-gray-10'} h-[1px] lg:my-10`} />
 
         <footer className="flex w-full items-center justify-center">
           <div className="hidden w-full flex-col items-center justify-center md:space-y-16 lg:flex">
             <div className="flex w-full flex-row justify-between md:justify-between">
               <div className="flex max-w-[30%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.products.title}
                   </p>
-                  <div className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
+                  <div
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
+                  >
                     <Link href="/drive" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.drive}
                     </Link>
@@ -243,19 +251,32 @@ export default function Footer({
 
                     <Link href="/mail" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.mail}
-                      <span className={`ml-2  h-max items-center justify-center rounded-2 ${darkMode ? 'bg-primary/10' : 'bg-primary dark:bg-primary/10'} bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}>
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-2 ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
+                      >
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
 
                     <Link href="/photos" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.photos}
-                      <span className={`ml-2  h-max items-center justify-center rounded-2 ${darkMode ? 'bg-primary/10' : 'bg-primary dark:bg-primary/10'} bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}>
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-2 ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-1 py-0.5 text-10 font-semibold text-primary`}
+                      >
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
 
-                    <Link href="/cloud-object-storage" locale={lang} passHref className="flex flex-row items-center hover:text-primary">
+                    <Link
+                      href="/cloud-object-storage"
+                      locale={lang}
+                      passHref
+                      className="flex flex-row items-center hover:text-primary"
+                    >
                       <div className="flex flex-row">{textContent.FooterSection.sections.products.objStorage}</div>
                     </Link>
 
@@ -266,12 +287,14 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className={`flex max-w-[14%] flex-1 flex-col items-center ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:flex-none`}>
+              <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.company.title}
                   </p>
-                  <div className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
+                  <div
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
+                  >
                     <Link href="/about" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.company.about}
                     </Link>
@@ -281,7 +304,9 @@ export default function Footer({
                     </Link>
 
                     <a
-                      href={`https://blog.internxt.com/${lang === 'es' ? 'es/como-internxt-protege-tus-datos/' : 'how-internxt-protects-your-data/'}`}
+                      href={`https://blog.internxt.com/${
+                        lang === 'es' ? 'es/como-internxt-protege-tus-datos/' : 'how-internxt-protects-your-data/'
+                      }`}
                       target="_blank"
                       rel="noreferrer"
                       className="hover:text-primary"
@@ -289,7 +314,12 @@ export default function Footer({
                       {textContent.FooterSection.sections.company.security}
                     </a>
 
-                    <Link href="/open-source" locale={lang} passHref className="flex max-w-[200px] flex-row items-center hover:text-primary">
+                    <Link
+                      href="/open-source"
+                      locale={lang}
+                      passHref
+                      className="flex max-w-[200px] flex-row items-center hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.company.openSource}
                     </Link>
 
@@ -297,19 +327,26 @@ export default function Footer({
                       {textContent.FooterSection.sections.company.legal}
                     </Link>
 
-                    <Link href="/green-cloud-computing" locale={lang} passHref className="flex max-w-[200px] flex-row items-center hover:text-primary">
+                    <Link
+                      href="/green-cloud-computing"
+                      locale={lang}
+                      passHref
+                      className="flex max-w-[200px] flex-row items-center hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.company.sustainability}
                     </Link>
                   </div>
                 </div>
               </div>
 
-              <div className={`flex max-w-[14%] flex-1 flex-col items-center ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:flex-none`}>
+              <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.join.title}
                   </p>
-                  <div className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
+                  <div
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
+                  >
                     <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.signup}
                     </a>
@@ -349,12 +386,14 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className={`flex max-w-[34%] flex-1 flex-col items-center ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:flex-none`}>
+              <div className="flex max-w-[34%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'}`}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'}`}>
                     {textContent.FooterSection.sections.resources.title}
                   </p>
-                  <div className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
+                  <div
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
+                  >
                     <a
                       href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
                       target="_blank"
@@ -363,7 +402,12 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.blog}
                     </a>
-                    <Link href="/cloud-storage-comparison" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                    <Link
+                      href="/cloud-storage-comparison"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.resources.comparison}
                     </Link>
 
@@ -380,55 +424,137 @@ export default function Footer({
                     </button>
 
                     <div
-                      className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${isAlternativesOpen ? 'max-h-[500px] opacity-100' : 'invisible max-h-0 opacity-0'}`}
+                      className={`flex flex-col gap-1 overflow-hidden transition-all duration-300 ease-in-out ${
+                        isAlternativesOpen ? 'max-h-[500px] opacity-100' : 'invisible max-h-0 opacity-0'
+                      }`}
                       style={!isAlternativesOpen ? { display: 'none' } : {}}
                     >
-                      <Link href="/pcloud-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/pcloud-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.pCloudAlternative}
                       </Link>
-                      <Link href="/dropbox-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/dropbox-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.dropboxAlternative}
                       </Link>
-                      <Link href="/mega-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/mega-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.megaAlternative}
                       </Link>
-                      <Link href="/koofr-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/koofr-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.koofrAlternative}
                       </Link>
-                      <Link href="/icedrive-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/icedrive-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.icedriveAlternative}
                       </Link>
-                      <Link href="/onedrive-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/onedrive-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.onedriveAlternative}
                       </Link>
-                      <Link href="/google-drive-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/google-drive-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.googleDriveAlternative}
                       </Link>
-                      <Link href="/drime-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/drime-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.drimeAlternative}
                       </Link>
-                      <Link href="/degoo-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/degoo-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.degooAlternative}
                       </Link>
-                      <Link href="/filejump-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/filejump-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.fileJumpAlternative}
                       </Link>
-                      <Link href="/elephantdrive-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/elephantdrive-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.elephantDriveAlternative}
                       </Link>
-                      <Link href="/sync-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/sync-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.syncAlternative}
                       </Link>
-                      <Link href="/filen-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/filen-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.filenAlternatice}
                       </Link>
-                      <Link href="/idrive-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/idrive-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.iDriveAlternative}
                       </Link>
-                      <Link href="/terabox-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/terabox-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.teraboxAlternative}
                       </Link>
-                      <Link href="/proton-alternative" locale={lang} passHref className="w-full max-w-[160px] pl-3 hover:text-primary">
+                      <Link
+                        href="/proton-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] pl-3 hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.protonAlternative}
                       </Link>
                     </div>
@@ -488,7 +614,12 @@ export default function Footer({
                       {textContent.FooterSection.sections.resources.cleanerAlternatives}
                     </Link>
 
-                    <Link href="/what-does-google-know-about-me" locale={lang} passHref className="items-center hover:text-primary">
+                    <Link
+                      href="/what-does-google-know-about-me"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
                     </Link>
                     <Link href="/webdav-rclone" locale={lang} passHref className="items-center hover:text-primary">
@@ -515,12 +646,14 @@ export default function Footer({
                   </div>
                 </div>
               </div>
-              <div className={`flex max-w-[18%] flex-1 flex-col items-center ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:flex-none`}>
+              <div className="flex max-w-[18%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.tools.title}
                   </p>
-                  <div className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
+                  <div
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
+                  >
                     <Link href="/byte-converter" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.tools.byteConverter}
                     </Link>
@@ -550,34 +683,66 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className={`flex max-w-[14%] flex-1 flex-col items-center ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} lg:flex-none`}>
+              <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} `}>
+                  <p className={`text-xs font-semibold ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.features.title}
                   </p>
-                  <div className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
-                    <Link href="/private-cloud-storage-solutions" locale={lang} passHref className=" items-center hover:text-primary">
+                  <div
+                    className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
+                  >
+                    <Link
+                      href="/private-cloud-storage-solutions"
+                      locale={lang}
+                      passHref
+                      className=" items-center hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.features.privateCloud}
                     </Link>
-                    <Link href="/cloud-storage-backup-solutions" locale={lang} passHref className="items-center hover:text-primary">
+                    <Link
+                      href="/cloud-storage-backup-solutions"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.features.cloudBakcup}
                     </Link>
                     <Link href="/gdpr-cloud-storage" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.features.GDPRCloud}
                     </Link>
-                    <Link href="/cloud-storage-for-videos" locale={lang} passHref className="items-center hover:text-primary">
+                    <Link
+                      href="/cloud-storage-for-videos"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.features.cloudVideo}
                     </Link>
-                    <Link href="/cloud-storage-for-documents" locale={lang} passHref className="items-center hover:text-primary">
+                    <Link
+                      href="/cloud-storage-for-documents"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.features.cloudDocuments}
                     </Link>
                     <Link href="/lifetime" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.features.lifetime}
                     </Link>
-                    <Link href="/drive/free-cloud-storage" locale={lang} passHref className="items-center hover:text-primary">
+                    <Link
+                      href="/drive/free-cloud-storage"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.features.freeCloudStorage}
                     </Link>
-                    <Link href="/secure-file-transfer" locale={lang} passHref className="items-center hover:text-primary">
+                    <Link
+                      href="/secure-file-transfer"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
                       {textContent.FooterSection.sections.features.fileTransfer}
                     </Link>
                   </div>
@@ -605,7 +770,6 @@ export default function Footer({
                   alt="Eturia logo"
                   width={60}
                   height={60}
-                  className={DARK_MODE_LOGO_FILTER}
                   style={{
                     maxWidth: '100%',
                     height: 'auto',
@@ -617,14 +781,17 @@ export default function Footer({
                     alt="GDPR Internxt"
                     width={146}
                     height={48}
-                    className={DARK_MODE_LOGO_FILTER}
                     style={{
                       maxWidth: '100%',
                       height: 'auto',
                     }}
                   />
                 ) : (
-                  <a href="https://blog.internxt.com/es/internxt-mail-e-internxt-meet-servicio-de-comunicacion-segura-mediante-encriptacion-postcuantica/" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://blog.internxt.com/es/internxt-mail-e-internxt-meet-servicio-de-comunicacion-segura-mediante-encriptacion-postcuantica/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       src={getImage('/images/footer/Screenshot 2026-10-22 at 12.50.57.png')}
                       alt="CDTI - Gobierno de España, Ministerio de Ciencia, Innovación y Universidades"
@@ -645,7 +812,6 @@ export default function Footer({
                     width={110}
                     height={12}
                     loading="lazy"
-                    className={darkMode ? '' : 'dark:brightness-0 dark:invert'}
                     src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
                     alt="Internxt logo"
                     style={{
@@ -654,7 +820,7 @@ export default function Footer({
                     }}
                   />
                 </Link>
-                <p className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
+                <p className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
                   {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
                 </p>
               </div>
@@ -693,7 +859,6 @@ export default function Footer({
                     width={16}
                     height={16}
                     loading="lazy"
-                    className={darkMode ? '' : SOCIAL_ICON_DARK_FILTER}
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`)}
                     draggable="false"
                     alt="linkedin icon"
@@ -703,12 +868,15 @@ export default function Footer({
                     }}
                   />
                 </Link>
-                <Link href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured" target="_blank" rel="noreferrer">
+                <Link
+                  href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image
                     loading="lazy"
                     width={16}
                     height={16}
-                    className={darkMode ? '' : SOCIAL_ICON_DARK_FILTER}
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`)}
                     draggable="false"
                     alt="youtube icon"
@@ -723,7 +891,6 @@ export default function Footer({
                     loading="lazy"
                     width={16}
                     height={16}
-                    className={darkMode ? '' : SOCIAL_ICON_DARK_FILTER}
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`)}
                     draggable="false"
                     alt="instagram icon"
@@ -738,14 +905,22 @@ export default function Footer({
           </div>
 
           {/* Mobile version */}
-          <div className={`${darkMode ? 'bg-gray-95 text-white' : 'bg-gray-5 bg-opacity-50 dark:bg-gray-95 dark:text-white dark:bg-opacity-100'} flex flex-col overflow-hidden lg:hidden`}>
+          <div
+            className={`${
+              darkMode ? 'bg-[#1C1C1C] text-white' : 'bg-gray-5 bg-opacity-50'
+            } flex flex-col overflow-hidden lg:hidden`}
+          >
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className={`${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}>
+                  <Disclosure.Button
+                    className={`${
+                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                    } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.products.title}</span>
-                    <CaretDown className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
-                    <CaretUp className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
+                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                   </Disclosure.Button>
                   <Transition
                     enter="transition duration-200 ease-out"
@@ -754,7 +929,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col px-6 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'} ${!open ? 'hidden' : 'flex'} ${darkMode ? 'bg-gray-71 text-green-120' : 'bg-gray-1 text-gray-60 dark:bg-gray-71 dark:text-green-120'} space-y-8 p-4`}
+                      className={`flex flex-col px-6 font-semibold text-gray-100 ${!open ? 'hidden' : 'flex'} ${
+                        darkMode ? 'bg-gray-71 text-green-120' : 'bg-gray-1 text-gray-60'
+                      } space-y-8 p-4`}
                     >
                       <Link href="/drive" locale={lang} passHref legacyBehavior>
                         <div className="flex flex-row space-x-2">
@@ -762,7 +939,12 @@ export default function Footer({
                         </div>
                       </Link>
 
-                      <Link href="/antivirus" locale={lang} passHref className="flex flex-row items-center hover:text-primary">
+                      <Link
+                        href="/antivirus"
+                        locale={lang}
+                        passHref
+                        className="flex flex-row items-center hover:text-primary"
+                      >
                         <div className="flex flex-row">{textContent.FooterSection.sections.products.antivirus}</div>
                       </Link>
                       <a
@@ -793,7 +975,12 @@ export default function Footer({
                         {textContent.FooterSection.sections.products.photos}
                       </Link>
 
-                      <Link href="/cloud-object-storage" locale={lang} passHref className="flex flex-row items-center hover:text-primary">
+                      <Link
+                        href="/cloud-object-storage"
+                        locale={lang}
+                        passHref
+                        className="flex flex-row items-center hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.products.objStorage}
                       </Link>
 
@@ -808,10 +995,14 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className={`${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}>
+                  <Disclosure.Button
+                    className={`${
+                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                    } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.company.title}</span>
-                    <CaretDown className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
-                    <CaretUp className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
+                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                   </Disclosure.Button>
                   <Transition
                     enter="transition duration-200 ease-out"
@@ -820,7 +1011,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1 dark:bg-gray-105'} px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60 dark:bg-gray-71 dark:text-green-120'} space-y-8 p-4`}
+                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
+                      } space-y-8 p-4`}
                     >
                       <Link href="/about" locale={lang} passHref>
                         {textContent.FooterSection.sections.company.about}
@@ -831,7 +1024,9 @@ export default function Footer({
                       </Link>
 
                       <Link
-                        href={`https://blog.internxt.com/${lang === 'es' ? 'es/como-internxt-protege-tus-datos/' : 'how-internxt-protects-your-data/'}`}
+                        href={`https://blog.internxt.com/${
+                          lang === 'es' ? 'es/como-internxt-protege-tus-datos/' : 'how-internxt-protects-your-data/'
+                        }`}
                         target="_blank"
                         rel="noreferrer"
                         className="flex flex-row items-center"
@@ -840,7 +1035,12 @@ export default function Footer({
                         <div>{textContent.FooterSection.sections.company.security}</div>
                       </Link>
 
-                      <Link href="/open-source" locale={lang} passHref className="flex max-w-[200px] flex-row items-center hover:text-primary">
+                      <Link
+                        href="/open-source"
+                        locale={lang}
+                        passHref
+                        className="flex max-w-[200px] flex-row items-center hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.company.openSource}
                       </Link>
 
@@ -855,10 +1055,14 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className={`${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}>
+                  <Disclosure.Button
+                    className={`${
+                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                    } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.join.title}</span>
-                    <CaretDown className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
-                    <CaretUp className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
+                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                   </Disclosure.Button>
                   <Transition
                     enter="transition duration-200 ease-out"
@@ -867,7 +1071,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1 dark:bg-gray-105'} px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60 dark:bg-gray-71 dark:text-green-120'} space-y-8 p-4`}
+                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
+                      } space-y-8 p-4`}
                     >
                       <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.signup}
@@ -914,8 +1120,8 @@ export default function Footer({
                 <>
                   <Disclosure.Button className={mobileResourcesHeaderClass}>
                     <span className="flex flex-row">{textContent.FooterSection.sections.resources.title}</span>
-                    <CaretDown className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
-                    <CaretUp className={`${open ? 'flex' : 'hidden'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
+                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${open ? 'flex' : 'hidden'} text-gray-80`} weight="bold" />
                   </Disclosure.Button>
                   <Transition
                     enter="transition duration-200 ease-out"
@@ -924,7 +1130,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1 dark:bg-gray-105'} px-6 font-semibold ${open ? 'flex' : 'hidden'} ${mobileResourcesPanelDarkClass} space-y-8 p-4`}
+                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${
+                        open ? 'flex' : 'hidden'
+                      } ${mobileResourcesPanelDarkClass} space-y-8 p-4`}
                     >
                       <a
                         href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
@@ -934,7 +1142,12 @@ export default function Footer({
                       >
                         {textContent.FooterSection.sections.resources.blog}
                       </a>
-                      <Link href="/cloud-storage-comparison" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                      <Link
+                        href="/cloud-storage-comparison"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.comparison}
                       </Link>
 
@@ -951,54 +1164,138 @@ export default function Footer({
                           )}
                         </button>
 
-                        <div className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${isAlternativesOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${
+                            isAlternativesOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                          }`}
+                        >
                           <div className="flex flex-col space-y-8 pl-4">
-                            <Link href="/pcloud-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/pcloud-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.pCloudAlternative}
                             </Link>
-                            <Link href="/dropbox-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/dropbox-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.dropboxAlternative}
                             </Link>
-                            <Link href="/mega-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/mega-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.megaAlternative}
                             </Link>
-                            <Link href="/google-drive-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/google-drive-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.googleDriveAlternative}
                             </Link>
-                            <Link href="/koofr-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/koofr-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.koofrAlternative}
                             </Link>
-                            <Link href="/icedrive-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/icedrive-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.icedriveAlternative}
                             </Link>
-                            <Link href="/onedrive-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/onedrive-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.onedriveAlternative}
                             </Link>
-                            <Link href="/drime-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/drime-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.drimeAlternative}
                             </Link>
-                            <Link href="/degoo-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/degoo-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.degooAlternative}
                             </Link>
-                            <Link href="/filejump-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/filejump-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.fileJumpAlternative}
                             </Link>
-                            <Link href="/elephantdrive-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/elephantdrive-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.elephantDriveAlternative}
                             </Link>
-                            <Link href="/sync-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/sync-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.elephantDriveAlternative}
                             </Link>
-                            <Link href="/filen-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/filen-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.elephantDriveAlternative}
                             </Link>
-                            <Link href="/idrive-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/idrive-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.elephantDriveAlternative}
                             </Link>
-                            <Link href="/terabox-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/terabox-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.elephantDriveAlternative}
                             </Link>
-                            <Link href="/proton-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/proton-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.elephantDriveAlternative}
                             </Link>
                           </div>
@@ -1018,18 +1315,42 @@ export default function Footer({
                           )}
                         </button>
 
-                        <div className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${isVideocallsOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${
+                            isVideocallsOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                          }`}
+                        >
                           <div className="flex flex-col space-y-8 pl-4">
-                            <Link href="/alternative-to-google-meet" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-google-meet"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.googleMeet}
                             </Link>
-                            <Link href="/alternative-to-zoom" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-zoom"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.zoom}
                             </Link>
-                            <Link href="/alternative-to-wire" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-wire"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.wire}
                             </Link>
-                            <Link href="/alternative-to-whereby" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-whereby"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.whereby}
                             </Link>
                           </div>
@@ -1049,21 +1370,50 @@ export default function Footer({
                           )}
                         </button>
 
-                        <div className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${isAiAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${
+                            isAiAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                          }`}
+                        >
                           <div className="flex flex-col space-y-8 pl-4">
-                            <Link href="/alternative-to-gemini" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-gemini"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.geminiAlternative}
                             </Link>
-                            <Link href="/alternative-to-grok" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-grok"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.grokAlternative}
                             </Link>
-                            <Link href="/alternative-to-copilot" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-copilot"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.copilotAlternative}
                             </Link>
-                            <Link href="/alternative-to-chatgpt" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-chatgpt"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.chatGPTAlternative}
                             </Link>
-                            <Link href="/alternative-to-deepseek" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-deepseek"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.deepSeekAlternative}
                             </Link>
                           </div>
@@ -1083,21 +1433,50 @@ export default function Footer({
                           )}
                         </button>
 
-                        <div className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${isS3AlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${
+                            isS3AlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                          }`}
+                        >
                           <div className="flex flex-col space-y-8 pl-4">
-                            <Link href="/idrive-e2-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/idrive-e2-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.idrivee2Alternative}
                             </Link>
-                            <Link href="/backblaze-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/backblaze-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.backblazeAlternative}
                             </Link>
-                            <Link href="/google-cloud-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/google-cloud-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.googleCloudAlternative}
                             </Link>
-                            <Link href="/aws-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/aws-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.awsAlternative}
                             </Link>
-                            <Link href="/azure-alternative" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/azure-alternative"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.azureAlternative}
                             </Link>
                           </div>
@@ -1117,30 +1496,72 @@ export default function Footer({
                           )}
                         </button>
 
-                        <div className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${antivirusExpandClass}`}>
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${antivirusExpandClass}`}
+                        >
                           <div className="flex flex-col space-y-8 pl-4">
-                            <Link href="/alternative-to-avast" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-avast"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.avastAlternative}
                             </Link>
-                            <Link href="/alternative-to-avg" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-avg"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.avgAlternative}
                             </Link>
-                            <Link href="/alternative-to-avira" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-avira"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.aviraAlternative}
                             </Link>
-                            <Link href="/alternative-to-bitdefender" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-bitdefender"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.bitdefenderAlternative}
                             </Link>
-                            <Link href="/alternative-to-malwarebytes" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-malwarebytes"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.malwarebytesAlternative}
                             </Link>
-                            <Link href="/alternative-to-mcafee" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-mcafee"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.mcafeeAlternative}
                             </Link>
-                            <Link href="/alternative-to-norton" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-norton"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.nortonAlternative}
                             </Link>
-                            <Link href="/alternative-to-totalav" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-totalav"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.totalavAlternative}
                             </Link>
                           </div>
@@ -1160,18 +1581,37 @@ export default function Footer({
                           )}
                         </button>
 
-                        <div className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${isCleanerAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div
+                          className={`flex flex-col overflow-hidden transition-all duration-300 ease-in-out ${
+                            isCleanerAlternativeOpen ? 'mt-8 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                          }`}
+                        >
                           <div className="flex flex-col space-y-8 pl-4">
-                            <Link href="/alternative-to-ccleaner" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-ccleaner"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.ccleanerAlternative}
                             </Link>
-                            <Link href="/alternative-to-clean-my-mac" locale={lang} passHref className="w-full max-w-[160px] hover:text-primary">
+                            <Link
+                              href="/alternative-to-clean-my-mac"
+                              locale={lang}
+                              passHref
+                              className="w-full max-w-[160px] hover:text-primary"
+                            >
                               {textContent.FooterSection.sections.resources.cleanMyMacAlternative}
                             </Link>
                           </div>
                         </div>
                       </div>
-                      <Link href="/what-does-google-know-about-me" locale={lang} passHref className="items-center hover:text-primary">
+                      <Link
+                        href="/what-does-google-know-about-me"
+                        locale={lang}
+                        passHref
+                        className="items-center hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
                       </Link>
                       <Link href="/webdav-rclone" locale={lang} passHref className="items-center hover:text-primary">
@@ -1186,7 +1626,12 @@ export default function Footer({
                       <Link href="/reviews" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.resources.reviews}
                       </Link>
-                      <Link href="/cloud-data-centers" locale={lang} passHref className="items-center hover:text-primary">
+                      <Link
+                        href="/cloud-data-centers"
+                        locale={lang}
+                        passHref
+                        className="items-center hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.certifications}
                       </Link>
                       <Link href="/deals" locale={lang} passHref className="items-center hover:text-primary">
@@ -1203,10 +1648,14 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className={`${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}>
+                  <Disclosure.Button
+                    className={`${
+                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                    } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.tools.title}</span>
-                    <CaretDown className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
-                    <CaretUp className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
+                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                   </Disclosure.Button>
                   <Transition
                     enter="transition duration-200 ease-out"
@@ -1215,7 +1664,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1 dark:bg-gray-105'} px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60 dark:bg-gray-71 dark:text-green-120'} space-y-8 p-4`}
+                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
+                      } space-y-8 p-4`}
                     >
                       <Link href="/byte-converter" locale={lang} passHref>
                         {textContent.FooterSection.sections.tools.byteConverter}
@@ -1253,10 +1704,14 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className={`${darkMode ? 'text-gray-1' : 'text-gray-100 dark:text-gray-1'} flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}>
+                  <Disclosure.Button
+                    className={`${
+                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                    } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.features.title}</span>
-                    <CaretDown className={`${open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
-                    <CaretUp className={`${!open ? 'hidden' : 'flex'} ${darkMode ? 'text-cool-gray-30' : 'text-gray-80 dark:text-cool-gray-30'}`} weight="bold" />
+                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                   </Disclosure.Button>
                   <Transition
                     enter="transition duration-200 ease-out"
@@ -1265,7 +1720,9 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col ${darkMode ? 'bg-gray-105' : 'bg-gray-1 dark:bg-gray-105'} px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60 dark:bg-gray-71 dark:text-green-120'} space-y-8 p-4`}
+                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
+                      } space-y-8 p-4`}
                     >
                       <Link href="/private-cloud-storage-solutions" locale={lang} passHref>
                         {textContent.FooterSection.sections.features.privateCloud}
@@ -1302,7 +1759,7 @@ export default function Footer({
             {/* Language selection for mobile view */}
             <LanguageMobileBox darkMode={darkMode} />
 
-            <div className={`flex flex-col items-center space-y-4 py-10 ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'}`}>
+            <div className="flex flex-col items-center space-y-4 py-10 text-gray-100">
               <div className="flex flex-row gap-5">
                 <Link href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
                   <Image
@@ -1337,7 +1794,6 @@ export default function Footer({
                     width={16}
                     height={16}
                     loading="lazy"
-                    className={darkMode ? '' : SOCIAL_ICON_DARK_FILTER}
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`)}
                     draggable="false"
                     alt="linkedin icon"
@@ -1347,12 +1803,15 @@ export default function Footer({
                     }}
                   />
                 </Link>
-                <Link href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured" target="_blank" rel="noreferrer">
+                <Link
+                  href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image
                     loading="lazy"
                     width={16}
                     height={16}
-                    className={darkMode ? '' : SOCIAL_ICON_DARK_FILTER}
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`)}
                     draggable="false"
                     alt="youtube icon"
@@ -1367,7 +1826,6 @@ export default function Footer({
                     loading="lazy"
                     width={16}
                     height={16}
-                    className={darkMode ? '' : SOCIAL_ICON_DARK_FILTER}
                     src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`)}
                     draggable="false"
                     alt="instagram icon"
@@ -1379,16 +1837,15 @@ export default function Footer({
                 </Link>
               </div>
 
-              <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
+              <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
                 {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
               </p>
 
-              <Link href="/" locale={lang} className={`flex flex-shrink-0 ${darkMode ? 'text-white-95' : 'text-gray-100 dark:text-white-95'}`}>
+              <Link href="/" locale={lang} className="flex flex-shrink-0 text-gray-100">
                 <Image
                   width={96}
                   height={10.5}
                   loading="lazy"
-                  className={darkMode ? '' : 'dark:brightness-0 dark:invert'}
                   src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
                   alt="Internxt logo"
                   style={{
@@ -1401,7 +1858,7 @@ export default function Footer({
           </div>
         </footer>
         {lang === 'es' && (
-          <p className={`text- max-w-[896px] pb-5 pt-10 text-center text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60 dark:text-cool-gray-30'}`}>
+          <p className="text- max-w-[896px] pb-5 pt-10 text-center text-xs text-cool-gray-60">
             {textContent.FooterSection.financialProject}
           </p>
         )}

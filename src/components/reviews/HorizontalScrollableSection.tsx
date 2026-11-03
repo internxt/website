@@ -4,10 +4,8 @@ import { ReviewersSelector, SwitchButtonOptions } from './ReviewersSelector';
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { DARK_MODE_LOGO_FILTER } from '@/theme.config';
 
 interface HorizontalScrollableSectionProps {
-  darkMode?: boolean;
   textContent: ReviewsTextPage['ReviewFromIndustrySection'];
 }
 
@@ -18,26 +16,18 @@ interface StarRatingProps {
 }
 
 interface ReviewCardProps {
-  darkMode?: boolean;
   review: string;
   author: string;
 }
 
 interface TechReviewCardProps {
-  darkMode?: boolean;
   title: string;
   description: string;
   author: string;
   companyLogo: string;
 }
 
-const TechReviewCard = ({
-  
-  title,
-  description,
-  author,
-  companyLogo,
-}: TechReviewCardProps): JSX.Element => {
+const TechReviewCard = ({ title, description, author, companyLogo }: TechReviewCardProps): JSX.Element => {
   const logoSizes: Record<string, { width: number; height: number }> = {
     'pcworld-logo.png': { width: 60, height: 32 },
     'techradar2@3x.png': { width: 45, height: 32 },
@@ -47,7 +37,7 @@ const TechReviewCard = ({
   const { width, height } = logoSizes[companyLogo] || { width: 30, height: 32 };
 
   return (
-    <div className="flex h-min w-[345px] flex-shrink-0 flex-col items-start justify-between gap-4 rounded-xl bg-white dark:bg-gray-95 p-6 lg:h-min lg:w-[400px] lg:gap-6 lg:rounded-16 lg:p-8">
+    <div className="flex h-min w-[345px] flex-shrink-0 flex-col items-start justify-between gap-4 rounded-xl bg-white p-6 lg:h-min lg:w-[400px] lg:gap-6 lg:rounded-16 lg:p-8">
       <div className="flex w-full flex-col gap-4 lg:gap-6">
         <div className="flex flex-row items-center justify-center gap-4">
           <Image
@@ -57,19 +47,13 @@ const TechReviewCard = ({
             width={width}
             className="object-contain"
           />
-          <h3 className="text-lg font-medium leading-tight text-gray-95 dark:text-white-95 lg:text-xl">
-            {title}
-          </h3>
+          <h3 className="text-lg font-medium leading-tight text-gray-95 lg:text-xl">{title}</h3>
         </div>
-        <div className="h-[1px] w-full bg-neutral-35 dark:bg-gray-71" />
-        <i className="text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base">
-          {description}
-        </i>
+        <div className="h-[1px] w-full bg-neutral-35" />
+        <i className="text-sm font-normal leading-tight text-gray-55 lg:text-base">{description}</i>
       </div>
       <div className="flex w-full flex-col gap-4 lg:gap-6">
-        <p className="text-sm font-semibold leading-tight text-gray-55 dark:text-green-120 lg:text-base">
-          {author}
-        </p>
+        <p className="text-sm font-semibold leading-tight text-gray-55 lg:text-base">{author}</p>
       </div>
     </div>
   );
@@ -93,7 +77,7 @@ const StarRating = ({ rating, maxStars = 5, size = 40 }: StarRatingProps): JSX.E
 
 const ReviewCard = ({ review, author }: ReviewCardProps): JSX.Element => {
   return (
-    <div className="flex h-[270px] w-[345px] flex-shrink-0 flex-col items-start justify-between gap-4 rounded-xl bg-white dark:bg-gray-95 p-6 lg:h-[380px] lg:w-[400px] lg:gap-6 lg:rounded-16 lg:p-8">
+    <div className="flex h-[270px] w-[345px] flex-shrink-0 flex-col items-start justify-between gap-4 rounded-xl bg-white p-6 lg:h-[380px] lg:w-[400px] lg:gap-6 lg:rounded-16 lg:p-8">
       <div className="flex flex-col gap-4 lg:gap-6">
         <Image
           src={getImage('/images/reviews/trustpilot-logo.webp')}
@@ -101,11 +85,9 @@ const ReviewCard = ({ review, author }: ReviewCardProps): JSX.Element => {
           height={24}
           width={94}
           quality={100}
-          className={`flex-shrink-0 ${DARK_MODE_LOGO_FILTER}`}
+          className="flex-shrink-0"
         />
-        <i className="text-sm font-normal leading-tight text-gray-55 dark:text-green-120 lg:text-base">
-          {review}
-        </i>
+        <i className="text-sm font-normal leading-tight text-gray-55 lg:text-base">{review}</i>
       </div>
       <div className="flex flex-col gap-4 lg:gap-6">
         <Image
@@ -116,19 +98,13 @@ const ReviewCard = ({ review, author }: ReviewCardProps): JSX.Element => {
           quality={100}
           className="flex-shrink-0"
         />
-        <p className="text-sm font-semibold leading-tight text-gray-55 dark:text-green-120 lg:text-base">
-          {author}
-        </p>
+        <p className="text-sm font-semibold leading-tight text-gray-55 lg:text-base">{author}</p>
       </div>
     </div>
   );
 };
 
-const HorizontalScrollableSection = ({
-  darkMode = false,
-  textContent,
-}: Readonly<HorizontalScrollableSectionProps>): JSX.Element => {
-  const hoverClass = 'hover:bg-neutral-10 dark:hover:bg-gray-105';
+const HorizontalScrollableSection = ({ textContent }: Readonly<HorizontalScrollableSectionProps>): JSX.Element => {
   const rating = 4;
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Users');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -224,22 +200,23 @@ const HorizontalScrollableSection = ({
   };
 
   return (
-    <section className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:gap-16 lg:py-20 bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0D0D0D_100%)]">
-      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 dark:bg-gray-71 lg:left-32 lg:right-32" />
+    <section
+      className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:gap-16 lg:py-20"
+      style={{ background: 'linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)' }}
+    >
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32" />
 
       <div className="flex w-full flex-col items-center gap-8 px-6 lg:gap-16 lg:px-20">
-        <h2 className="text-center text-30 font-bold leading-tight text-gray-95 dark:text-white-95 lg:text-start lg:text-3xl">
+        <h2 className="text-center text-30 font-bold leading-tight text-gray-95 lg:text-start lg:text-3xl">
           {textContent.title}
         </h2>
         <div className="flex w-full flex-col items-center gap-3 lg:gap-6">
-          <p className="text-center text-base font-medium leading-tight text-gray-95 dark:text-white-95 lg:text-start lg:text-xl">
+          <p className="text-center text-base font-medium leading-tight text-gray-95 lg:text-start lg:text-xl">
             {textContent.description}
           </p>
           <div className="flex w-full flex-col items-center gap-1">
             <StarRating rating={rating} />
-            <p className="text-sm font-normal text-gray-55 dark:text-green-120">
-              {textContent.underStars}
-            </p>
+            <p className="text-sm font-normal text-gray-55">{textContent.underStars}</p>
           </div>
         </div>
         <div className="flex w-full justify-center ">
@@ -277,7 +254,7 @@ const HorizontalScrollableSection = ({
             {activeSwitchPlan === 'Users'
               ? userReviews.reviews.map((review, index) => (
                   <div key={`user-review-${index}`} className="review-card">
-                    <ReviewCard review={review} author={userReviews.authors[index]} darkMode={darkMode} />
+                    <ReviewCard review={review} author={userReviews.authors[index]} />
                   </div>
                 ))
               : techReviews?.titles.map((title, index) => (
@@ -287,7 +264,6 @@ const HorizontalScrollableSection = ({
                       description={techReviews.description[index]}
                       author={processAuthor(techReviews.authors[index], index)}
                       companyLogo={companyLogos[index]}
-                      darkMode={darkMode}
                     />
                   </div>
                 ))}
@@ -300,14 +276,18 @@ const HorizontalScrollableSection = ({
               <button
                 onClick={scrollLeft}
                 disabled={currentIndex === 0}
-                className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white dark:bg-gray-95 transition-opacity ${currentIndex === 0 ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
+                className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white transition-opacity ${
+                  currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-neutral-10'
+                }`}
               >
                 <CaretLeft className="h-[24px] w-[24px] text-primary" />
               </button>
               <button
                 onClick={scrollRight}
                 disabled={currentIndex >= maxIndex}
-                className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white dark:bg-gray-95 transition-opacity ${currentIndex >= maxIndex ? 'cursor-not-allowed opacity-50' : `cursor-pointer ${hoverClass}`}`}
+                className={`flex h-[48px] w-[48px] items-center justify-center rounded-full border border-primary bg-white transition-opacity ${
+                  currentIndex >= maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-neutral-10'
+                }`}
               >
                 <CaretRight className="h-[24px] w-[24px] text-primary" />
               </button>

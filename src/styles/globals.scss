@@ -2,6 +2,365 @@
 @tailwind components;
 @tailwind utilities;
 
+@mixin light-theme {
+  --color-primary: 0 102 255;
+  --color-primary-dark: 0 88 219;
+  --text-black: 0 0 0;
+  --text-gray-55: 115 115 115;
+  --text-gray-60: 99 99 103;
+  --text-gray-70: 72 72 75;
+  --text-gray-80: 58 58 59;
+  --text-gray-95: 28 28 28;
+  --text-gray-100: 24 24 27;
+  --text-gray-105: 13 13 13;
+  --text-cool-gray-50: 135 141 150;
+  --text-cool-gray-60: 105 112 119;
+  --text-cool-gray-80: 52 58 63;
+  --text-cool-gray-90: 33 39 42;
+  --text-cool-gray-100: 18 22 25;
+  --text-neutral-700: 37 56 88;
+  --text-neutral-900: 9 30 66;
+  --bg-white: 255 255 255;
+  --bg-white-95: 250 250 250;
+  --bg-gray-1: 249 249 252;
+  --bg-gray-5: 243 243 248;
+  --bg-gray-10: 229 229 235;
+  --bg-gray-20: 209 209 215;
+  --bg-cool-gray-5: 249 250 252;
+  --bg-cool-gray-10: 242 244 248;
+  --bg-neutral-10: 250 251 252;
+  --bg-neutral-15: 249 249 252;
+  --bg-neutral-16: 247 250 255;
+  --bg-neutral-17: 244 248 255;
+  --bg-neutral-20: 244 245 247;
+  --bg-neutral-25: 236 236 236;
+  --bg-neutral-35: 236 236 236;
+  --bg-neutral-37: 229 239 255;
+  --bg-neutral-250: 102 163 255;
+  --bg-blue-10: 204 224 255;
+  --bg-blue-20: 208 226 255;
+  --bg-green-120: 236 236 236;
+  --bg-red-old-10: 255 241 241;
+  --bg-white-summer: rgba(239, 239, 239, 0.6);
+  --bg-red-old-15: rgb(255, 230, 229);
+  --bg-red-old-25: rgb(255, 206, 204);
+  --bg-green-100: rgb(214, 243, 221);
+  --bg-green-110: rgb(234, 249, 238);
+  --border-gray-5: 243 243 248;
+  --border-gray-10: 229 229 235;
+  --border-gray-20: 209 209 215;
+  --border-gray-30: 199 199 205;
+  --border-gray-40: 174 174 179;
+  --border-cool-gray-10: 242 244 248;
+  --border-cool-gray-20: 221 225 230;
+  --border-cool-gray-30: 193 199 205;
+  --border-neutral-20: 244 245 247;
+  --border-neutral-25: 236 236 236;
+  --border-neutral-35: 236 236 236;
+  --border-green-120: 236 236 236;
+  --border-blue-20: 208 226 255;
+  --border-highlight: rgba(17, 17, 17, 0.1);
+  --ring-gray-10: 229 229 235;
+  --ring-neutral-25: 236 236 236;
+  --ring-green-120: 236 236 236;
+  --ring-blue-20: 208 226 255;
+  --outline-neutral-25: 236 236 236;
+  --placeholder-gray-30: 199 199 205;
+}
+
+@mixin dark-theme {
+  --color-primary: 20 114 255;
+  --color-primary-dark: 0 96 240;
+  --text-black: 250 250 250;
+  --text-gray-55: 236 236 236;
+  --text-gray-60: 236 236 236;
+  --text-gray-70: 193 199 205;
+  --text-gray-80: 193 199 205;
+  --text-gray-95: 250 250 250;
+  --text-gray-100: 250 250 250;
+  --text-gray-105: 193 199 205;
+  --text-cool-gray-50: 193 199 205;
+  --text-cool-gray-60: 193 199 205;
+  --text-cool-gray-80: 193 199 205;
+  --text-cool-gray-90: 250 250 250;
+  --text-cool-gray-100: 250 250 250;
+  --text-neutral-700: 193 199 205;
+  --text-neutral-900: 250 250 250;
+  --bg-white: 28 28 28;
+  --bg-white-95: 13 13 13;
+  --bg-gray-1: 13 13 13;
+  --bg-gray-5: 13 13 13;
+  --bg-gray-10: 71 71 71;
+  --bg-gray-20: 71 71 71;
+  --bg-cool-gray-5: 13 13 13;
+  --bg-cool-gray-10: 58 58 59;
+  --bg-neutral-10: 13 13 13;
+  --bg-neutral-15: 13 13 13;
+  --bg-neutral-16: 13 13 13;
+  --bg-neutral-17: 13 13 13;
+  --bg-neutral-20: 13 13 13;
+  --bg-neutral-25: 71 71 71;
+  --bg-neutral-35: 71 71 71;
+  --bg-neutral-37: 8 45 102;
+  --bg-neutral-250: 16 91 204;
+  --bg-blue-10: 8 45 102;
+  --bg-blue-20: 8 45 102;
+  --bg-green-120: 33 39 42;
+  --bg-red-old-10: 13 13 13;
+  --bg-white-summer: rgb(13, 13, 13);
+  --bg-red-old-15: rgba(255, 13, 0, 0.1);
+  --bg-red-old-25: rgba(255, 13, 0, 0.15);
+  --bg-green-100: rgba(50, 195, 86, 0.15);
+  --bg-green-110: rgba(50, 195, 86, 0.1);
+  --border-gray-5: 71 71 71;
+  --border-gray-10: 71 71 71;
+  --border-gray-20: 71 71 71;
+  --border-gray-30: 71 71 71;
+  --border-gray-40: 71 71 71;
+  --border-cool-gray-10: 71 71 71;
+  --border-cool-gray-20: 71 71 71;
+  --border-cool-gray-30: 71 71 71;
+  --border-neutral-20: 71 71 71;
+  --border-neutral-25: 71 71 71;
+  --border-neutral-35: 71 71 71;
+  --border-green-120: 71 71 71;
+  --border-blue-20: 8 45 102;
+  --border-highlight: rgb(71, 71, 71);
+  --ring-gray-10: 71 71 71;
+  --ring-neutral-25: 71 71 71;
+  --ring-green-120: 71 71 71;
+  --ring-blue-20: 8 45 102;
+  --outline-neutral-25: 71 71 71;
+  --placeholder-gray-30: 142 142 148;
+}
+
+:root,
+.dark #navbar {
+  @include light-theme;
+}
+
+.dark {
+  @include dark-theme;
+
+  [style*="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"] {
+    background-image: linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%) !important;
+  }
+  [style*="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"],
+  [style*="linear-gradient(rgb(255, 255, 255) 0%, rgb(255, 206, 204) 50%, rgb(255, 255, 255) 100%)"],
+  [style*="linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 206, 204) 50%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(180deg, #1c1c1c 0%, #3a1412 50%, #1c1c1c 100%) !important;
+  }
+  [style*="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"],
+  [style*="linear-gradient(rgb(255, 255, 255) 0%, rgb(214, 243, 221) 50%, rgb(255, 255, 255) 100%)"],
+  [style*="linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(214, 243, 221) 50%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(180deg, #1c1c1c 0%, #0e2a16 50%, #1c1c1c 100%) !important;
+  }
+  [style*="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"],
+  [style*="linear-gradient(rgb(244, 248, 255) 0%, rgb(255, 255, 255) 100%)"],
+  [style*="linear-gradient(180deg, rgb(244, 248, 255) 0%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(180deg, #0d0d0d 0%, #1c1c1c 100%) !important;
+  }
+  [style*="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"],
+  [style*="linear-gradient(0deg, rgb(244, 248, 255) 0%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(0deg, #0d0d0d 0%, #1c1c1c 100%) !important;
+  }
+  [style*="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"],
+  [style*="linear-gradient(360deg, rgb(244, 248, 255) 0%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(360deg, #0d0d0d 0%, #1c1c1c 100%) !important;
+  }
+  [style*="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"],
+  [style*="linear-gradient(rgb(255, 255, 255) 0%, rgb(244, 248, 255) 100%)"],
+  [style*="linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(244, 248, 255) 100%)"] {
+    background-image: linear-gradient(180deg, #1c1c1c 0%, #0d0d0d 100%) !important;
+  }
+  [style*="linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)"],
+  [style*="linear-gradient(rgb(229, 239, 255) 0%, rgb(255, 255, 255) 100%)"],
+  [style*="linear-gradient(180deg, rgb(229, 239, 255) 0%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(180deg, #082d66 0%, #1c1c1c 100%) !important;
+  }
+  [style*="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"],
+  [style*="linear-gradient(360deg, rgb(255, 255, 255) 0%, rgb(244, 248, 255) 100%)"] {
+    background-image: linear-gradient(360deg, #1c1c1c 0%, #0d0d0d 100%) !important;
+  }
+  [style*="linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)"],
+  [style*="linear-gradient(360deg, rgb(255, 255, 255) 0%, rgb(229, 239, 255) 85.17%)"] {
+    background-image: linear-gradient(360deg, #1c1c1c 0%, #082d66 85.17%) !important;
+  }
+  [style*="linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)"],
+  [style*="linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 248, 255) 100%)"] {
+    background-image: linear-gradient(0deg, #1c1c1c 0%, #0d0d0d 100%) !important;
+  }
+  [style*="linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%)"],
+  [style*="linear-gradient(360deg, rgb(229, 239, 255) 0%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(360deg, #082d66 0%, #1c1c1c 100%) !important;
+  }
+  [style*="linear-gradient(180deg, #F4F8FF 0%, #FFCECC 50%, #FFFFFF 100%)"],
+  [style*="linear-gradient(rgb(244, 248, 255) 0%, rgb(255, 206, 204) 50%, rgb(255, 255, 255) 100%)"],
+  [style*="linear-gradient(180deg, rgb(244, 248, 255) 0%, rgb(255, 206, 204) 50%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(180deg, #0d0d0d 0%, #3a1412 50%, #1c1c1c 100%) !important;
+  }
+  [style*="linear-gradient(180deg, #F4F8FF 80%, #FFFFFF 100%)"],
+  [style*="linear-gradient(rgb(244, 248, 255) 80%, rgb(255, 255, 255) 100%)"],
+  [style*="linear-gradient(180deg, rgb(244, 248, 255) 80%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(180deg, #0d0d0d 80%, #1c1c1c 100%) !important;
+  }
+  [style*="linear-gradient(360deg, #F4F8FF 63.1%, #FFFFFF 100%)"],
+  [style*="linear-gradient(360deg, rgb(244, 248, 255) 63.1%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(360deg, #0d0d0d 63.1%, #1c1c1c 100%) !important;
+  }
+  [style*="linear-gradient(180deg, #F4F8FF 63.1%, #FFFFFF 100%)"],
+  [style*="linear-gradient(rgb(244, 248, 255) 63.1%, rgb(255, 255, 255) 100%)"],
+  [style*="linear-gradient(180deg, rgb(244, 248, 255) 63.1%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(180deg, #0d0d0d 63.1%, #1c1c1c 100%) !important;
+  }
+  [style*="linear-gradient(0deg, #F9F9FC 0%, #FFFFFF 100%)"],
+  [style*="linear-gradient(0deg, rgb(249, 249, 252) 0%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(0deg, #0d0d0d 0%, #1c1c1c 100%) !important;
+  }
+  [style*="linear-gradient(0deg, #E5EEFB 0%, #FFFFFF 100%)"],
+  [style*="linear-gradient(0deg, rgb(229, 238, 251) 0%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(0deg, #082d66 0%, #1c1c1c 100%) !important;
+  }
+  [style*="linear-gradient(0deg, #E5EFFF 0%, #FFFFFF 100%)"],
+  [style*="linear-gradient(0deg, rgb(229, 239, 255) 0%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(0deg, #082d66 0%, #1c1c1c 100%) !important;
+  }
+  [style*="linear-gradient(180deg, #FFFFFF 0%, #FFF2F8 100%)"],
+  [style*="linear-gradient(rgb(255, 255, 255) 0%, rgb(255, 242, 248) 100%)"],
+  [style*="linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 242, 248) 100%)"] {
+    background-image: linear-gradient(180deg, #1c1c1c 0%, #2a1420 100%) !important;
+  }
+  [style*="linear-gradient(360deg, #FFFFFF 0%, #FFF2F8 100%)"],
+  [style*="linear-gradient(360deg, rgb(255, 255, 255) 0%, rgb(255, 242, 248) 100%)"] {
+    background-image: linear-gradient(360deg, #1c1c1c 0%, #2a1420 100%) !important;
+  }
+  [style*="linear-gradient(180deg, #FFFFFF 0%, #E5EFFF 100%)"],
+  [style*="linear-gradient(rgb(255, 255, 255) 0%, rgb(229, 239, 255) 100%)"],
+  [style*="linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(229, 239, 255) 100%)"] {
+    background-image: linear-gradient(180deg, #1c1c1c 0%, #082d66 100%) !important;
+  }
+  [style*="linear-gradient(180deg, #F9F9FC 0%, #FFFFFF 100%)"],
+  [style*="linear-gradient(rgb(249, 249, 252) 0%, rgb(255, 255, 255) 100%)"],
+  [style*="linear-gradient(180deg, rgb(249, 249, 252) 0%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(180deg, #0d0d0d 0%, #1c1c1c 100%) !important;
+  }
+  [style*="linear-gradient(180deg, #FFF2F8 0%, #FFFFFF 100.01%)"],
+  [style*="linear-gradient(rgb(255, 242, 248) 0%, rgb(255, 255, 255) 100.01%)"],
+  [style*="linear-gradient(180deg, rgb(255, 242, 248) 0%, rgb(255, 255, 255) 100.01%)"] {
+    background-image: linear-gradient(180deg, #2a1420 0%, #1c1c1c 100.01%) !important;
+  }
+  [style*="linear-gradient(0deg, var(--Neutral-neutral-0, #FFF) 0%, var(--Brand-primary-brand-0, #F4F8FF) 100%)"],
+  [style*="linear-gradient(0deg, var(--Neutral-neutral-0, #FFF) 0%, var(--Brand-primary-brand-0, rgb(244, 248, 255)) 100%)"] {
+    background-image: linear-gradient(0deg, #1c1c1c 0%, #0d0d0d 100%) !important;
+  }
+  [style*="radial-gradient(ellipse at center, #E5EFFF 25%, #F9F9FC 100%)"],
+  [style*="radial-gradient(rgb(229, 239, 255) 25%, rgb(249, 249, 252) 100%)"],
+  [style*="radial-gradient(ellipse at center, rgb(229, 239, 255) 25%, rgb(249, 249, 252) 100%)"] {
+    background-image: radial-gradient(ellipse at center, #082d66 25%, #0d0d0d 100%) !important;
+  }
+  [style*="linear-gradient(180deg, #F4F8FF 59.26%, #FFFFFF 100%)"],
+  [style*="linear-gradient(rgb(244, 248, 255) 59.26%, rgb(255, 255, 255) 100%)"],
+  [style*="linear-gradient(180deg, rgb(244, 248, 255) 59.26%, rgb(255, 255, 255) 100%)"] {
+    background-image: linear-gradient(180deg, #0d0d0d 59.26%, #1c1c1c 100%) !important;
+  }
+  [class~="bg-white"][class~="shadow-sm"][class~="text-primary"] {
+    background-color: #ffffff;
+    color: rgb(0, 102, 255);
+  }
+  [class~="bg-white"][class~="shadow-sm"][class~="text-cool-gray-80"] {
+    background-color: #ffffff;
+    color: rgb(52, 58, 63);
+  }
+  [class~="from-[#FFFFFF]"] {
+    --tw-gradient-from: #1c1c1c var(--tw-gradient-from-position);
+  }
+  [class~="bg-[#F4F8FF]"] {
+    background-color: #1c1c1c;
+  }
+  [class~="bg-neutral-37"][class~="text-primary"],
+  [class~="bg-blue-10"][class~="text-primary"] {
+    color: rgb(114, 170, 255);
+  }
+  [class~="bg-primary/10"][class~="shadow-sm"][class~="text-primary"] {
+    background-color: #ffffff;
+    color: rgb(0, 102, 255);
+  }
+  [class~="bg-white/50"],
+  [class~="bg-white/10"] {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  [class~="hover:bg-white/50"]:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  [class~="hover:bg-white/95"]:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+  [style*="background:white"],
+  [style*="background: white"],
+  [style*="background:#FFFFFF"],
+  [style*="background: rgb(255, 255, 255)"] {
+    background-color: #1c1c1c !important;
+  }
+  [style*="background:#F4F8FF 100%"],
+  [style*="background: 100% center rgb(244, 248, 255)"] {
+    background-color: #0d0d0d !important;
+  }
+  [style*="background:#FFFFFF 100%"],
+  [style*="background: 100% center rgb(255, 255, 255)"] {
+    background-color: #1c1c1c !important;
+  }
+  [style*="color:#0A0A0A"],
+  [style*="color: rgb(10, 10, 10)"] {
+    color: #ffffff !important;
+  }
+  img[src*="/images/about/logos/"],
+  img[src*="%2Fimages%2Fabout%2Flogos%2F"],
+  img[src*="/images/datacenters-and-certifications/"],
+  img[src*="%2Fimages%2Fdatacenters-and-certifications%2F"],
+  img[src*="/icons/guarantee-dark"],
+  img[src*="%2Ficons%2Fguarantee-dark"],
+  img[src*="/icons/social/ISO-27001-logo-eturia"],
+  img[src*="%2Ficons%2Fsocial%2FISO-27001-logo-eturia"],
+  img[src*="/icons/social/gdpr-internxt"],
+  img[src*="%2Ficons%2Fsocial%2Fgdpr-internxt"],
+  img[src*="/images/partnerships/cloudwards/logo"],
+  img[src*="%2Fimages%2Fpartnerships%2Fcloudwards%2Flogo"],
+  img[src*="/images/reviews/trustpilot-logo"],
+  img[src*="%2Fimages%2Freviews%2Ftrustpilot-logo"],
+  img[src*="/images/comparison/competitors/"][src*="_Letters"],
+  img[src*="%2Fimages%2Fcomparison%2Fcompetitors%2F"][src*="_Letters"] {
+    filter: invert(1) brightness(0.55) invert(1) saturate(3);
+  }
+  img[src*="/logos/internxt/cool-gray-90"],
+  img[src*="%2Flogos%2Finternxt%2Fcool-gray-90"],
+  img[src*="/images/comparison/competitors/Internxt_Letters"],
+  img[src*="%2Fimages%2Fcomparison%2Fcompetitors%2FInternxt_Letters"] {
+    filter: brightness(0) invert(1);
+  }
+  img[src*="/images/reviews/Forbes"],
+  img[src*="%2Fimages%2Freviews%2FForbes"],
+  img[src*="/images/reviews/Deloitte"],
+  img[src*="%2Fimages%2Freviews%2FDeloitte"],
+  img[src*="/images/reviews/Techradar"],
+  img[src*="%2Fimages%2Freviews%2FTechradar"],
+  img[src*="/images/reviews/Fortune"],
+  img[src*="%2Fimages%2Freviews%2FFortune"],
+  img[src*="/images/reviews/Trustpilot."],
+  img[src*="%2Fimages%2Freviews%2FTrustpilot."] {
+    filter: brightness(0) invert(1) opacity(0.6);
+  }
+  img[src*="/icons/social/cool-gray-60/"],
+  img[src*="%2Ficons%2Fsocial%2Fcool-gray-60%2F"] {
+    filter: brightness(0) invert(0.78);
+  }
+  #navbar img {
+    filter: none;
+  }
+  [class~="pointer-events-none"][class~="h-96"][class~="bg-gray-5"] {
+    background-image: linear-gradient(to bottom, #001d6c, #121923);
+  }
+}
+
 @layer components {
   .button-primary {
     @apply flex h-12 cursor-pointer flex-row items-center justify-center rounded-lg bg-primary px-5 text-lg font-medium text-white transition-colors duration-100 ease-in-out active:bg-primary-dark md:h-10 md:text-base;
@@ -118,7 +477,7 @@ body {
 @layer {
   html,
   body {
-    @apply text-gray-100 dark:bg-gray-95 dark:text-white-95;
+    @apply bg-white text-gray-100;
   }
 }
 

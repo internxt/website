@@ -1,3 +1,5 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { GetStaticPropsContext } from 'next';
 import { HomeText } from '@/assets/types/home';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
@@ -10,6 +12,7 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
+import { Campaign, isCampaign } from '@/lib/helpers/campaigns';
 import TrustedSection from '@/components/home/TrustedSection';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
 import AwardWinningSection from '@/components/home/AwardWinningPrivacySection';
@@ -18,7 +21,6 @@ import ReviewsSection from '@/components/home/ReviewsSection';
 import { getMinimumPrice } from '@/utils/priceHelper';
 
 interface HomeProps {
-  darkMode?: boolean;
   lang: GetStaticPropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -26,16 +28,16 @@ interface HomeProps {
   footerLang: FooterText;
 }
 
-const HomePage = ({
-  darkMode = false,
-  metatagsDescriptions,
-  textContent,
-  lang,
-  navbarLang,
-  footerLang,
-}: HomeProps): JSX.Element => {
+const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
 
+  const [campaign, setCampaign] = useState<Campaign>();
+  useEffect(() => {
+    axios
+      .get('/api/get_active_campaign', { params: { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone } })
+      .then(({ data }) => setCampaign(isCampaign(data?.campaign) ? data.campaign : undefined))
+      .catch(() => undefined);
+  }, []);
   const {
     products,
     loadingCards,
@@ -87,9 +89,9 @@ const HomePage = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
+      <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} campaign={campaign} />
 
-      <ReviewsSection textContent={textContent.ReviewSection} darkMode={darkMode} />
+      <ReviewsSection textContent={textContent.ReviewSection} />
 
       <PricingSectionWrapper
         textContent={textContent.tableSection}
@@ -103,12 +105,11 @@ const HomePage = ({
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         popularPlanBySize="2TB"
-        sectionDetails="bg-white dark:bg-gray-95 lg:py-20 xl:py-32"
+        sectionDetails="bg-white lg:py-20 xl:py-32"
         freePlanNeedsH2
-        darkMode={darkMode}
       />
 
-      <TrustedSection textContent={textContent.TrustedBySection} darkMode={darkMode} />
+      <TrustedSection textContent={textContent.TrustedBySection} />
 
       <AwardWinningSection textContent={textContent.AwardWinningSection} />
 
@@ -116,24 +117,19 @@ const HomePage = ({
         textContent={textContent.OfficalCloudProvider}
         lang={locale}
         partner="levante"
-        bgColor="bg-neutral-17 dark:bg-gray-95"
+        bgColor="bg-neutral-17"
       />
 
-      <HorizontalScrollableSection
-        textContent={textContent.NextGenSection}
-        bgGradient="bg-[linear-gradient(180deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#18181B_100%)]"
-        darkMode={darkMode}
-      />
+      <HorizontalScrollableSection textContent={textContent.NextGenSection} />
 
       <FAQSection
         textContent={textContent.EncryptedStorageSeoSection}
         needsH2
         needsH3
-        bgGradient="bg-[linear-gradient(360deg,#FFFFFF_0%,#F4F8FF_100%)] dark:bg-[linear-gradient(360deg,#1C1C1C_0%,#18181B_100%)]"
-        darkMode={darkMode}
+        bgGradient="linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)"
       />
 
-      <Footer textContent={footerLang} lang={locale} darkMode={darkMode} />
+      <Footer textContent={footerLang} lang={locale} />
     </Layout>
   );
 };

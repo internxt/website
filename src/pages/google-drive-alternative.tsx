@@ -18,14 +18,7 @@ import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
-const GoogleDriveComparison = ({
-  darkMode = false,
-  metatagsDescriptions,
-  langJson,
-  lang,
-  navbarLang,
-  footerLang,
-}): JSX.Element => {
+const GoogleDriveComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'google-drive-alternative');
   const {
     products,
@@ -69,9 +62,8 @@ const GoogleDriveComparison = ({
   const locale = lang as string;
   const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : undefined;
-  const privacyBgGradient = 'bg-[linear-gradient(180deg,#FFFFFF_0%,#FFCECC_50%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#3A1412_50%,#1C1C1C_100%)]';
-  const alternativeBgColor = 'bg-[linear-gradient(180deg,#FFFFFF_0%,#D6F3DD_50%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0E2A16_50%,#1C1C1C_100%)]';
-  const alternativeBgColorLight = 'bg-[linear-gradient(180deg,#FFFFFF_0%,#D6F3DD_50%,#FFFFFF_100%)]';
+  const privacyBgGradient = 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)';
+  const alternativeBgColor = 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)';
 
   return (
     <>
@@ -86,9 +78,9 @@ const GoogleDriveComparison = ({
       >
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
 
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Drive'} darkMode={darkMode} />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'Drive'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Drive'} percentage={percentageDiscount} needH2 darkMode={darkMode} />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'Drive'} percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
@@ -98,7 +90,6 @@ const GoogleDriveComparison = ({
           TableTitleTag={'h3'}
           sectionNeedsH2
           bottomSeparationBar
-          darkMode={darkMode}
         />
 
         <PricingSectionWrapper
@@ -111,8 +102,7 @@ const GoogleDriveComparison = ({
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          sectionDetails="bg-white dark:bg-gray-95 lg:py-20 py-10"
-          darkMode={darkMode}
+          sectionDetails="bg-white lg:py-20 py-10"
         />
 
         <HorizontalScrollableSection textContent={langJson.PrivacyViolationsSection} bgGradient={privacyBgGradient} />
@@ -120,14 +110,13 @@ const GoogleDriveComparison = ({
         <ThreeCardsSection
           textContent={langJson.WhyNeedAlternativeSection}
           bgColor={privacyBgGradient}
-          cardColor="bg-white dark:bg-gray-95"
+          cardColor="bg-white"
           TitleTag={'h3'}
-          darkMode={darkMode}
         />
 
         <HorizontalScrollableSectionWithPhotosSection
           textContent={langJson.WhyBestAlternativeSection}
-          bgColor={alternativeBgColorLight}
+          bgColor={alternativeBgColor}
           TitleCardTag={'h3'}
           TitleTag={'h2'}
         />
@@ -137,16 +126,16 @@ const GoogleDriveComparison = ({
           url={'#pricingTable'}
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-28">
-              <p className="text-2xl font-semibold text-gray-95 dark:text-white-95 lg:text-4xl">
-                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount }, darkMode)}
+              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
+                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount })}
               </p>
-              <p className="text-base font-normal text-gray-55 dark:text-green-120 lg:text-xl">
-                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount }, darkMode)}
+              <p className="text-base font-normal text-gray-55 lg:text-xl">
+                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount })}
               </p>
             </div>
           }
-          containerDetails="shadow-lg backdrop-blur-[55px] bg-white dark:bg-gray-95"
-          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           bgPadding="px-20 py-10"
         />
 
@@ -154,7 +143,6 @@ const GoogleDriveComparison = ({
           textContent={langJson.FaqSection}
           percentageDiscount={percentageDiscount?.toString()}
           needsH3={false}
-          darkMode={darkMode}
         />
 
         <Footer
@@ -165,7 +153,6 @@ const GoogleDriveComparison = ({
             { name: 'Encrypted Cloud Storage', url: '/' },
             { name: 'Google drive alternative', url: '/google-drive-alternative' },
           ]}
-          darkMode={darkMode}
         />
       </Layout>
     </>

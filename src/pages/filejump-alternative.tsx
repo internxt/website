@@ -18,14 +18,7 @@ import { parseDynamicText } from '@/components/utils/parse-dynamic-text';
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 
-const FilejumpComparison = ({
-  darkMode = false,
-  metatagsDescriptions,
-  langJson,
-  lang,
-  navbarLang,
-  footerLang,
-}): JSX.Element => {
+const FilejumpComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'filejump-alternative');
   const {
     products,
@@ -70,9 +63,8 @@ const FilejumpComparison = ({
   const locale = lang as string;
   const decimalDiscount = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : undefined;
-  const privacyBgGradient = 'bg-[linear-gradient(180deg,#FFFFFF_0%,#FFCECC_50%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#3A1412_50%,#1C1C1C_100%)]';
-  const alternativeBgColor = 'bg-[linear-gradient(180deg,#FFFFFF_0%,#D6F3DD_50%,#FFFFFF_100%)] dark:bg-[linear-gradient(180deg,#1C1C1C_0%,#0E2A16_50%,#1C1C1C_100%)]';
-  const alternativeBgColorLight = 'bg-[linear-gradient(180deg,#FFFFFF_0%,#D6F3DD_50%,#FFFFFF_100%)]';
+  const privacyBgGradient = 'linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)';
+  const alternativeBgColor = 'linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)';
 
   return (
     <>
@@ -86,9 +78,9 @@ const FilejumpComparison = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed />
-        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'FileJump'} darkMode={darkMode} />
+        <HeroSection textContent={langJson.HeroSection} percentage={percentageDiscount} competitor={'FileJump'} />
 
-        <ComparisonTable textContent={langJson.HeaderSection} competitor={'FileJump'} percentage={percentageDiscount} needH2 darkMode={darkMode} />
+        <ComparisonTable textContent={langJson.HeaderSection} competitor={'FileJump'} percentage={percentageDiscount} needH2 />
 
         <TablesSection
           textContent={langJson.VersusSection}
@@ -98,7 +90,6 @@ const FilejumpComparison = ({
           sectionNeedsH2
           bottomSeparationBar
           TableTitleTag={'h3'}
-          darkMode={darkMode}
         />
 
         <PricingSectionWrapper
@@ -112,8 +103,7 @@ const FilejumpComparison = ({
           products={products}
           loadingCards={loadingCards}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          sectionDetails="bg-white dark:bg-gray-95 lg:py-20 py-10"
-          darkMode={darkMode}
+          sectionDetails="bg-white lg:py-20 py-10"
         />
         <HorizontalScrollableSection
           textContent={langJson.PrivacyViolationsSection}
@@ -126,16 +116,15 @@ const FilejumpComparison = ({
           <ThreeCardsSection
             textContent={langJson.WhyNeedAlternativeSection}
             bgColor={alternativeBgColor}
-            cardColor="bg-white dark:bg-gray-95"
+            cardColor="bg-white"
             bottomSeparationBar={true}
             needsH2={false}
-            darkMode={darkMode}
           />
         )}
 
         <HorizontalScrollableSectionWithPhotosSection
           textContent={langJson.WhyBestAlternativeSection}
-          bgColor={alternativeBgColorLight}
+          bgColor={alternativeBgColor}
           TitleTag={'h2'}
         />
 
@@ -144,16 +133,16 @@ const FilejumpComparison = ({
           url={'/drive'}
           customText={
             <div className="flex flex-col gap-4 px-10 lg:px-40">
-              <p className="text-2xl font-semibold text-gray-95 dark:text-white-95 lg:text-4xl">
-                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount }, darkMode)}
+              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">
+                {parseDynamicText(langJson.CtaSection.title, { percentage: percentageDiscount, discount: percentageDiscount })}
               </p>
-              <p className="text-base font-normal text-gray-55 dark:text-green-120 lg:text-xl">
-                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount }, darkMode)}
+              <p className="text-base font-normal text-gray-55 lg:text-xl">
+                {parseDynamicText(langJson.CtaSection.description, { percentage: percentageDiscount, discount: percentageDiscount })}
               </p>
             </div>
           }
-          containerDetails="shadow-lg backdrop-blur-[55px] bg-white dark:bg-gray-95"
-          bgGradientContainerColor="bg-[linear-gradient(115.95deg,rgba(244,248,255,0.75)_10.92%,rgba(255,255,255,0.08)_96.4%)]"
+          containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           bgPadding="px-20 py-10"
         />
 
@@ -161,7 +150,6 @@ const FilejumpComparison = ({
           textContent={langJson.FaqSection}
           percentageDiscount={percentageDiscount?.toString()}
           needsH3={false}
-          darkMode={darkMode}
         />
 
         <Footer
@@ -172,7 +160,6 @@ const FilejumpComparison = ({
             { name: 'Encrypted Cloud Storage', url: '/' },
             { name: 'Alternative to filejump', url: '/filejump-alternative' },
           ]}
-          darkMode={darkMode}
         />
       </Layout>
     </>

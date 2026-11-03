@@ -4,9 +4,7 @@ import {
 } from '@/components/templates/secureFileTransferTemplate';
 import { GetStaticPropsContext } from 'next';
 
-const SecureFileTransferLP = (props: SecureFileTransferTemplateProps) => (
-  <SecureFileTransferTemplate {...props} darkMode={props.darkMode} />
-);
+const SecureFileTransferLP = (props: SecureFileTransferTemplateProps) => <SecureFileTransferTemplate {...props} />;
 
 export function getStaticProps(ctx: GetStaticPropsContext) {
   const locale = ctx.locale as string;

@@ -30,7 +30,6 @@ interface FinalChallengeText {
 }
 
 interface FinalChallengeProps {
-  darkMode?: boolean;
   lang: string;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -39,7 +38,6 @@ interface FinalChallengeProps {
 }
 
 const FinalChallengeEmPage = ({
-  darkMode = false,
   metatagsDescriptions,
   textContent,
   lang,
@@ -110,7 +108,6 @@ const FinalChallengeEmPage = ({
         lang={lang}
         decimalDiscountForLifetime={decimalDiscountForLifetime}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        darkMode={darkMode}
       />
 
       <Footer textContent={footerLang} lang={lang} darkMode />

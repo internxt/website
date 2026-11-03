@@ -9,7 +9,6 @@ const PhotosEmLP = (props: PhotosProps) => (
     couponCodeForLifetime={PromoCodeName.OFFLFT}
     hidePriceTable
     robots="noindex,follow"
-    darkMode={props.darkMode}
   />
 );
 

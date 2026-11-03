@@ -12,7 +12,6 @@ const CloudStorageBackupSolutionsEmLP = (props: CloudStorageBackupSolutionsTempl
     couponCodeForLifetime={PromoCodeName.seolp}
     hidePriceTable
     robots="noindex,follow"
-    darkMode={props.darkMode}
   />
 );
 
