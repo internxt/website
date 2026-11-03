@@ -455,6 +455,14 @@ export enum PromoCodeName {
   xatakacm90 = 'XATAKACM90',
   clubiccm90 = 'CLUBICCM90',
   sc90 = 'SC90',
+  gpesbm87 = 'GPESBM87',
+  gpitbm87 = 'GPITBM87',
+  gpesbf90 = 'GPESBF90',
+  gpitbf90 = 'GPITBF90',
+  gpescw90 = 'GPESCW90',
+  gpitcw90 = 'GPITCW90',
+  gpes85 = 'GPES85',
+  gpit85 = 'GPIT85',
 }
 
 export interface PromoCodeProps {

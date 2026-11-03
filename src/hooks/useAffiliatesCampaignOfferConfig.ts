@@ -14,6 +14,8 @@ export const CAMPAIGN_BY_PATH: Record<string, AffiliatesBlackFridayCampaign> = {
   tdesbm87: 'black-month',
   tdptbm87: 'black-month',
   tditbm87: 'black-month',
+  gpesbm87: 'black-month',
+  gpitbm87: 'black-month',
 
   blackfriday90: 'black-week',
   blackfridaycn90: 'black-week',
@@ -25,6 +27,8 @@ export const CAMPAIGN_BY_PATH: Record<string, AffiliatesBlackFridayCampaign> = {
   tdesbf90: 'black-week',
   tdptbf90: 'black-week',
   tditbf90: 'black-week',
+  gpesbf90: 'black-week',
+  gpitbf90: 'black-week',
 
   cyberweek90: 'cyber-week',
   cyberweekcn90: 'cyber-week',
@@ -36,6 +40,8 @@ export const CAMPAIGN_BY_PATH: Record<string, AffiliatesBlackFridayCampaign> = {
   tdescm90: 'cyber-week',
   tdptcm90: 'cyber-week',
   tditcm90: 'cyber-week',
+  gpescw90: 'cyber-week',
+  gpitcw90: 'cyber-week',
 };
 
 export const COUPON_CODES: Record<string, PromoCodeName> = {
@@ -49,6 +55,8 @@ export const COUPON_CODES: Record<string, PromoCodeName> = {
   tdesbm87: PromoCodeName.tdesbm87,
   tdptbm87: PromoCodeName.tdptbm87,
   tditbm87: PromoCodeName.tditbm87,
+  gpesbm87: PromoCodeName.gpesbm87,
+  gpitbm87: PromoCodeName.gpitbm87,
 
   blackfriday90: PromoCodeName.blackfriday90,
   blackfridaycn90: PromoCodeName.blackfridaycn90,
@@ -60,6 +68,8 @@ export const COUPON_CODES: Record<string, PromoCodeName> = {
   tdesbf90: PromoCodeName.tdesbf90,
   tdptbf90: PromoCodeName.tdptbf90,
   tditbf90: PromoCodeName.tditbf90,
+  gpesbf90: PromoCodeName.gpesbf90,
+  gpitbf90: PromoCodeName.gpitbf90,
 
   cyberweek90: PromoCodeName.cyberweek90,
   cyberweekcn90: PromoCodeName.cyberweekcn90,
@@ -71,6 +81,8 @@ export const COUPON_CODES: Record<string, PromoCodeName> = {
   tdescm90: PromoCodeName.tdesbf90,
   tdptcm90: PromoCodeName.tdptbf90,
   tditcm90: PromoCodeName.tditbf90,
+  gpescw90: PromoCodeName.gpescw90,
+  gpitcw90: PromoCodeName.gpitcw90,
 };
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -84,6 +96,9 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   tdesbm87: 'es',
   tdesbf90: 'es',
   tdescm90: 'es',
+  gpesbm87: 'es',
+  gpesbf90: 'es',
+  gpescw90: 'es',
 
   clubicbm87: 'fr',
   clubicbf90: 'fr',
@@ -92,6 +107,9 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   tditbm87: 'it',
   tditbf90: 'it',
   tditcm90: 'it',
+  gpitbm87: 'it',
+  gpitbf90: 'it',
+  gpitcw90: 'it',
 
   tdptbm87: 'pt-br',
   tdptbf90: 'pt-br',
