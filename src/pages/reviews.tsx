@@ -3,7 +3,7 @@ import { ReviewsTemplate, ReviewsTemplateProps } from '@/components/templates/re
 
 const Reviews = (props: ReviewsTemplateProps) => <ReviewsTemplate {...props} />;
 
-export async function getStaticProps(ctx: GetStaticPropsContext) {
+export function getStaticProps(ctx: GetStaticPropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

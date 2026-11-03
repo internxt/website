@@ -32,7 +32,6 @@ export interface ReviewsTemplateProps {
   footerLang: FooterText;
   couponCode?: PromoCodeName;
   couponCodeForLifetime?: PromoCodeName;
-  hidePriceTable?: boolean;
   robots?: string;
 }
 
@@ -78,7 +77,7 @@ export const ReviewsTemplate = ({
       couponCodeForCheckout,
     );
 
-    stripeService.redirectToCheckout(
+    await stripeService.redirectToCheckout(
       priceId,
       finalPrice,
       currencyValue,
