@@ -70,7 +70,7 @@ const HomeAssistantPage = ({ metatagsDescriptions, textContent, lang, footerLang
 
     return (
         <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} segmentName="Home" lang={lang}>
-            <Navbar lang={locale} textContent={navbarLang} cta={['payment']} hideLogoLink />
+            <Navbar lang={locale} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA hideLogoLink />
 
             <HeroSection textContent={textContent.HeroSection} />
 
