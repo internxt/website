@@ -464,6 +464,7 @@ export enum PromoCodeName {
   gpes85 = 'GPES85',
   gpit85 = 'GPIT85',
   julian = 'JULIAN',
+  kb = 'KB',
 }
 
 export interface PromoCodeProps {
