@@ -32,6 +32,8 @@ export interface PhotosProps {
   couponCodeForLifetime?: PromoCodeName;
   hidePriceTable?: boolean;
   robots?: string;
+  hideNavbarLinks?: boolean;
+  hideNavbarCTA?: boolean;
 }
 
 export const Photos = ({
@@ -45,6 +47,8 @@ export const Photos = ({
   couponCodeForLifetime = PromoCodeName.OFFLFT,
   hidePriceTable = false,
   robots,
+  hideNavbarLinks,
+  hideNavbarCTA,
 }: PhotosProps): JSX.Element => {
   const metatags = metatagsDescription.find((metatag) => metatag.id === 'photos');
   const lang = locale as string;
@@ -100,7 +104,7 @@ export const Photos = ({
 
   return (
     <Layout title={metatags?.title ?? ''} description={metatags?.description ?? ''} lang={lang} robots={robots}>
-      <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
+      <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed hideCTA={hideNavbarCTA} isLinksHidden={hideNavbarLinks} />
 
       <HeroSection textContent={textContent.HeroSection} url={ctaUrl} />
 
