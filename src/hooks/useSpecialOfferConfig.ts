@@ -213,6 +213,8 @@ export const ALLOWED_PATHS = [
   'sc90',
   'gpes85',
   'gpit85',
+  'julian',
+  'kb',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -281,6 +283,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   apfeltalk: 'de',
   mobiflip: 'de',
   alextbg: 'de',
+  julian: 'de',
 
   // es
   alejavi: 'es',
@@ -584,6 +587,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'sc90',
   'gpes85',
   'gpit85',
+  'julian',
+  'kb',
 ]);
 
 export const COUPON_CODES = {
@@ -797,6 +802,8 @@ export const COUPON_CODES = {
   sc90: PromoCodeName.sc90,
   gpes85: PromoCodeName.gpes85,
   gpit85: PromoCodeName.gpit85,
+  julian: PromoCodeName.julian,
+  kb: PromoCodeName.kb,
 };
 
 interface OfferConfig {
