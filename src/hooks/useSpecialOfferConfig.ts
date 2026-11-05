@@ -215,6 +215,10 @@ export const ALLOWED_PATHS = [
   'gpit85',
   'julian',
   'kb',
+  '98grados',
+  'robot',
+  'alaniz',
+  'hixec',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -307,6 +311,10 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   naseros: 'es',
   roxana: 'es',
   gpes85: 'es',
+  '98grados': 'es',
+  robot: 'es',
+  alaniz: 'es',
+  hixec: 'es',
 
   // fr
   benjamin: 'fr',
@@ -589,6 +597,10 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'gpit85',
   'julian',
   'kb',
+  '98grados',
+  'robot',
+  'alaniz',
+  'hixec',
 ]);
 
 export const COUPON_CODES = {
@@ -804,6 +816,10 @@ export const COUPON_CODES = {
   gpit85: PromoCodeName.gpit85,
   julian: PromoCodeName.julian,
   kb: PromoCodeName.kb,
+  '98grados': PromoCodeName.nyogrados,
+  robot: PromoCodeName.robot,
+  alaniz: PromoCodeName.alaniz,
+  hixec: PromoCodeName.hixec,
 };
 
 interface OfferConfig {
