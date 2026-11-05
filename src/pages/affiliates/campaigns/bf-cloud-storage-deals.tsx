@@ -1,4 +1,4 @@
-import { GetStaticPropsContext } from 'next';
+import { GetServerSidePropsContext } from 'next';
 import { useRouter } from 'next/router';
 import { getDealsProps } from '@/lib/helpers/deals';
 import { PromoCodeName } from '@/lib/types';
@@ -23,7 +23,7 @@ const AffiliatesBlackFridayCloudStorageDeals = ({ config, ...props }: any) => {
   );
 };
 
-export async function getStaticProps(ctx: GetStaticPropsContext) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   return getDealsProps(
     ctx,
     {
