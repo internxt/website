@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import { CaretRight } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { ROUTES_WITH_OWN_PAGES } from '@/constants';
+import { COUPON_CODES } from '@/hooks/useAffiliatesCampaignOfferConfig';
 
 interface TopBannerProps {
   isBannerFixed?: boolean;
@@ -13,7 +14,10 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
   const bannersJson = require(`@/assets/lang/${lang}/banners.json`);
   const textContent = bannersJson.TopBarBanner;
   const routeWithOwnPages = ROUTES_WITH_OWN_PAGES.find((route) => router.pathname.startsWith(`/${route}`));
-  const bannerUrl = routeWithOwnPages ? `/${routeWithOwnPages}/black-friday-deals` : '/black-friday';
+  const promoCode = [router.query.filename, router.query.coupon].find((code) => COUPON_CODES[code as string]);
+  const bannerUrl = routeWithOwnPages
+    ? `/${routeWithOwnPages}/black-friday-deals${promoCode ? `?coupon=${promoCode}` : ''}`
+    : '/black-friday';
 
   return (
     <>

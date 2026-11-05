@@ -32,6 +32,8 @@ const AffiliatesBlackFridayPage = ({ pathname, ...props }: AffiliatesBlackFriday
   return (
     <BlackFridayCampaignTemplate
       {...props}
+      hideNavbarLinks
+      hideNavbarCTA
       config={{
         heroImage,
         metatagsId: METATAGS_ID_BY_CAMPAIGN[campaign],
