@@ -3,7 +3,14 @@ import bytes from 'bytes';
 import { currency as CURRENCY_MAP, currencyService } from './currency.service';
 import { checkout, checkoutForPcComponentes } from '@/lib/auth';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
-import { ActiveCampaigns, ResolvedPromoCode, applyCampaign, hasEarlyRelease, isCampaign } from '@/lib/helpers/campaigns';
+import {
+  ActiveCampaigns,
+  ResolvedPromoCode,
+  applyCampaign,
+  hasEarlyRelease,
+  isCampaign,
+  isCampaignException,
+} from '@/lib/helpers/campaigns';
 import { getGclidFromURL, saveGclidToCookie } from '@/lib/cookies';
 import { analyticsService } from './ga.services';
 
@@ -123,8 +130,6 @@ function transformProductData(individualsData: ProductValue[], businessData: Pro
   transform(individualsData, 'individuals');
   transform(businessData, 'business');
 
-  console.log(transformedData);
-
   return transformedData;
 }
 
@@ -155,7 +160,7 @@ function fetchActiveCampaigns(): Promise<ActiveCampaigns> {
   return activeCampaigns;
 }
 
-async function requestCoupon(couponName: ResolvedPromoCode): Promise<PromoCodeProps> {
+async function fetchCoupon(couponName: ResolvedPromoCode): Promise<PromoCodeProps> {
   try {
     const res = await axios.get(`${window.origin}/api/stripe/get_coupons`, {
       params: {
@@ -175,7 +180,25 @@ async function requestCoupon(couponName: ResolvedPromoCode): Promise<PromoCodePr
   }
 }
 
+const couponRequests = new Map<ResolvedPromoCode, Promise<PromoCodeProps>>();
+
+function requestCoupon(couponName: ResolvedPromoCode): Promise<PromoCodeProps> {
+  let request = couponRequests.get(couponName);
+
+  if (!request) {
+    request = fetchCoupon(couponName);
+    couponRequests.set(couponName, request);
+    request.catch(() => couponRequests.delete(couponName));
+  }
+
+  return request;
+}
+
 async function getCoupon(couponName: PromoCodeName): Promise<PromoCodeProps> {
+  if (isCampaignException(couponName)) {
+    return requestCoupon(couponName);
+  }
+
   const { campaign, earlyReleaseCampaign } = await fetchActiveCampaigns();
   const resolvedName = applyCampaign(couponName, hasEarlyRelease(couponName) ? earlyReleaseCampaign : campaign);
 

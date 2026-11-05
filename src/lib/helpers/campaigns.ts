@@ -21,7 +21,7 @@ export interface ActiveCampaigns {
   earlyReleaseCampaign?: Campaign;
 }
 
-const CAMPAIGN_EXCEPTIONS: ReadonlySet<PromoCodeName> = new Set([]);
+const CAMPAIGN_EXCEPTIONS: ReadonlySet<PromoCodeName> = new Set([PromoCodeName.blackmonth87]);
 
 export const EARLY_RELEASE_CAMPAIGNS: ReadonlySet<Campaign> = new Set([
   Campaign.BlackFriday,
@@ -36,8 +36,10 @@ export const isCampaign = (value: unknown): value is Campaign =>
 
 export const hasEarlyRelease = (name: PromoCodeName): boolean => EARLY_RELEASE_CODES.has(name);
 
+export const isCampaignException = (name: PromoCodeName): boolean => CAMPAIGN_EXCEPTIONS.has(name);
+
 export const applyCampaign = (name: PromoCodeName, campaign?: Campaign): ResolvedPromoCode => {
-  if (!campaign || CAMPAIGN_EXCEPTIONS.has(name)) return name;
+  if (!campaign || isCampaignException(name)) return name;
 
   return `${name}${CAMPAIGN_SUFFIXES[campaign]}`;
 };
