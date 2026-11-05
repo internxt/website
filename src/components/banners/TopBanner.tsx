@@ -15,9 +15,8 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
   const textContent = bannersJson.TopBarBanner;
   const routeWithOwnPages = ROUTES_WITH_OWN_PAGES.find((route) => router.pathname.startsWith(`/${route}`));
   const promoCode = [router.query.filename, router.query.coupon].find((code) => COUPON_CODES[code as string]);
-  const bannerUrl = routeWithOwnPages
-    ? `/${routeWithOwnPages}/black-friday-deals${promoCode ? `?coupon=${promoCode}` : ''}`
-    : '/black-friday';
+  const couponQuery = promoCode ? `?coupon=${promoCode}` : '';
+  const bannerUrl = routeWithOwnPages ? `/${routeWithOwnPages}/black-friday-deals${couponQuery}` : '/black-friday';
 
   return (
     <>
