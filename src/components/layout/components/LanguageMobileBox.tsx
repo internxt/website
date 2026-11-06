@@ -56,7 +56,7 @@ export default function LanguageMobileBox({ darkMode }: LanguageMobileBoxProps) 
               >
                 {filteredLanguages.map((language) => {
                   const langPrefix = language.lang === 'en' ? '' : `/${language.lang}`;
-                  const finalHref = `${langPrefix}${router.pathname}`;
+                  const finalHref = `${langPrefix}${router.asPath}`;
 
                   return (
                     <a
@@ -64,7 +64,7 @@ export default function LanguageMobileBox({ darkMode }: LanguageMobileBoxProps) 
                       href={finalHref}
                       onClick={(e) => {
                         e.preventDefault();
-                        router.push(router.pathname, router.pathname, { locale: language.lang });
+                        router.push(router.asPath, undefined, { locale: language.lang });
                       }}
                       className="block w-full py-2 text-center"
                     >

@@ -38,19 +38,12 @@ export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProp
 
   const [currentLangText, setCurrentLangText] = useState<string>(selectedLang[router.locale as string]);
 
-  const getCorrectPath = () => {
-    if (router.pathname.includes('[') && router.pathname.includes(']')) {
-      return router.asPath;
-    }
-    return router.pathname;
-  };
-
   function changeLang(lang: string) {
     cookies.setCookie({ cookieName: 'i18next', cookieValue: lang });
     setCurrentLangText(selectedLang[lang]);
   }
 
-  const correctPath = getCorrectPath();
+  const correctPath = router.asPath;
 
   return (
     <div
