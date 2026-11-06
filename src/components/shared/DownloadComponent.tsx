@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import { ArrowCircleDown, CaretRight } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
+import { addLangToDriveURL } from '@/lib/auth';
 
 interface DownloadLinks {
   Android: string;
@@ -158,12 +159,12 @@ const DesktopSection: React.FC<{
   </div>
 );
 
-const WebSection: React.FC<{ textContent: TextContent }> = ({ textContent }) => (
+const WebSection: React.FC<{ textContent: TextContent; lang: string }> = ({ textContent, lang }) => (
   <div className="flex flex-col items-center justify-between">
     <p className="pb-6 text-3xl font-medium text-black lg:text-30">{textContent.Web}</p>
     <a
       className="hidden flex-row items-center space-x-1 text-lg font-semibold text-primary hover:underline lg:flex"
-      href="https://drive.internxt.com/app"
+      href={addLangToDriveURL('https://drive.internxt.com/app', lang)}
       target="_blank"
       rel="noreferrer"
     >
@@ -290,7 +291,7 @@ const DownloadComponent: React.FC<DownloadComponentProps> = ({ textContent, lang
 
         {!isMobile && (
           <div className="hidden lg:flex">
-            <WebSection textContent={textContent} />
+            <WebSection textContent={textContent} lang={lang} />
           </div>
         )}
 

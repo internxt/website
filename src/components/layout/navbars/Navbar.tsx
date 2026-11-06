@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Transition, Disclosure } from '@headlessui/react';
 import Hamburger from 'hamburger-react';
 
-import { checkout, goToLoginURL, IFRAME_AUTH_ENABLED } from '@/lib/auth';
+import { addLangToDriveURL, checkout, goToLoginURL, IFRAME_AUTH_ENABLED } from '@/lib/auth';
 import LanguageBox from '../components/LanguageBox';
 import { useRouter } from 'next/router';
 import { CaretDown, CaretUp } from '@phosphor-icons/react';
@@ -413,7 +413,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           setMenuState(false);
                         }}
                         tabIndex={0}
-                        href="https://drive.internxt.com/login"
+                        href={addLangToDriveURL('https://drive.internxt.com/login', props.lang)}
                         className={`flex w-full translate-y-0 px-8 py-4 text-primary outline-none transition delay-300 duration-300 ${
                           menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                         }`}

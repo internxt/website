@@ -1,6 +1,7 @@
 import { Disclosure, Transition } from '@headlessui/react';
 import { CaretDown, CaretUp, Globe } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
+import cookies from '@/lib/cookies';
 
 interface LanguageMobileBoxProps {
   darkMode?: boolean;
@@ -64,6 +65,7 @@ export default function LanguageMobileBox({ darkMode }: LanguageMobileBoxProps) 
                       href={finalHref}
                       onClick={(e) => {
                         e.preventDefault();
+                        cookies.setCookie({ cookieName: 'i18next', cookieValue: language.lang });
                         router.push(router.asPath, undefined, { locale: language.lang });
                       }}
                       className="block w-full py-2 text-center"
