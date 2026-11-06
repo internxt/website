@@ -9,6 +9,7 @@ import {
 } from '@phosphor-icons/react';
 import React from 'react';
 import { useRouter } from 'next/router';
+import { addLangToDriveURL } from '@/lib/auth';
 
 const cardsTitles = {
   en: {
@@ -151,7 +152,7 @@ const LoginBFBanner = () => {
                 className="relative flex h-14 w-48 flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-8 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
                 onClick={() => {
                   window.location.replace(
-                    'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=blackfriday',
+                    addLangToDriveURL('https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=blackfriday'),
                   );
                 }}
               >

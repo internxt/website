@@ -2,6 +2,7 @@ import { Trash } from '@phosphor-icons/react';
 import RenderDescription from '@/components/shared/RenderDescription';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { addLangToDriveURL } from '@/lib/auth';
 
 const ManageGoogleDataSection = ({ textContent }) => {
   const numberedList = textContent.section2.numberedList.map((item) => (
@@ -47,7 +48,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
 
         <Image
           onClick={() => {
-            window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
+            window.open(addLangToDriveURL('https://drive.internxt.com/new'), '_blank', 'noopener noreferrer');
           }}
           width={897}
           height={200}
@@ -90,7 +91,7 @@ const ManageGoogleDataSection = ({ textContent }) => {
         />
         <Image
           onClick={() => {
-            window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
+            window.open(addLangToDriveURL('https://drive.internxt.com/new'), '_blank', 'noopener noreferrer');
           }}
           width={897}
           height={200}

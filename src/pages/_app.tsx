@@ -13,7 +13,7 @@ import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { isDarkModePage } from '@/theme.config';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
 import { FreeCardPromoBannerPPC } from '@/components/ppc/FreeCardPromoBanner';
-import { saveReferralToCookie } from '@/lib/cookies';
+import cookies, { saveReferralToCookie } from '@/lib/cookies';
 
 const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
@@ -49,6 +49,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     const referralId = new URLSearchParams(globalThis.location.search).get('ref');
     if (referralId) saveReferralToCookie(referralId);
   }, [router.asPath]);
+
+  useEffect(() => {
+    const lang = pageProps?.lang ?? router.locale;
+    if (lang) cookies.setCookie({ cookieName: 'i18next', cookieValue: lang });
+  }, [pageProps?.lang, router.locale]);
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode);
