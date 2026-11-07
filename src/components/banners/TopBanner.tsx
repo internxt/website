@@ -49,14 +49,10 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
             <p className="mx-1 flex items-center justify-center gap-1 text-base font-semibold">
               <span>{textContent.title.normalText}</span>
             </p>
-            <Link
-              href={bannerUrl}
-              id={'topBannerActionButton'}
-              className="flex cursor-pointer flex-row items-center "
-            >
+            <span id={'topBannerActionButton'} className="flex cursor-pointer flex-row items-center ">
               <p className="text-base font-medium underline hover:no-underline">{textContent.title.cta}</p>
               <CaretRight size={16} />
-            </Link>
+            </span>
           </div>
         </div>
       </Link>
