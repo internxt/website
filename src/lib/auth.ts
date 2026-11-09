@@ -12,9 +12,15 @@ const getCurrentLang = (lang?: string) =>
   lang ?? (typeof document !== 'undefined' ? cookies.getCookie('i18next') : undefined);
 
 export function addLangToDriveURL(url: string, lang?: string): string {
-  if (!url.startsWith(AUTH_FLOW_URL)) return url;
+  let driveURL: URL;
+  try {
+    driveURL = new URL(url);
+  } catch {
+    return url;
+  }
+  if (driveURL.origin !== AUTH_FLOW_URL) return url;
   const resolvedLang = getCurrentLang(lang);
-  return resolvedLang ? `${url}${url.includes('?') ? '&' : '?'}lng=${resolvedLang}` : url;
+  return resolvedLang ? `${url}${driveURL.search ? '&' : '?'}lng=${resolvedLang}` : url;
 }
 
 export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
