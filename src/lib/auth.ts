@@ -20,7 +20,9 @@ export function addLangToDriveURL(url: string, lang?: string): string {
   }
   if (driveURL.origin !== AUTH_FLOW_URL) return url;
   const resolvedLang = getCurrentLang(lang);
-  return resolvedLang ? `${url}${driveURL.search ? '&' : '?'}lng=${resolvedLang}` : url;
+  if (!resolvedLang) return url;
+  const separator = driveURL.search ? '&' : '?';
+  return `${url}${separator}lng=${resolvedLang}`;
 }
 
 export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
