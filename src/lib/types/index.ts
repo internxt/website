@@ -469,6 +469,10 @@ export enum PromoCodeName {
   robot = 'ROBOT',
   alaniz = 'ALANIZ',
   hixec = 'HIXEC',
+  attilio = 'ATTILIO',
+  chollobm87 = 'chollobm87',
+  chollobf90 = 'chollobf90',
+  chollocw90 = 'chollocw90',
 }
 
 export interface PromoCodeProps {

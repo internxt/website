@@ -219,6 +219,7 @@ export const ALLOWED_PATHS = [
   'robot',
   'alaniz',
   'hixec',
+  'attilio',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -361,6 +362,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   negocios: 'pt-br',
   lucas: 'pt-br',
   youensina: 'pt-br',
+  attilio: 'pt-br',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -607,6 +609,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'robot',
   'alaniz',
   'hixec',
+  'attilio',
 ]);
 
 export const COUPON_CODES = {
@@ -826,6 +829,7 @@ export const COUPON_CODES = {
   robot: PromoCodeName.robot,
   alaniz: PromoCodeName.alaniz,
   hixec: PromoCodeName.hixec,
+  attilio: PromoCodeName.attilio,
 };
 
 interface OfferConfig {
