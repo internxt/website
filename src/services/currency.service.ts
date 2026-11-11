@@ -27,9 +27,15 @@ const objectStorageCurrencyValue = {
   brl: 'eur',
 };
 
-const getCountry = async () => {
-  const { data } = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
-  return data;
+let countryRequest: Promise<{ country?: string }> | undefined;
+
+const getCountry = () => {
+  if (!countryRequest) {
+    countryRequest = axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`).then(({ data }) => data);
+    countryRequest.catch(() => (countryRequest = undefined));
+  }
+
+  return countryRequest;
 };
 
 const filterCurrencyByCountry = async (currencySpecified?: string) => {

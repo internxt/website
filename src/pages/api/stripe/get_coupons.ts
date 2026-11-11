@@ -27,6 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
 
     //Return the coupon with its data
+    res.setHeader('Cache-Control', 'public, max-age=60, s-maxage=300');
     res.status(200).send(promoCodeData);
   } else {
     res.status(405).end(); // Method Not Allowed
