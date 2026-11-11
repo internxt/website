@@ -30,7 +30,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         business: businessProductsData,
       };
 
-      res.setHeader('Cache-Control', 'public, max-age=60, s-maxage=300');
       res.status(200).json(productsData);
     } catch (err) {
       const error = err as Error;
