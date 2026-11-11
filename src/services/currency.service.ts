@@ -27,7 +27,7 @@ const objectStorageCurrencyValue = {
   brl: 'eur',
 };
 
-let countryRequest: Promise<{ country?: string }> | undefined;
+let countryRequest: Promise<{ country: string }> | undefined;
 
 const getCountry = () => {
   if (!countryRequest) {
