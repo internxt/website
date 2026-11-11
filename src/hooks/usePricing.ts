@@ -110,11 +110,11 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
   useEffect(() => {
     let cancelled = false;
 
-    Promise.all([loadPrices(currencySpecified), fetchLifetimeCoupons ? loadLifetimeCoupons() : undefined]).then(
-      ([prices, lifetimeCoupons]) => {
+    Promise.all([loadPrices(currencySpecified), fetchLifetimeCoupons ? loadLifetimeCoupons() : undefined])
+      .then(([prices, lifetimeCoupons]) => {
         if (!cancelled) dispatch({ type: 'SET_PRICES', payload: { ...prices, lifetimeCoupons } });
-      },
-    );
+      })
+      .catch((error) => console.error('Error loading prices:', error));
 
     return () => {
       cancelled = true;
@@ -125,11 +125,11 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
   useEffect(() => {
     let cancelled = false;
 
-    Promise.all([loadCoupon(couponCode), loadCoupon(couponCodeForLifetime), loadCoupon(couponCodeForBusiness)]).then(
-      ([coupon, lifetimeCoupon, businessCoupon]) => {
+    Promise.all([loadCoupon(couponCode), loadCoupon(couponCodeForLifetime), loadCoupon(couponCodeForBusiness)])
+      .then(([coupon, lifetimeCoupon, businessCoupon]) => {
         if (!cancelled) dispatch({ type: 'SET_COUPONS', payload: { coupon, lifetimeCoupon, businessCoupon } });
-      },
-    );
+      })
+      .catch((error) => console.error('Error loading coupons:', error));
 
     return () => {
       cancelled = true;
