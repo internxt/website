@@ -106,7 +106,6 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  // Prices and coupons don't depend on each other, so they are requested in parallel.
   useEffect(() => {
     let cancelled = false;
 
