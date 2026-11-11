@@ -11,6 +11,7 @@
     "build": "node ./scripts/check-envs.js && next build --webpack",
     "start": "next start",
     "test:worker": "node --test src/worker/edgeCache.test.ts",
+    "test:worker:coverage": "mkdir -p coverage && node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=coverage/lcov.info src/worker/edgeCache.test.ts",
     "build:cf": "opennextjs-cloudflare build",
     "preview:cf": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy:cf": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
