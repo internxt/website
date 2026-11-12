@@ -2,14 +2,17 @@ import axios from 'axios';
 import { PromoCodeProps } from './types';
 import { PASSWORD_REGEX } from '@/components/cloud-object-storage/integrated-checkout/components/InputsComponent';
 import cookies, { isCelloExpired } from '@/lib/cookies';
+import { SUPPORTED_LANGUAGES } from '@/constants';
 
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
 const AUTH_FLOW_URL = 'https://drive.internxt.com';
 const OBJECT_STORAGE_USER_ACTIVATION_URL = process.env.NEXT_PUBLIC_OBJECT_STORAGE_USER_ACTIVATION_URL as string;
 
-const getCurrentLang = (lang?: string) =>
-  lang ?? (typeof document !== 'undefined' ? cookies.getCookie('i18next') : undefined);
+const getCurrentLang = (lang?: string) => {
+  const currentLang = lang ?? (typeof document !== 'undefined' ? cookies.getCookie('i18next') : undefined);
+  return currentLang && SUPPORTED_LANGUAGES.includes(currentLang) ? currentLang : undefined;
+};
 
 export function addLangToDriveURL(url: string, lang?: string): string {
   let driveURL: URL;
