@@ -6,11 +6,12 @@ import { COUPON_CODES } from '@/hooks/useAffiliatesCampaignOfferConfig';
 
 interface TopBannerProps {
   isBannerFixed?: boolean;
+  lang?: string;
 }
 
-const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
+const TopBanner = ({ isBannerFixed, lang: pageLang }: TopBannerProps) => {
   const router = useRouter();
-  const lang = router.locale;
+  const lang = pageLang ?? router.locale;
   const bannersJson = require(`@/assets/lang/${lang}/banners.json`);
   const textContent = bannersJson.TopBarBanner;
   const routeWithOwnPages = ROUTES_WITH_OWN_PAGES.find((route) => router.pathname.startsWith(`/${route}`));
