@@ -6,6 +6,7 @@ module.exports = {
   experimental: {
     //swcPlugins: [['swc-plugin-coverage-instrument', { coverage: true }]],
     scrollRestoration: true,
+    optimizePackageImports: ['@phosphor-icons/react'],
   },
   webpack(config) {
     config.module.rules.push({
