@@ -1,16 +1,14 @@
 'use client';
 
 import path from 'path';
-import dynamic from 'next/dynamic';
 import { buildLocalizedPaths, getLangFolderSlugs } from '@/lib/helpers/staticPaths';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Footer from '@/components/layout/footers/Footer';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
+import { ConverterSection } from '@/components/file-converter/ConverterSection';
 import { FeaturesSection } from '@/components/file-converter/FeaturesSection';
 import CtaSection from '@/components/shared/CtaSection';
-
-const ConverterSection = dynamic(() => import('@/components/file-converter/ConverterSection').then((mod) => mod.ConverterSection), { ssr: false });
 
 const FileConverter = ({
   metatagsDescriptions,
