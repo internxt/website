@@ -67,6 +67,10 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/nas',
 ];
 
+export const EXCLUDED_PATHS_FOR_TOP_BANNER = ['/notification'];
+
+export const ROUTES_WITH_OWN_PAGES = ['ga', 'fb', 'affiliates/campaigns'];
+
 export const SNIGEL_BANNERS = {
   DEFAULT_BANNERS: ['incontent_1', 'incontent_2', 'incontent_3', 'incontent_4', 'adhesive', 'top_leaderboard'],
   CUSTOM_BANNERS: ['sidebar_right', 'sidebar_left'],

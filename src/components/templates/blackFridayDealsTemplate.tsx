@@ -35,6 +35,8 @@ interface BlackFridayDealsTemplateProps {
   textContent: BlackFridayText;
   footerLang: FooterText;
   config: BlackFridayDealConfig;
+  hideNavbarLinks?: boolean;
+  hideNavbarCTA?: boolean;
 }
 
 const BlackFridayDealsTemplate = ({
@@ -44,6 +46,8 @@ const BlackFridayDealsTemplate = ({
   navbarLang,
   footerLang,
   config,
+  hideNavbarLinks,
+  hideNavbarCTA,
 }: BlackFridayDealsTemplateProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === config.metatagsId);
 
@@ -103,7 +107,7 @@ const BlackFridayDealsTemplate = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="BlackFridayDeals" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
+      <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed hideCTA={hideNavbarCTA} isLinksHidden={hideNavbarLinks} />
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} darkMode image={config.heroImage} />
 

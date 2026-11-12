@@ -210,6 +210,16 @@ export const ALLOWED_PATHS = [
   'negocios',
   'lucas',
   'youensina',
+  'sc90',
+  'gpes85',
+  'gpit85',
+  'julian',
+  'kb',
+  '98grados',
+  'robot',
+  'alaniz',
+  'hixec',
+  'attilio',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -278,6 +288,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   apfeltalk: 'de',
   mobiflip: 'de',
   alextbg: 'de',
+  julian: 'de',
 
   // es
   alejavi: 'es',
@@ -300,6 +311,11 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   tdes85: 'es',
   naseros: 'es',
   roxana: 'es',
+  gpes85: 'es',
+  '98grados': 'es',
+  robot: 'es',
+  alaniz: 'es',
+  hixec: 'es',
 
   // fr
   benjamin: 'fr',
@@ -328,6 +344,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   gian: 'it',
   pietro: 'it',
   tdit85: 'it',
+  gpit85: 'it',
 
   // zh
   madmoneylabs: 'zh',
@@ -345,6 +362,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   negocios: 'pt-br',
   lucas: 'pt-br',
   youensina: 'pt-br',
+  attilio: 'pt-br',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -376,6 +394,7 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'thelinuxexp',
   'simon42',
   'ition',
+  'luca',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -417,6 +436,12 @@ export const URGENT_CHECKOUT_PATHS = new Set<string>([
   'nu90',
   'techsagar90',
   'cm90',
+  'julian',
+  'luca',
+  'micha',
+  'howmation',
+  'dinamotech',
+  'pietro',
 ]);
 export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'adi4u',
@@ -575,6 +600,16 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'negocios',
   'lucas',
   'youensina',
+  'sc90',
+  'gpes85',
+  'gpit85',
+  'julian',
+  'kb',
+  '98grados',
+  'robot',
+  'alaniz',
+  'hixec',
+  'attilio',
 ]);
 
 export const COUPON_CODES = {
@@ -785,6 +820,16 @@ export const COUPON_CODES = {
   negocios: PromoCodeName.negocios,
   lucas: PromoCodeName.lucas,
   youensina: PromoCodeName.youensina,
+  sc90: PromoCodeName.sc90,
+  gpes85: PromoCodeName.gpes85,
+  gpit85: PromoCodeName.gpit85,
+  julian: PromoCodeName.julian,
+  kb: PromoCodeName.kb,
+  '98grados': PromoCodeName.nyogrados,
+  robot: PromoCodeName.robot,
+  alaniz: PromoCodeName.alaniz,
+  hixec: PromoCodeName.hixec,
+  attilio: PromoCodeName.attilio,
 };
 
 interface OfferConfig {

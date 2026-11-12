@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
 import { CaretRight } from '@phosphor-icons/react';
 import Link from 'next/link';
+import { ROUTES_WITH_OWN_PAGES } from '@/constants';
+import { COUPON_CODES } from '@/hooks/useAffiliatesCampaignOfferConfig';
 
 interface TopBannerProps {
   isBannerFixed?: boolean;
@@ -11,6 +13,10 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
   const lang = router.locale;
   const bannersJson = require(`@/assets/lang/${lang}/banners.json`);
   const textContent = bannersJson.TopBarBanner;
+  const routeWithOwnPages = ROUTES_WITH_OWN_PAGES.find((route) => router.pathname.startsWith(`/${route}`));
+  const promoCode = [router.query.filename, router.query.coupon].find((code) => COUPON_CODES[code as string]);
+  const couponQuery = promoCode ? `?coupon=${promoCode}` : '';
+  const bannerUrl = routeWithOwnPages ? `/${routeWithOwnPages}/black-friday-deals${couponQuery}` : '/black-friday';
 
   return (
     <>
@@ -24,7 +30,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
             </p>
           </div>
           <Link
-            href={'/deals/black-friday-internxt'}
+            href={bannerUrl}
             id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center"
           >
@@ -35,7 +41,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
       </div>
 
       <Link
-        href={'/deals/black-friday-internxt'}
+        href={bannerUrl}
         className={`group fixed left-0 top-0 z-50 flex h-[64px] w-screen items-center justify-center overflow-hidden bg-primary text-white lg:hidden`}
       >
         <div className=" w-full  overflow-hidden px-3 text-center">
@@ -44,7 +50,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
               <span>{textContent.title.normalText}</span>
             </p>
             <Link
-              href={'/deals/black-friday-internxt'}
+              href={bannerUrl}
               id={'topBannerActionButton'}
               className="flex cursor-pointer flex-row items-center "
             >
