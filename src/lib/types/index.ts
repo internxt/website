@@ -473,6 +473,12 @@ export enum PromoCodeName {
   chollobm87 = 'chollobm87',
   chollobf90 = 'chollobf90',
   chollocw90 = 'chollocw90',
+  diolinux = 'DIOLINUX',
+  ondeeuclico = 'ONDEEUCLICO',
+  darlan = 'DARLAN',
+  adrenaline = 'ADRENALINE',
+  labs = 'LABS',
+  otto = 'OTTO',
 }
 
 export interface PromoCodeProps {
