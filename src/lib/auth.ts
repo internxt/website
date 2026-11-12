@@ -1,12 +1,32 @@
 import axios from 'axios';
 import { PromoCodeProps } from './types';
 import { PASSWORD_REGEX } from '@/components/cloud-object-storage/integrated-checkout/components/InputsComponent';
-import { isCelloExpired } from '@/lib/cookies';
+import cookies, { isCelloExpired } from '@/lib/cookies';
+import { SUPPORTED_LANGUAGES } from '@/constants';
 
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
 const AUTH_FLOW_URL = 'https://drive.internxt.com';
 const OBJECT_STORAGE_USER_ACTIVATION_URL = process.env.NEXT_PUBLIC_OBJECT_STORAGE_USER_ACTIVATION_URL as string;
+
+const getCurrentLang = (lang?: string) => {
+  const currentLang = lang ?? (typeof document !== 'undefined' ? cookies.getCookie('i18next') : undefined);
+  return currentLang && SUPPORTED_LANGUAGES.includes(currentLang) ? currentLang : undefined;
+};
+
+export function addLangToDriveURL(url: string, lang?: string): string {
+  let driveURL: URL;
+  try {
+    driveURL = new URL(url);
+  } catch {
+    return url;
+  }
+  if (driveURL.origin !== AUTH_FLOW_URL) return url;
+  const resolvedLang = getCurrentLang(lang);
+  if (!resolvedLang) return url;
+  const separator = driveURL.search ? '&' : '?';
+  return `${url}${separator}lng=${resolvedLang}`;
+}
 
 export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
   if (view === 'login') {
@@ -86,8 +106,9 @@ const getAuthFlowLoginURL = ({
     search.set('autoSubmit', 'true');
   }
 
-  if (lang) {
-    search.set('lng', lang);
+  const resolvedLang = getCurrentLang(lang);
+  if (resolvedLang) {
+    search.set('lng', resolvedLang);
   }
 
   const searchQuery = search.toString();
@@ -134,8 +155,9 @@ const getAuthFlowCreateUserURL = ({
     search.set('skipSignupIfLoggedIn', skipSignupIfLoggedIn.toString());
   }
 
-  if (lang) {
-    search.set('lng', lang);
+  const resolvedLang = getCurrentLang(lang);
+  if (resolvedLang) {
+    search.set('lng', resolvedLang);
   }
 
   const searchQuery = search.toString();
@@ -232,7 +254,7 @@ export function signup(
 
 export function recover(data: Record<string, unknown>): void {
   if (REDIRECT_AUTH_ENABLED) {
-    window.location.href = AUTH_FLOW_URL + '/remove';
+    window.location.href = addLangToDriveURL(AUTH_FLOW_URL + '/remove');
   }
 
   if (IFRAME_AUTH_ENABLED) {
@@ -285,6 +307,9 @@ export function checkout({
     mode && params.set('mode', mode ? mode : 'subscription');
     gclid && params.set('gclid', gclid);
 
+    const lang = getCurrentLang();
+    lang && params.set('lng', lang);
+
     appendTrackingParams(params, trackingParams);
 
     if (!isCelloExpired()) {
@@ -324,6 +349,10 @@ export function checkoutForPcComponentes({
     currency && params.set('currency', currency);
     mode && params.set('mode', mode ? mode : 'subscription');
     trialToken && params.set('mobileToken', trialToken);
+
+    const lang = getCurrentLang();
+    lang && params.set('lng', lang);
+
     const checkoutUrl = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
 
     window.open(checkoutUrl, '_self', 'noopener noreferrer');

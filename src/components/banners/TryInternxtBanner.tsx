@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X } from '@phosphor-icons/react';
 import Image from "next/image";
 import { getImage } from '@/lib/getImage';
+import { addLangToDriveURL } from '@/lib/auth';
 
 const TryInternxtBanner = ({ textContent, url }) => {
   const [bannerVisible, setBannerVisible] = useState(false);
@@ -40,7 +41,7 @@ const TryInternxtBanner = ({ textContent, url }) => {
               <button
                 className="relative flex flex-row items-center justify-center space-x-4 rounded-full bg-primary px-8 py-3 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
                 onClick={() => {
-                  window.open(url, '_blank');
+                  window.open(addLangToDriveURL(url), '_blank');
                 }}
               >
                 {textContent.cta}

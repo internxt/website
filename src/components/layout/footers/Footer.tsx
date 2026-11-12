@@ -12,6 +12,7 @@ import { notificationService } from '@/components/Snackbar';
 import { FooterText } from '@/assets/types/layout/types';
 import { getImage } from '@/lib/getImage';
 import { Breadcrumb, BreadcrumbItem } from '@/components/shared/Breadcrumb';
+import { addLangToDriveURL } from '@/lib/auth';
 
 export default function Footer({
   textContent,
@@ -347,10 +348,10 @@ export default function Footer({
                   <div
                     className={`flex flex-col gap-1 text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}
                   >
-                    <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
+                    <a href={addLangToDriveURL('https://drive.internxt.com/new', lang)} target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.signup}
                     </a>
-                    <a href="https://drive.internxt.com/login" target="_top" className="hover:text-primary">
+                    <a href={addLangToDriveURL('https://drive.internxt.com/login', lang)} target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.login}
                     </a>
                     <Link
@@ -1075,10 +1076,10 @@ export default function Footer({
                         darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
-                      <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
+                      <a href={addLangToDriveURL('https://drive.internxt.com/new', lang)} target="_top" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.signup}
                       </a>
-                      <a href="https://drive.internxt.com/login" target="_top" className="hover:text-primary">
+                      <a href={addLangToDriveURL('https://drive.internxt.com/login', lang)} target="_top" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.login}
                       </a>
                       <Link
