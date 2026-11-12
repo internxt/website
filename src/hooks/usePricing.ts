@@ -132,7 +132,7 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
       const lifetimeCoupons = lifetimeCouponsResult.status === 'fulfilled' ? lifetimeCouponsResult.value : undefined;
 
       dispatch({ type: 'SET_PRICES', payload: { ...prices, lifetimeCoupons, pricesError } });
-    });
+    }).catch((err) => console.error('Error loading prices:', err));
 
     return () => {
       cancelled = true;
@@ -156,7 +156,7 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
       });
 
       dispatch({ type: 'SET_COUPONS', payload: { coupon, lifetimeCoupon, businessCoupon } });
-    });
+    }).catch((err) => console.error('Error loading coupons:', err));
 
     return () => {
       cancelled = true;
