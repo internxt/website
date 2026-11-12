@@ -3,6 +3,9 @@ import { currencyService } from '@/services/currency.service';
 import { ProductsDataProps, stripeService } from '@/services/stripe.service';
 import { useEffect, useReducer } from 'react';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
+import { notificationService } from '@/components/Snackbar';
+
+type LifetimeCoupons = Record<string, PromoCodeProps>;
 
 type UsePricingOptions = {
   couponCode?: PromoCodeName;
@@ -21,6 +24,7 @@ interface UseStripeProductsAndCurrencyResponse {
   businessCoupon?: PromoCodeProps;
   lifetimeCoupons?: any;
   products?: ProductsDataProps;
+  pricesError: boolean;
 }
 
 interface PricesData {
@@ -28,6 +32,7 @@ interface PricesData {
   currency: string;
   currencyValue: string;
   lifetimeCoupons?: any;
+  pricesError: boolean;
 }
 
 interface CouponsData {
@@ -44,9 +49,11 @@ interface PricingState extends PricesData, CouponsData {
 type ActionType = { type: 'SET_PRICES'; payload: PricesData } | { type: 'SET_COUPONS'; payload: CouponsData };
 
 const DEFAULT_CURRENCY = { currency: '€', currencyValue: 'eur' };
+const PRICES_ERROR_MESSAGE = 'We could not load the prices. Please reload the page and try again.';
 
 const initialState: PricingState = {
   ...DEFAULT_CURRENCY,
+  pricesError: false,
   pricesLoaded: false,
   couponsLoaded: false,
 };
@@ -62,32 +69,27 @@ const reducer = (state: PricingState, action: ActionType): PricingState => {
   }
 };
 
-const loadPrices = async (currencySpecified?: string): Promise<Omit<PricesData, 'lifetimeCoupons'>> => {
+const loadPrices = async (currencySpecified?: string): Promise<Omit<PricesData, 'lifetimeCoupons' | 'pricesError'>> => {
   try {
     const { currency, currencyValue } = await currencyService.filterCurrencyByCountry(currencySpecified);
     const products = await stripeService.getPrices(currencyValue);
+
+    if (!products) throw new Error(`No prices available for ${currencyValue}`);
 
     return { products, currency, currencyValue };
   } catch (err) {
     console.warn('Primary price fetch failed, falling back to EUR:', err);
 
-    try {
-      const products = await stripeService.getPrices(DEFAULT_CURRENCY.currencyValue);
-      return { products, ...DEFAULT_CURRENCY };
-    } catch (error) {
-      console.error('Critical error: Failed to fetch fallback prices:', error);
-      return { products: undefined, ...DEFAULT_CURRENCY };
-    }
+    const products = await stripeService.getPrices(DEFAULT_CURRENCY.currencyValue);
+
+    if (!products) throw new Error(`No prices available for ${DEFAULT_CURRENCY.currencyValue}`);
+
+    return { products, ...DEFAULT_CURRENCY };
   }
 };
 
-const loadLifetimeCoupons = async (): Promise<any> => {
-  try {
-    return await stripeService.getLifetimeCoupons();
-  } catch (error) {
-    console.error('Error fetching lifetime coupons:', error);
-    return undefined;
-  }
+const loadLifetimeCoupons = async (): Promise<LifetimeCoupons> => {
+  return stripeService.getLifetimeCoupons();
 };
 
 const loadCoupon = async (couponName?: PromoCodeName): Promise<PromoCodeProps | undefined> => {
@@ -109,11 +111,28 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
   useEffect(() => {
     let cancelled = false;
 
-    Promise.all([loadPrices(currencySpecified), fetchLifetimeCoupons ? loadLifetimeCoupons() : undefined])
-      .then(([prices, lifetimeCoupons]) => {
-        if (!cancelled) dispatch({ type: 'SET_PRICES', payload: { ...prices, lifetimeCoupons } });
-      })
-      .catch((error) => console.error('Error loading prices:', error));
+    Promise.allSettled([
+      loadPrices(currencySpecified),
+      fetchLifetimeCoupons ? loadLifetimeCoupons() : Promise.resolve(undefined),
+    ]).then(([pricesResult, lifetimeCouponsResult]) => {
+      if (cancelled) return;
+
+      const pricesError = pricesResult.status === 'rejected';
+
+      if (pricesError) {
+        console.error('Error loading prices:', pricesResult.reason);
+        notificationService.openErrorToast(PRICES_ERROR_MESSAGE);
+      }
+
+      if (lifetimeCouponsResult.status === 'rejected') {
+        console.error('Error fetching lifetime coupons:', lifetimeCouponsResult.reason);
+      }
+
+      const prices = pricesResult.status === 'fulfilled' ? pricesResult.value : DEFAULT_CURRENCY;
+      const lifetimeCoupons = lifetimeCouponsResult.status === 'fulfilled' ? lifetimeCouponsResult.value : undefined;
+
+      dispatch({ type: 'SET_PRICES', payload: { ...prices, lifetimeCoupons, pricesError } });
+    });
 
     return () => {
       cancelled = true;
@@ -124,11 +143,20 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
   useEffect(() => {
     let cancelled = false;
 
-    Promise.all([loadCoupon(couponCode), loadCoupon(couponCodeForLifetime), loadCoupon(couponCodeForBusiness)])
-      .then(([coupon, lifetimeCoupon, businessCoupon]) => {
-        if (!cancelled) dispatch({ type: 'SET_COUPONS', payload: { coupon, lifetimeCoupon, businessCoupon } });
-      })
-      .catch((error) => console.error('Error loading coupons:', error));
+    Promise.allSettled([
+      loadCoupon(couponCode),
+      loadCoupon(couponCodeForLifetime),
+      loadCoupon(couponCodeForBusiness),
+    ]).then((results) => {
+      if (cancelled) return;
+
+      const [coupon, lifetimeCoupon, businessCoupon] = results.map((result) => {
+        if (result.status === 'rejected') console.error('Error loading coupons:', result.reason);
+        return result.status === 'fulfilled' ? result.value : undefined;
+      });
+
+      dispatch({ type: 'SET_COUPONS', payload: { coupon, lifetimeCoupon, businessCoupon } });
+    });
 
     return () => {
       cancelled = true;
@@ -144,6 +172,7 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
     businessCoupon: state.businessCoupon,
     lifetimeCoupon: state.lifetimeCoupon,
     lifetimeCoupons: state.lifetimeCoupons,
+    pricesError: state.pricesError,
   };
 }
 
