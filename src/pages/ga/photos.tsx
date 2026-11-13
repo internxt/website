@@ -7,6 +7,8 @@ const GaPhotos = (props: PhotosProps) => (
     {...props}
     couponCode={PromoCodeName.GADS85}
     couponCodeForLifetime={PromoCodeName.GADS85}
+    hideNavbarLinks
+    hideNavbarCTA
   />
 );
 

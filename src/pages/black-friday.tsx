@@ -17,8 +17,8 @@ export async function getStaticProps(ctx: GetStaticPropsContext) {
       couponCodeForLifetime: PromoCodeName.OFFLFT,
       popularPlanSize: '5TB',
       moreDealsUrls: {
-        card1: '/deals/black-friday-internxt/bf-cloud-storage-deals',
-        card2: '/deals/black-friday-internxt/bf-personal-cloud-storage-deals',
+        card1: 'bf-cloud-storage-deals',
+        card2: 'bf-personal-cloud-storage-deals',
       },
     },
     {

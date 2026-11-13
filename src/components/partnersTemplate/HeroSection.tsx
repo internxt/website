@@ -12,6 +12,8 @@ import {
 } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { currencyService } from '@/services/currency.service';
+import { useRouter } from 'next/router';
+import { addLangToDriveURL } from '@/lib/auth';
 import { useEffect, useState } from 'react';
 import { HighlightText } from '../components/HighlightText';
 
@@ -75,6 +77,7 @@ export default function HeroSection({
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
 
+  const router = useRouter();
   const redirection = isUltimatePlan
     ? 'https://drive.internxt.com/checkout?planId=price_1TRoAJFAOdcgaBMQveT6cebN&planType=individual&currency=eur&mode=payment'
     : '#billingButtons';
@@ -261,7 +264,7 @@ export default function HeroSection({
         <div className="flex h-min w-full flex-col justify-center gap-4">
           <div className="flex w-full flex-row items-start gap-4">
             <Link
-              href={redirection}
+              href={addLangToDriveURL(redirection, router.locale)}
               className="z-10 flex items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-7 py-3 text-base font-medium text-white hover:bg-primary-dark"
             >
               {textContent.claimDeal}

@@ -465,6 +465,22 @@ export enum PromoCodeName {
   gpit85 = 'GPIT85',
   bfcmrec87 = 'BFCMREC87',
   bfcmrec90 = 'BFCMREC90',
+  julian = 'JULIAN',
+  kb = 'KB',
+  nyogrados = '98GRADOS',
+  robot = 'ROBOT',
+  alaniz = 'ALANIZ',
+  hixec = 'HIXEC',
+  attilio = 'ATTILIO',
+  chollobm87 = 'chollobm87',
+  chollobf90 = 'chollobf90',
+  chollocw90 = 'chollocw90',
+  diolinux = 'DIOLINUX',
+  ondeeuclico = 'ONDEEUCLICO',
+  darlan = 'DARLAN',
+  adrenaline = 'ADRENALINE',
+  labs = 'LABS',
+  otto = 'OTTO',
 }
 
 export interface PromoCodeProps {

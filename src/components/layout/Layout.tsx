@@ -39,6 +39,7 @@ export default function Layout({
   specialOffer,
   pathnameForSEO,
   robots,
+  lang: pageLang,
 }: LayoutProps) {
   const router = useRouter();
   const pathname = pathnameForSEO ? pathnameForSEO : router.pathname === '/' ? '' : router.pathname;
@@ -167,7 +168,7 @@ export default function Layout({
         `}
       </Script>
 
-      {showTopBanner && <TopBanner />}
+      {showTopBanner && <TopBanner lang={pageLang} />}
 
       <div className={`flex flex-col ${showTopBanner ? 'pt-[64px] lg:pt-[54px]' : ''}`}>{children}</div>
 

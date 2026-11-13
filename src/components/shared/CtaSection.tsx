@@ -1,5 +1,7 @@
 import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { addLangToDriveURL } from '@/lib/auth';
 
 const CtaSection = ({
   textContent,
@@ -16,6 +18,7 @@ const CtaSection = ({
   bgImage?: string;
   customDescription?: React.ReactNode;
 }) => {
+  const router = useRouter();
   const defaultBgImage = getImage('/images/cyber-awareness/Background.svg');
 
   return (
@@ -32,7 +35,7 @@ const CtaSection = ({
         </div>
         {url && (
           <Link
-            href={url}
+            href={addLangToDriveURL(url, router.locale)}
             target={target}
             className={`flex rounded-lg px-5 py-3 text-lg font-medium ${
               bgImage && bgImage !== defaultBgImage

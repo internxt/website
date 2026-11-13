@@ -10,6 +10,8 @@
     "dev:tw": "TAILWIND_MODE=watch tailwindcss -o src/tailwind.css --watch",
     "build": "node ./scripts/check-envs.js && next build --webpack",
     "start": "next start",
+    "test:worker": "node --test src/worker/edgeCache.test.ts",
+    "test:worker:coverage": "mkdir -p coverage && node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=coverage/lcov.info src/worker/edgeCache.test.ts",
     "build:cf": "opennextjs-cloudflare build",
     "preview:cf": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy:cf": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
@@ -51,7 +53,7 @@
     "memory-cache": "^0.2.0",
     "moment": "^2.31.0",
     "music-metadata": "^11.16.0",
-    "next": "^16.3.8",
+    "next": "^16.4.6",
     "next-csrf": "^0.2.1",
     "next-share": "^0.18.1",
     "pdf-lib": "^1.17.1",
@@ -73,7 +75,7 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^1.20.6",
+    "@opennextjs/cloudflare": "^1.20.17",
     "@svgr/webpack": "^6.5.1",
     "@types/browser-image-compression": "^1.0.13",
     "@types/jest": "^29.4.0",

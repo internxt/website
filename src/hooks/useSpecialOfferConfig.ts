@@ -215,6 +215,19 @@ export const ALLOWED_PATHS = [
   'gpit85',
   'bfcmrec87',
   'bfcmrec90',
+  'julian',
+  'kb',
+  '98grados',
+  'robot',
+  'alaniz',
+  'hixec',
+  'attilio',
+  'diolinux',
+  'ondeeuclico',
+  'darlan',
+  'adrenaline',
+  'labs',
+  'otto',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -283,6 +296,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   apfeltalk: 'de',
   mobiflip: 'de',
   alextbg: 'de',
+  julian: 'de',
 
   // es
   alejavi: 'es',
@@ -306,6 +320,10 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   naseros: 'es',
   roxana: 'es',
   gpes85: 'es',
+  '98grados': 'es',
+  robot: 'es',
+  alaniz: 'es',
+  hixec: 'es',
 
   // fr
   benjamin: 'fr',
@@ -335,6 +353,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   pietro: 'it',
   tdit85: 'it',
   gpit85: 'it',
+  otto: 'it',
 
   // zh
   madmoneylabs: 'zh',
@@ -352,6 +371,12 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   negocios: 'pt-br',
   lucas: 'pt-br',
   youensina: 'pt-br',
+  attilio: 'pt-br',
+  diolinux: 'pt-br',
+  ondeeuclico: 'pt-br',
+  darlan: 'pt-br',
+  adrenaline: 'pt-br',
+  labs: 'pt-br',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -425,6 +450,12 @@ export const URGENT_CHECKOUT_PATHS = new Set<string>([
   'nu90',
   'techsagar90',
   'cm90',
+  'julian',
+  'luca',
+  'micha',
+  'howmation',
+  'dinamotech',
+  'pietro',
 ]);
 export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'adi4u',
@@ -588,6 +619,19 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'gpit85',
   'bfcmrec87',
   'bfcmrec90',
+  'julian',
+  'kb',
+  '98grados',
+  'robot',
+  'alaniz',
+  'hixec',
+  'attilio',
+  'diolinux',
+  'ondeeuclico',
+  'darlan',
+  'adrenaline',
+  'labs',
+  'otto',
 ]);
 
 export const COUPON_CODES = {
@@ -803,6 +847,19 @@ export const COUPON_CODES = {
   gpit85: PromoCodeName.gpit85,
   bfcmrec87: PromoCodeName.bfcmrec87,
   bfcmrec90: PromoCodeName.bfcmrec90,
+  julian: PromoCodeName.julian,
+  kb: PromoCodeName.kb,
+  '98grados': PromoCodeName.nyogrados,
+  robot: PromoCodeName.robot,
+  alaniz: PromoCodeName.alaniz,
+  hixec: PromoCodeName.hixec,
+  attilio: PromoCodeName.attilio,
+  diolinux: PromoCodeName.diolinux,
+  ondeeuclico: PromoCodeName.ondeeuclico,
+  darlan: PromoCodeName.darlan,
+  adrenaline: PromoCodeName.adrenaline,
+  labs: PromoCodeName.labs,
+  otto: PromoCodeName.otto,
 };
 
 interface OfferConfig {

@@ -36,6 +36,8 @@ interface BlackFridayCampaignTemplateProps {
   footerLang: FooterText;
   config: BlackFridayCampaignConfig;
   hideLanguage?: boolean;
+  hideNavbarLinks?: boolean;
+  hideNavbarCTA?: boolean;
 }
 
 const BlackFridayCampaignTemplate = ({
@@ -46,6 +48,8 @@ const BlackFridayCampaignTemplate = ({
   footerLang,
   config,
   hideLanguage,
+  hideNavbarLinks,
+  hideNavbarCTA,
 }: BlackFridayCampaignTemplateProps): JSX.Element => {
   const metatags = metatagsDescriptions.find((desc) => desc.id === config.metatagsId);
 
@@ -102,7 +106,7 @@ const BlackFridayCampaignTemplate = ({
       lang={lang}
       robots="noindex, follow"
     >
-      <Navbar textContent={navbarLang} lang={lang} cta={['chooseStorage']} fixed hideLanguage={hideLanguage} />
+      <Navbar textContent={navbarLang} lang={lang} cta={['chooseStorage']} fixed hideLanguage={hideLanguage} hideCTA={hideNavbarCTA} isLinksHidden={hideNavbarLinks} />
 
       <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} darkMode image={config.heroImage} />
 

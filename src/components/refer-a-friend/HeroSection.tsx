@@ -6,12 +6,15 @@ import dynamic from 'next/dynamic';
 
 const Animation = dynamic(() => import('../home/components/Animation'));
 import { ReferAFriendText } from '@/assets/types/refer-a-friend';
+import { useRouter } from 'next/router';
+import { addLangToDriveURL } from '@/lib/auth';
 
 interface HeroSectionForHomeProps {
   textContent: ReferAFriendText['HeroSection'];
 }
 
 export default function HeroSection({ textContent }: Readonly<HeroSectionForHomeProps>): JSX.Element {
+  const router = useRouter();
   const HighlightText = ({ text, className = '' }) => {
     const parts = text.split(/(\*\*.*?\*\*)/);
 
@@ -59,7 +62,7 @@ export default function HeroSection({ textContent }: Readonly<HeroSectionForHome
         <div className="flex h-min w-full flex-col justify-center gap-4">
           <div className="flex w-full flex-row items-start gap-4">
             <a
-              href={'https://drive.internxt.com/?openReferrals=true'}
+              href={addLangToDriveURL('https://drive.internxt.com/?openReferrals=true', router.locale)}
               className="no z-10 flex h-[48px] w-1/2 items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary  py-4 text-base font-medium text-white hover:bg-primary-dark lg:w-[177px]"
             >
               {textContent.cta}

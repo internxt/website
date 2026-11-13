@@ -2,6 +2,7 @@ import { MagnifyingGlass } from '@phosphor-icons/react';
 import RenderDescription from '../shared/RenderDescription';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { addLangToDriveURL } from '@/lib/auth';
 
 const WhatGoogleKnowsSection = ({ textContent }) => {
   const numberedList = textContent.section1.numberedList.map((item, index) => (
@@ -56,7 +57,7 @@ const WhatGoogleKnowsSection = ({ textContent }) => {
         </div>
         <Image
           onClick={() => {
-            window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
+            window.open(addLangToDriveURL('https://drive.internxt.com/new'), '_blank', 'noopener noreferrer');
           }}
           width={897}
           height={200}
