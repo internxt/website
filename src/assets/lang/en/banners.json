@@ -180,6 +180,11 @@
       "boldText": "",
       "normalText": "Massive Black Friday savings — only for a limited time!",
       "cta": "Claim deal"
+    },
+    "cyberWeekTitle": {
+      "boldText": "",
+      "normalText": "Massive Cyber Week savings — only for a limited time!",
+      "cta": "Claim deal"
     }
   },
   "lifetimeBanner": {

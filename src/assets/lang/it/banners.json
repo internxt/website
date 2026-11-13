@@ -157,6 +157,11 @@
       "boldText": "",
       "normalText": "Super sconti del Black Friday — solo per un periodo limitato!",
       "cta": "Approfitta dell'offerta"
+    },
+    "cyberWeekTitle": {
+      "boldText": "",
+      "normalText": "Super sconti della Cyber Week — solo per un periodo limitato!",
+      "cta": "Approfitta dell'offerta"
     }
   },
   "lifetimeBanner": {

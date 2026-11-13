@@ -180,6 +180,11 @@
       "boldText": "",
       "normalText": "Descontos enormes de Black Friday — só por tempo limitado!",
       "cta": "Aproveitar oferta"
+    },
+    "cyberWeekTitle": {
+      "boldText": "",
+      "normalText": "Descontos enormes de Cyber Week — só por tempo limitado!",
+      "cta": "Aproveitar oferta"
     }
   },
   "lifetimeBanner": {

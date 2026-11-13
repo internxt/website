@@ -465,6 +465,7 @@ export enum PromoCodeName {
   gpit85 = 'GPIT85',
   bfcmrec87 = 'BFCMREC87',
   bfcmrec90 = 'BFCMREC90',
+  cwcmrec90 = 'CWCMREC90',
   julian = 'JULIAN',
   kb = 'KB',
   nyogrados = '98GRADOS',
