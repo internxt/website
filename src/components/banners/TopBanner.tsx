@@ -53,12 +53,6 @@ const TopBanner = ({ isBannerFixed, lang: pageLang }: TopBannerProps) => {
               <span>{textContent.title.normalText}</span>
             </p>
             <span id={'topBannerActionButton'} className="flex cursor-pointer flex-row items-center ">
-            <Link
-              href={bannerUrl}
-              locale={lang}
-              id={'topBannerActionButton'}
-              className="flex cursor-pointer flex-row items-center "
-            >
               <p className="text-base font-medium underline hover:no-underline">{textContent.title.cta}</p>
               <CaretRight size={16} />
             </span>
