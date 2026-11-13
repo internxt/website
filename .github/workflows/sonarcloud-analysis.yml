@@ -39,6 +39,9 @@ jobs:
           start: yarn start
           browser: chrome
 
+      - name: Worker unit tests with coverage
+        run: yarn test:worker:coverage
+
       - name: Cypress artifacts
         uses: actions/upload-artifact@v4
         if: always()

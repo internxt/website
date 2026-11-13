@@ -18,6 +18,25 @@ export const priceValue = {
   BH: 'usd', // Bahrain
   OM: 'usd', // Oman
   IR: 'usd', // Iran
+  AR: 'usd', // Argentina
+  BO: 'usd', // Bolivia
+  CL: 'usd', // Chile
+  CO: 'usd', // Colombia
+  CR: 'usd', // Costa Rica
+  CU: 'usd', // Cuba
+  DO: 'usd', // Dominican Republic
+  EC: 'usd', // Ecuador
+  SV: 'usd', // El Salvador
+  GT: 'usd', // Guatemala
+  HN: 'usd', // Honduras
+  MX: 'usd', // Mexico
+  NI: 'usd', // Nicaragua
+  PA: 'usd', // Panama
+  PY: 'usd', // Paraguay
+  PE: 'usd', // Peru
+  PR: 'usd', // Puerto Rico
+  UY: 'usd', // Uruguay
+  VE: 'usd', // Venezuela
 };
 
 const objectStorageCurrencyValue = {

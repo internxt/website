@@ -3,6 +3,7 @@ import { Gift } from '@phosphor-icons/react';
 import React from 'react';
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
+import { addLangToDriveURL } from '@/lib/auth';
 
 const ThirdFeaturesSection = ({ textContent }) => {
   return (
@@ -33,7 +34,7 @@ const ThirdFeaturesSection = ({ textContent }) => {
             <button
               className="rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
               onClick={() => {
-                window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
+                window.open(addLangToDriveURL('https://drive.internxt.com/new'), '_blank', 'noopener noreferrer');
               }}
             >
               {textContent.cta}

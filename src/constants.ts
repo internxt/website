@@ -17,6 +17,8 @@ export const INTERNXT_URL = 'https://internxt.com';
 export const COOKIE_DOMAIN = 'internxt.com';
 export const IMPACT_LOGIN_USER = 'https://app.impact.com/login.user';
 
+export const SUPPORTED_LANGUAGES = ['en', 'es', 'fr', 'it', 'zh', 'ru', 'de', 'zh-tw', 'pt-br'];
+
 export const EXCLUDED_PATHS_FOR_BANNER = [
   '/pricing',
   '/partner-discount',

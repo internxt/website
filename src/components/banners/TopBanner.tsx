@@ -6,11 +6,12 @@ import { COUPON_CODES } from '@/hooks/useAffiliatesCampaignOfferConfig';
 
 interface TopBannerProps {
   isBannerFixed?: boolean;
+  lang?: string;
 }
 
-const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
+const TopBanner = ({ isBannerFixed, lang: pageLang }: TopBannerProps) => {
   const router = useRouter();
-  const lang = router.locale;
+  const lang = pageLang ?? router.locale;
   const bannersJson = require(`@/assets/lang/${lang}/banners.json`);
   const textContent = bannersJson.TopBarBanner;
   const routeWithOwnPages = ROUTES_WITH_OWN_PAGES.find((route) => router.pathname.startsWith(`/${route}`));
@@ -31,6 +32,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
           </div>
           <Link
             href={bannerUrl}
+            locale={lang}
             id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center"
           >
@@ -42,6 +44,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
 
       <Link
         href={bannerUrl}
+        locale={lang}
         className={`group fixed left-0 top-0 z-50 flex h-[64px] w-screen items-center justify-center overflow-hidden bg-primary text-white lg:hidden`}
       >
         <div className=" w-full  overflow-hidden px-3 text-center">
@@ -50,6 +53,12 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
               <span>{textContent.title.normalText}</span>
             </p>
             <span id={'topBannerActionButton'} className="flex cursor-pointer flex-row items-center ">
+            <Link
+              href={bannerUrl}
+              locale={lang}
+              id={'topBannerActionButton'}
+              className="flex cursor-pointer flex-row items-center "
+            >
               <p className="text-base font-medium underline hover:no-underline">{textContent.title.cta}</p>
               <CaretRight size={16} />
             </span>

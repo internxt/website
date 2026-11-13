@@ -2,9 +2,12 @@ import { Fragment } from 'react';
 import { UilCheck, UilMinus } from '@iconscout/react-unicons';
 import Link from 'next/link';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
+import { useRouter } from 'next/router';
+import { addLangToDriveURL } from '@/lib/auth';
 import { getImage } from '@/lib/getImage';
 
 const TableSection = ({ textContent }) => {
+  const router = useRouter();
   const competitors = [
     {
       name: 'Internxt',
@@ -598,7 +601,7 @@ const TableSection = ({ textContent }) => {
                   <td className="p-0" />
                   <td className="relative p-0">
                     <Link
-                      href={SIGNUP_DRIVE_WEB}
+                      href={addLangToDriveURL(SIGNUP_DRIVE_WEB, router.locale)}
                       target="_blank"
                       rel="noopener noreferrer"
                       id="get-started-link"

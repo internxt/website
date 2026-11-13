@@ -220,6 +220,12 @@ export const ALLOWED_PATHS = [
   'alaniz',
   'hixec',
   'attilio',
+  'diolinux',
+  'ondeeuclico',
+  'darlan',
+  'adrenaline',
+  'labs',
+  'otto',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -345,6 +351,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   pietro: 'it',
   tdit85: 'it',
   gpit85: 'it',
+  otto: 'it',
 
   // zh
   madmoneylabs: 'zh',
@@ -363,6 +370,11 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   lucas: 'pt-br',
   youensina: 'pt-br',
   attilio: 'pt-br',
+  diolinux: 'pt-br',
+  ondeeuclico: 'pt-br',
+  darlan: 'pt-br',
+  adrenaline: 'pt-br',
+  labs: 'pt-br',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -610,6 +622,12 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'alaniz',
   'hixec',
   'attilio',
+  'diolinux',
+  'ondeeuclico',
+  'darlan',
+  'adrenaline',
+  'labs',
+  'otto',
 ]);
 
 export const COUPON_CODES = {
@@ -830,6 +848,12 @@ export const COUPON_CODES = {
   alaniz: PromoCodeName.alaniz,
   hixec: PromoCodeName.hixec,
   attilio: PromoCodeName.attilio,
+  diolinux: PromoCodeName.diolinux,
+  ondeeuclico: PromoCodeName.ondeeuclico,
+  darlan: PromoCodeName.darlan,
+  adrenaline: PromoCodeName.adrenaline,
+  labs: PromoCodeName.labs,
+  otto: PromoCodeName.otto,
 };
 
 interface OfferConfig {
