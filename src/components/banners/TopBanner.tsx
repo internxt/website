@@ -32,6 +32,7 @@ const TopBanner = ({ isBannerFixed, lang: pageLang }: TopBannerProps) => {
           </div>
           <Link
             href={bannerUrl}
+            locale={lang}
             id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center"
           >
@@ -43,6 +44,7 @@ const TopBanner = ({ isBannerFixed, lang: pageLang }: TopBannerProps) => {
 
       <Link
         href={bannerUrl}
+        locale={lang}
         className={`group fixed left-0 top-0 z-50 flex h-[64px] w-screen items-center justify-center overflow-hidden bg-primary text-white lg:hidden`}
       >
         <div className=" w-full  overflow-hidden px-3 text-center">
@@ -52,6 +54,7 @@ const TopBanner = ({ isBannerFixed, lang: pageLang }: TopBannerProps) => {
             </p>
             <Link
               href={bannerUrl}
+              locale={lang}
               id={'topBannerActionButton'}
               className="flex cursor-pointer flex-row items-center "
             >
