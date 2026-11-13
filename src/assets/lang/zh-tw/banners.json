@@ -157,6 +157,11 @@
       "boldText": "",
       "normalText": "黑色星期五超值優惠——僅限限時搶購！",
       "cta": "立即領取"
+    },
+    "cyberWeekTitle": {
+      "boldText": "",
+      "normalText": "網路週超值優惠——僅限限時搶購！",
+      "cta": "立即領取"
     }
   },
   "lifetimeBanner": {

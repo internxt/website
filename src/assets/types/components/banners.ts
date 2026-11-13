@@ -117,6 +117,7 @@ export interface GoogleLpBanner {
 
 export interface TopBarBanner {
   title: TopBarBannerTitle;
+  cyberWeekTitle: TopBarBannerTitle;
 }
 
 export interface TopBarBannerTitle {

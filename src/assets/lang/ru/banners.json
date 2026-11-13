@@ -154,6 +154,11 @@
       "boldText": "",
       "normalText": "Огромные скидки в Чёрную пятницу — только ограниченное время!",
       "cta": "Получить скидку"
+    },
+    "cyberWeekTitle": {
+      "boldText": "",
+      "normalText": "Огромные скидки на Cyber Week — только ограниченное время!",
+      "cta": "Получить скидку"
     }
   },
   "AndroidSmartBanner": {

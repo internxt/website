@@ -126,6 +126,11 @@
       "boldText": "",
       "normalText": "Des réductions massives pour le Black Friday — pour une durée limitée !",
       "cta": "Profiter de l'offre"
+    },
+    "cyberWeekTitle": {
+      "boldText": "",
+      "normalText": "Des réductions massives pour la Cyber Week — pour une durée limitée !",
+      "cta": "Profiter de l'offre"
     }
   },
   "lifetimeBanner": {
