@@ -138,10 +138,9 @@ export default function HeroSection({
               {textContent.subtitle.part1} {textContent.subtitle.part2}
             </p>
           </div>
-          <span className="flex w-min flex-nowrap items-center gap-1 whitespace-nowrap rounded-2 text-base font-semibold leading-tight text-gray-100 lg:text-xl">
-            <p className="bg-neutral-37 px-1 py-0.5 text-primary">{parsePercentText(campaignText?.description ?? textContent.description)}</p>
-
-            <p className="bg-transparent">{textContent.descriptionNormal}</p>
+          <span className="w-full rounded-2 text-base font-semibold leading-tight text-gray-100 lg:text-xl">
+            <p className="box-decoration-clone inline bg-neutral-37 px-1 py-0.5 text-primary">{parsePercentText(campaignText?.description ?? textContent.description)}</p>{' '}
+            <p className="inline whitespace-nowrap bg-transparent">{textContent.descriptionNormal}</p>
           </span>
           <div className="flex flex-col justify-center gap-1 lg:gap-2">
             {textContent.features.map((feat) => (

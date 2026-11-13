@@ -226,6 +226,7 @@ export const ALLOWED_PATHS = [
   'adrenaline',
   'labs',
   'otto',
+  'techibee',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -628,6 +629,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'adrenaline',
   'labs',
   'otto',
+  'techibee',
 ]);
 
 export const COUPON_CODES = {
@@ -854,6 +856,7 @@ export const COUPON_CODES = {
   adrenaline: PromoCodeName.adrenaline,
   labs: PromoCodeName.labs,
   otto: PromoCodeName.otto,
+  techibee: PromoCodeName.techibee,
 };
 
 interface OfferConfig {

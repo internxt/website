@@ -118,11 +118,11 @@ export default function HeroSection({
           </div>
           {textContent.description && (
             <span
-              className={`flex w-full flex-nowrap items-center gap-1 rounded-2 text-base font-semibold leading-tight lg:w-min lg:whitespace-nowrap lg:text-xl ${
+              className={`w-full rounded-2 text-base font-semibold leading-tight lg:text-xl ${
                 darkMode ? 'text-gray-100' : 'text-gray-100'
               }`}
             >
-              <p className={`px-1 py-0.5 ${darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary'}`}>
+              <p className={`box-decoration-clone inline px-1 py-0.5 ${darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary'}`}>
                 {parsePercentText(textContent.description)}
               </p>
             </span>
