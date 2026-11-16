@@ -84,7 +84,7 @@
         "Internxt isn't a paywall over the privacy architecture. Drive on the free plan runs the same AES-256 and Kyber-512 zero-knowledge encryption as every paid plan, and the same Internxt account works across VPN, Antivirus, Cleaner, Meet, and Send. What paid plans add is more storage, more VPN locations, and tools like file versioning and collaborative folders.",
         "Internxt Business runs the same zero-knowledge stack, with team folders, admin controls, SSO, and shared billing on top. Files stay in EU data centers, and ISO 27001:2022 plus GDPR coverage handle most regulated workloads.",
         "Share albums with family through encrypted invitation links. RAW files, 4K video, and full-resolution photos stay in their original format. Internxt doesn't re-encode, scan, or downgrade your media to save server space.",
-        "Free at sign-up, no card required. Annual paid plans start at €3 a month. Lifetime plans secure 1 TB, 3 TB, or 5 TB of encrypted storage for a single one-time payment, and your storage stays active for as long as your account does."
+        "Free at sign-up, no card required. Annual paid plans start at €3 a month. Lifetime plans secure 1 TB, 2 TB, or 5 TB of encrypted storage for a single one-time payment, and your storage stays active for as long as your account does."
       ]
     }
   },
@@ -244,7 +244,7 @@
       {
         "question": "How much free cloud storage do you get with Internxt?",
         "answer": [
-          "The free plan starts at 1 GB of encrypted cloud storage, and the plan stays active for as long as your Internxt account does. If you need more, annual plans start at €3 a month for more storage and tools, and Lifetime plans secure 1 TB, 3 TB, or 5 TB of storage with a single one-time payment."
+          "The free plan starts at 1 GB of encrypted cloud storage, and the plan stays active for as long as your Internxt account does. If you need more, annual plans start at €3 a month for more storage and tools, and Lifetime plans secure 1 TB, 2 TB, or 5 TB of storage with a single one-time payment."
         ]
       },
       {

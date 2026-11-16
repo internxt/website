@@ -49,7 +49,7 @@
     "cta": "Accepter l'invitation"
   },
   "ctaSection2": {
-    "title": "Parmi les forfaits annuels d'Internxt : Lequel dois-je choisir ? 1 To, 3 To ou 5 To ?",
+    "title": "Parmi les forfaits annuels d'Internxt : Lequel dois-je choisir ? 1 To, 2 To ou 5 To ?",
     "description": "Réclamez votre remise exclusive de {{discount}} % pour accéder à la suite de confidentialité d'Internxt pendant un an",
     "descriptionWithoutDisocunt": "Découvrez la confidentialité numérique complète avec Internxt",
     "cta": "Choisir un forfait"
@@ -94,7 +94,7 @@
     },
     "planStorage": {
       "essential": "1 To",
-      "premium": "3 To",
+      "premium": "2 To",
       "ultimate": "5 To"
     }
   },

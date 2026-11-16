@@ -35,7 +35,7 @@
     "individuals": "Annuel",
     "planStorage": {
       "essential": "1 To",
-      "premium": "3 To",
+      "premium": "2 To",
       "ultimate": "5 To"
     },
     "ctaCompare": "Comparer tous les plans"
@@ -78,7 +78,7 @@
           },
           {
             "id": "storage_Premium",
-            "name": "3 To",
+            "name": "2 To",
             "avalability": {
               "Essential": false,
               "Premium": true,
