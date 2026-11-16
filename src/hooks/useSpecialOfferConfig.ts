@@ -226,6 +226,9 @@ export const ALLOWED_PATHS = [
   'adrenaline',
   'labs',
   'otto',
+  'techibee',
+  'xataka85',
+  'heise85',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -295,6 +298,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   mobiflip: 'de',
   alextbg: 'de',
   julian: 'de',
+  heise85: 'de',
 
   // es
   alejavi: 'es',
@@ -322,6 +326,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   robot: 'es',
   alaniz: 'es',
   hixec: 'es',
+  xataka85: 'es',
 
   // fr
   benjamin: 'fr',
@@ -628,6 +633,9 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'adrenaline',
   'labs',
   'otto',
+  'techibee',
+  'xataka85',
+  'heise85',
 ]);
 
 export const COUPON_CODES = {
@@ -854,6 +862,9 @@ export const COUPON_CODES = {
   adrenaline: PromoCodeName.adrenaline,
   labs: PromoCodeName.labs,
   otto: PromoCodeName.otto,
+  techibee: PromoCodeName.techibee,
+  xataka85: PromoCodeName.xataka85,
+  heise85: PromoCodeName.heise85,
 };
 
 interface OfferConfig {
