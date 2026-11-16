@@ -49,7 +49,7 @@
     "cta": "Accepter l'invitation"
   },
   "ctaSection2": {
-    "title": "Parmi les offres à vie d'Internxt : laquelle choisir ? 1 To, 3 To ou 5 To ?",
+    "title": "Parmi les offres à vie d'Internxt : laquelle choisir ? 1 To, 2 To ou 5 To ?",
     "description": "Toutes nos offres vous donnent tout ce dont vous avez besoin pour stocker vos fichiers en toute confidentialité dans le cloud. Si vous souhaitez une confidentialité complète, une gestion avancée du cloud et toutes les fonctionnalités d'Internxt, comme Meet et Mail, l'offre Ultimate 5 To est le meilleur choix pour un contrôle total et une confidentialité maximale.",
     "descriptionWithoutDisocunt": "Vivez une confidentialité numérique complète avec Internxt",
     "cta": "Choisir l'offre"
@@ -94,7 +94,7 @@
     },
     "planStorage": {
       "essential": "1 To",
-      "premium": "3 To",
+      "premium": "2 To",
       "ultimate": "5 To"
     }
   },

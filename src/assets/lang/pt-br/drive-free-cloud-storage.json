@@ -88,7 +88,7 @@
         "A Internxt não coloca um paywall sobre a arquitetura de privacidade. O Drive no plano gratuito usa a mesma criptografia de conhecimento zero AES-256 e Kyber-512 de todos os planos pagos, e a mesma conta Internxt funciona no VPN, Antivirus, Cleaner, Meet e Send. O que os planos pagos acrescentam é mais armazenamento, mais localizações de VPN e ferramentas como versionamento de arquivos e pastas colaborativas.",
         "O Internxt Business usa a mesma estrutura de conhecimento zero, com pastas de equipe, controles administrativos, SSO e cobrança compartilhada por cima. Os arquivos ficam em data centers na UE, e a certificação ISO 27001:2022 somada ao GDPR cobre a maioria das cargas de trabalho regulamentadas.",
         "Compartilhe álbuns com a família por meio de links de convite criptografados. Arquivos RAW, vídeo 4K e fotos em resolução máxima mantêm o formato original. A Internxt não recodifica, escaneia nem reduz a qualidade da sua mídia para economizar espaço no servidor.",
-        "Gratuito no cadastro, sem necessidade de cartão. Os planos anuais começam em € 3 por mês. Os planos vitalícios garantem 1 TB, 3 TB ou 5 TB de armazenamento criptografado com um único pagamento, e seu armazenamento permanece ativo enquanto sua conta existir."
+        "Gratuito no cadastro, sem necessidade de cartão. Os planos anuais começam em € 3 por mês. Os planos vitalícios garantem 1 TB, 2 TB ou 5 TB de armazenamento criptografado com um único pagamento, e seu armazenamento permanece ativo enquanto sua conta existir."
       ]
     }
   },
@@ -248,7 +248,7 @@
       {
         "question": "Quanto armazenamento na nuvem gratuito você tem com a Internxt?",
         "answer": [
-          "O plano gratuito começa com 1 GB de armazenamento na nuvem criptografado, e permanece ativo enquanto sua conta Internxt existir. Se precisar de mais, os planos anuais começam em € 3 por mês, com mais armazenamento e ferramentas, e os planos vitalícios garantem 1 TB, 3 TB ou 5 TB de armazenamento com um único pagamento."
+          "O plano gratuito começa com 1 GB de armazenamento na nuvem criptografado, e permanece ativo enquanto sua conta Internxt existir. Se precisar de mais, os planos anuais começam em € 3 por mês, com mais armazenamento e ferramentas, e os planos vitalícios garantem 1 TB, 2 TB ou 5 TB de armazenamento com um único pagamento."
         ]
       },
       {
