@@ -479,6 +479,12 @@ export enum PromoCodeName {
   adrenaline = 'ADRENALINE',
   labs = 'LABS',
   otto = 'OTTO',
+  tdescw90 = 'TDESCW90',
+  tdptcw90 = 'TDPTCW90',
+  tditcw90 = 'TDITCW90',
+  techibee = 'TECHIBEE',
+  xataka85 = 'XATAKA85',
+  heise85 = 'HEISE85',
 }
 
 export interface PromoCodeProps {
