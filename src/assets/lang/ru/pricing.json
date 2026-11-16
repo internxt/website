@@ -78,7 +78,7 @@
           },
           {
             "id": "storage_Premium",
-            "name": "3 ТБ",
+            "name": "2 ТБ",
             "avalability": {
               "Essential": false,
               "Premium": true,
