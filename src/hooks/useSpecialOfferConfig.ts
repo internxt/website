@@ -229,6 +229,8 @@ export const ALLOWED_PATHS = [
   'techibee',
   'xataka85',
   'heise85',
+  'parlonscyber',
+  'awde85',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -299,6 +301,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   alextbg: 'de',
   julian: 'de',
   heise85: 'de',
+  awde85: 'de',
 
   // es
   alejavi: 'es',
@@ -340,6 +343,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   overfl0w: 'fr',
   qinhui: 'fr',
   visionia: 'fr',
+  parlonscyber: 'fr',
 
   // it
   alessandro: 'it',
@@ -412,6 +416,7 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'simon42',
   'ition',
   'luca',
+  'pietro',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -636,6 +641,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'techibee',
   'xataka85',
   'heise85',
+  'parlonscyber',
+  'awde85',
 ]);
 
 export const COUPON_CODES = {
@@ -865,6 +872,8 @@ export const COUPON_CODES = {
   techibee: PromoCodeName.techibee,
   xataka85: PromoCodeName.xataka85,
   heise85: PromoCodeName.heise85,
+  parlonscyber: PromoCodeName.parlonscyber,
+  awde85: PromoCodeName.awde85,
 };
 
 interface OfferConfig {

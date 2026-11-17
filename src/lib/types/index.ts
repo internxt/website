@@ -485,6 +485,10 @@ export enum PromoCodeName {
   techibee = 'TECHIBEE',
   xataka85 = 'XATAKA85',
   heise85 = 'HEISE85',
+  parlonscyber = 'PARLONSCYBER',
+  awde85 = 'AWDE85',
+  awbf90 = 'AWBF90',
+  awcw90 = 'AWCW90',
 }
 
 export interface PromoCodeProps {
