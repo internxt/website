@@ -15,6 +15,20 @@
     "subtitle2": "适用于所有计划",
     "claimDeal": "获取优惠"
   },
+  "PriorityHeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "杀毒软件",
+      "cleaner": "清理工具",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "邮箱"
+    },
+    "title": "您已进入黑色星期五**优先名单**。",
+    "description": "抢先解锁我们年度最大的黑色星期五优惠——后量子加密云存储和完整隐私套件，立享{{discount}}%折扣。",
+    "subtitle": "享受{{discount}}%折扣",
+    "claimDeal": "获取优惠"
+  },
   "ReviewSection": {
     "forbes": "Internxt巩固了其作为欧洲科技巨头替代方案的地位",
     "deloitte": "荣获德勤Fast 50大奖，表彰增长最快的企业",

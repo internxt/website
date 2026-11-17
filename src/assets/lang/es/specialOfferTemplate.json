@@ -16,6 +16,21 @@
     "subtitle2": "en todos los planes",
     "claimDeal": "Reclamar oferta"
   },
+  "PriorityHeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail",
+      "ai": "AI"
+    },
+    "title": "Estás en la **lista prioritaria** del Black Friday.",
+    "description": "Desbloquea el acceso anticipado a nuestra mayor oferta del Black Friday del año antes que nadie: almacenamiento en la nube encriptado post-cuántico y toda nuestra suite de privacidad con un {{discount}}% de descuento.",
+    "subtitle": "Obtén un {{discount}}% de descuento",
+    "claimDeal": "Reclamar oferta"
+  },
   "ReviewSection": {
     "forbes": "Internxt consolida su posición como alternativa europea a los gigantes tecnológicos",
     "deloitte": "Recibió el premio Deloitte Fast 50, que reconoce a las empresas de más rápido crecimiento",

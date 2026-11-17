@@ -231,6 +231,7 @@ export const ALLOWED_PATHS = [
   'heise85',
   'parlonscyber',
   'awde85',
+  'priority-offer-em',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -643,6 +644,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'heise85',
   'parlonscyber',
   'awde85',
+  'priority-offer-em',
 ]);
 
 export const COUPON_CODES = {
@@ -874,6 +876,7 @@ export const COUPON_CODES = {
   heise85: PromoCodeName.heise85,
   parlonscyber: PromoCodeName.parlonscyber,
   awde85: PromoCodeName.awde85,
+  'priority-offer-em': PromoCodeName.plbf90,
 };
 
 interface OfferConfig {
@@ -892,6 +895,7 @@ interface OfferConfig {
   isBpdrive: boolean;
   requireAnnualDiscount?: boolean;
   isPrivacyTutor: boolean;
+  isPriorityHero: boolean;
   redirectToUrgentCheckout: boolean;
 }
 
@@ -916,6 +920,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         isBpdrive: false,
         requireAnnualDiscount: false,
         isPrivacyTutor: false,
+        isPriorityHero: false,
         redirectToUrgentCheckout: false,
       };
     }
@@ -932,6 +937,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const isWpcdrive = selectedPathname === 'wpcdrive';
     const isBpdrive = selectedPathname === 'bpdrive';
     const isPrivacyTutor = selectedPathname === 'privacytutor';
+    const isPriorityHero = selectedPathname === 'priority-offer-em';
     const requireAnnualDiscount = ANNUAL_DISCOUNT_PLANS_PATHS.has(selectedPathname);
     const redirectToUrgentCheckout = URGENT_CHECKOUT_PATHS.has(selectedPathname);
 
@@ -954,6 +960,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       isWpcdrive,
       isBpdrive,
       isPrivacyTutor,
+      isPriorityHero,
       requireAnnualDiscount,
       redirectToUrgentCheckout,
     };
