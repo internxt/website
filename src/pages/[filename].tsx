@@ -81,6 +81,7 @@ function CombinedSpecialOffer({
     isWpcdrive,
     isBpdrive,
     isPrivacyTutor,
+    isPriorityHero,
     requireAnnualDiscount,
     redirectToUrgentCheckout,
   } = useOfferConfig(pathname);
@@ -158,7 +159,7 @@ function CombinedSpecialOffer({
       robots={
         pathname === 'world-backup-day' || pathname === 'earth-day' || pathname === 'drop-offer'
          || pathname === 'offerblogen' || pathname === 'offerbloges' || pathname === 'offerblogde'
-         || pathname === 'offerblogfr'
+         || pathname === 'offerblogfr' || pathname === 'priority-offer-em'
           ? 'noindex,follow'
           : undefined
       }
@@ -174,7 +175,7 @@ function CombinedSpecialOffer({
       />
 
       <HeroSection
-        textContent={langJson.HeroSection}
+        textContent={isPriorityHero ? langJson.PriorityHeroSection : langJson.HeroSection}
         percentOff={percentOff}
         darkMode={isDarkMode}
         image={alternativeImages}

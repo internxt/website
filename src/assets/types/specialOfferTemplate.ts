@@ -1,5 +1,6 @@
 export interface SpecialOfferText {
   HeroSection: HeroSection;
+  PriorityHeroSection: PriorityHeroSection;
   ReviewSection: ReviewSection;
   TrustedBySection: TrustedBySection;
   NextGenSection: NextGenSection;
@@ -95,6 +96,14 @@ export interface HeroSection {
   description: string;
   subtitle: string;
   subtitle2: string;
+  claimDeal: string;
+}
+
+export interface PriorityHeroSection {
+  products: Products;
+  title: string;
+  description: string;
+  subtitle: string;
   claimDeal: string;
 }
 

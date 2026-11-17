@@ -17,6 +17,21 @@
     "lifetimeSubtitle2": "on all lifetime plans",
     "claimDeal": "Claim deal"
   },
+  "PriorityHeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail",
+      "ai": "AI"
+    },
+    "title": "You're on the Black Friday **priority list**.",
+    "description": "Unlock early access to our biggest Black Friday deal of the year before anyone else—post-quantum encrypted cloud storage and our full privacy suite at {{discount}}% off.",
+    "subtitle": "Get {{discount}}% off discount",
+    "claimDeal": "Claim deal"
+  },
   "ReviewSection": {
     "forbes": "Internxt consolidates its position as an European alternative to the tech giants",
     "deloitte": "Received Deloitte Fast 50 Award, which recognizes fastest-growing companies",

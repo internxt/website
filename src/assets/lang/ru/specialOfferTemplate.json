@@ -16,6 +16,21 @@
     "subtitle2": "на все тарифы",
     "claimDeal": "Получить предложение"
   },
+  "PriorityHeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail",
+      "ai": "AI"
+    },
+    "title": "Вы в **приоритетном списке** Black Friday.",
+    "description": "Получите ранний доступ к нашему крупнейшему предложению Black Friday в этом году раньше всех — пост-квантовое зашифрованное облачное хранилище и весь пакет конфиденциальности со скидкой {{discount}}%.",
+    "subtitle": "Получите {{discount}}% скидки",
+    "claimDeal": "Получить предложение"
+  },
   "ReviewSection": {
     "forbes": "Internxt укрепляет свои позиции как европейская альтернатива технологическим гигантам",
     "deloitte": "Получил премию Deloitte Fast 50, признающую самые быстрорастущие компании",

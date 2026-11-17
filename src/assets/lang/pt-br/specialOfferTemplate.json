@@ -17,6 +17,21 @@
     "lifetimeSubtitle2": "em todos os planos vitalícios",
     "claimDeal": "Garantir oferta"
   },
+  "PriorityHeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail",
+      "ai": "AI"
+    },
+    "title": "Você está na **lista prioritária** da Black Friday.",
+    "description": "Desbloqueie o acesso antecipado à nossa maior oferta de Black Friday do ano antes de todo mundo: armazenamento na nuvem criptografado pós-quântico e toda a nossa suíte de privacidade com {{discount}}% de desconto.",
+    "subtitle": "Ganhe {{discount}}% de desconto",
+    "claimDeal": "Garantir oferta"
+  },
   "ReviewSection": {
     "forbes": "A Internxt consolida sua posição como alternativa europeia às gigantes da tecnologia",
     "deloitte": "Recebeu o prêmio Deloitte Fast 50, que reconhece as empresas de crescimento mais rápido",

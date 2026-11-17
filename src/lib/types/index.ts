@@ -489,6 +489,7 @@ export enum PromoCodeName {
   awde85 = 'AWDE85',
   awbf90 = 'AWBF90',
   awcw90 = 'AWCW90',
+  plbf90 = 'PLBF90',
 }
 
 export interface PromoCodeProps {
