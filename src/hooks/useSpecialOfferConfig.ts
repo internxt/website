@@ -234,6 +234,8 @@ export const ALLOWED_PATHS = [
   'priority-offer-em',
   'gaito',
   'fabio',
+  'suneja',
+  'techiq',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -651,6 +653,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'priority-offer-em',
   'gaito',
   'fabio',
+  'suneja',
+  'techiq',
 ]);
 
 export const COUPON_CODES = {
@@ -885,6 +889,8 @@ export const COUPON_CODES = {
   'priority-offer-em': PromoCodeName.plbf90,
   gaito: PromoCodeName.gaito,
   fabio: PromoCodeName.fabio,
+  suneja: PromoCodeName.suneja,
+  techiq: PromoCodeName.techiq,
 };
 
 interface OfferConfig {
