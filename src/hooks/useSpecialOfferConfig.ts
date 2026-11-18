@@ -232,6 +232,8 @@ export const ALLOWED_PATHS = [
   'parlonscyber',
   'awde85',
   'priority-offer-em',
+  'gaito',
+  'fabio',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -362,6 +364,8 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   tdit85: 'it',
   gpit85: 'it',
   otto: 'it',
+  gaito: 'it',
+  fabio: 'it',
 
   // zh
   madmoneylabs: 'zh',
@@ -645,6 +649,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'parlonscyber',
   'awde85',
   'priority-offer-em',
+  'gaito',
+  'fabio',
 ]);
 
 export const COUPON_CODES = {
@@ -877,6 +883,8 @@ export const COUPON_CODES = {
   parlonscyber: PromoCodeName.parlonscyber,
   awde85: PromoCodeName.awde85,
   'priority-offer-em': PromoCodeName.plbf90,
+  gaito: PromoCodeName.gaito,
+  fabio: PromoCodeName.fabio,
 };
 
 interface OfferConfig {

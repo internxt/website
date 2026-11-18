@@ -490,6 +490,8 @@ export enum PromoCodeName {
   awbf90 = 'AWBF90',
   awcw90 = 'AWCW90',
   plbf90 = 'PLBF90',
+  gaito = 'GAITO',
+  fabio = 'FABIO',
 }
 
 export interface PromoCodeProps {
