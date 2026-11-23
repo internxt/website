@@ -131,7 +131,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
             <div className="flex  w-full flex-col items-center justify-center pt-6">
               <Image
                 src={getImage(`/banners/BanInternxt728x90en.webp`)}
-                alt="Bitdefender x Internxt Banner"
+                alt="Internxt Banner"
                 width={800}
                 height={110}
                 quality={100}

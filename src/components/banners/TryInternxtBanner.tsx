@@ -22,7 +22,7 @@ const TryInternxtBanner = ({ textContent, url }) => {
         className={`${bannerVisible ? 'flex' : 'hidden'} absolute left-1/2 top-1/2
         flex w-full max-w-[800px] -translate-x-1/2 -translate-y-1/2 transform flex-col rounded-2xl text-neutral-900`}
         style={{
-          backgroundImage: `url(/images/virus-scanner/banner-bg.png)`,
+          backgroundImage: `url(${getImage('/images/virus-scanner/banner-bg.png')})`,
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
@@ -51,7 +51,7 @@ const TryInternxtBanner = ({ textContent, url }) => {
           <div className="hidden items-center lg:flex">
             <div className="flex w-[340px]">
               <Image
-                src={getImage('/images/virus-scanner/ImageBanner.webp')}
+                src={getImage('/images/virus-scanner/ImageBanner.png')}
                 alt="hero"
                 width={208}
                 height={208}

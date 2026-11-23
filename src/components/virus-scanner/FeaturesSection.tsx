@@ -15,26 +15,6 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-5 px-5 lg:p-16">
         <div className="flex w-full flex-col items-center justify-center ">
           <SignUpBanner textContent={bannerText} lang={lang} />
-          <div className="flex w-full flex-col items-center justify-center pt-10">
-            <Image
-              src={getImage(`/banners/Ban_Internxt_728x90.webp`)}
-              alt="Internxt x Bitdefender Banner"
-              width={728}
-              height={90}
-              quality={100}
-              onClick={() =>
-                window.open(
-                  `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
-                  '_blank',
-                  'noopener noreferrer',
-                )
-              }
-              style={{
-                cursor: 'pointer',
-                maxWidth: "100%",
-                height: "auto"
-              }} />
-          </div>
         </div>
         <div id="incontent_2" className="flex w-full max-w-[1000px] justify-center"></div>
         {/* Marketing text */}
@@ -55,7 +35,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
               </div>
               <div className="flex">
                 <Image
-                  src={`/images/virus-scanner/virus_scanner.webp`}
+                  src={getImage(`/images/virus-scanner/virus_scanner.webp`)}
                   width={573}
                   height={390}
                   alt="Viruses Hate Privacy"
@@ -70,7 +50,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
             <div className="flex flex-col-reverse items-center md:flex-row md:space-x-16">
               <div className="flex">
                 <Image
-                  src={`/images/virus-scanner/malware.webp`}
+                  src={getImage(`/images/virus-scanner/malware.webp`)}
                   width={573}
                   height={390}
                   alt="Stop malware image"
@@ -84,26 +64,6 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 <p className=" text-3xl font-semibold md:text-start">{textContent.stopMalware.title}</p>
                 <p className="text-xl text-gray-80">{textContent.stopMalware.description}</p>
               </div>
-            </div>
-            <div className="flex w-full flex-col items-center justify-center">
-              <Image
-                src={getImage(`/banners/Ban_Internxt_728x90.webp`)}
-                alt="File Arrow Up icon"
-                width={728}
-                height={90}
-                quality={100}
-                onClick={() =>
-                  window.open(
-                    `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
-                    '_blank',
-                    'noopener noreferrer',
-                  )
-                }
-                style={{
-                  cursor: 'pointer',
-                  maxWidth: "100%",
-                  height: "auto"
-                }} />
             </div>
 
             {/* Free online scanner */}
@@ -130,7 +90,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
               </div>
               <div className="flex">
                 <Image
-                  src={`/images/virus-scanner/phishing.webp`}
+                  src={getImage(`/images/virus-scanner/phishing.webp`)}
                   width={573}
                   height={390}
                   alt="Scan files image"
@@ -140,26 +100,6 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                     height: "auto"
                   }} />
               </div>
-            </div>
-            <div className="flex w-full flex-col items-center justify-center">
-              <Image
-                src={getImage(`/banners/Ban_Internxt_728x90.webp`)}
-                alt="File Arrow Up icon"
-                width={728}
-                height={90}
-                quality={100}
-                onClick={() =>
-                  window.open(
-                    `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
-                    '_blank',
-                    'noopener noreferrer',
-                  )
-                }
-                style={{
-                  cursor: 'pointer',
-                  maxWidth: "100%",
-                  height: "auto"
-                }} />
             </div>
           </div>
         </div>

@@ -29,9 +29,9 @@
       "unableToProcess": "Kann nicht verarbeitet werden",
       "noVirusesDetected": {
         "message": "Kein Virus erkannt",
-        "title": "Schützen Sie Ihre Dateien vor Viren",
-        "subtitle": "Internxt hat sich mit Bitdefender zusammengeschlossen, um Ihnen den ultimativen Echtzeitschutz für Ihr Gerät zu bieten. Sichern Sie sich 3 Monate ultimativen Virenschutz kostenlos.",
-        "cta": "Angebot sichern"
+        "title": "Möchten Sie Ihre Dateien schützen?",
+        "subtitle": "Internxt ist ein privater Cloud-Speicherdienst mit integriertem Virenscan und end-to-end Verschlüsselung.",
+        "cta": "Starte jetzt"
       },
       "analyzing": "Scanne Datei...",
       "scanTime": "Scan Zeit",

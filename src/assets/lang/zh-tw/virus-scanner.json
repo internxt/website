@@ -28,9 +28,9 @@
       "unableToProcess": "無法處理",
       "noVirusesDetected": {
         "message": "未檢測到病毒",
-        "title": "保護您的檔案免受病毒侵害",
-        "subtitle": "Internxt 推薦屢獲殊榮的 Bitdefender 防病毒技術，以幫助保護您的設備。為 Windows 獲取終身保護以及實時安全功能，在威脅觸及您的文件之前將其阻止。",
-        "cta": "免費獲取防病毒軟件"
+        "title": "想要保護您的文件安全嗎？",
+        "subtitle": "Internxt 是一家具有內置病毒掃描和端到端加密的私人雲存儲服務。",
+        "cta": "立即開始"
       },
       "analyzing": "正在掃描文件...",
       "scanTime": "掃描時間",
