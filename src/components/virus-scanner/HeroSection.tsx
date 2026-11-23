@@ -245,7 +245,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                                     </div>
 
                                     <a
-                                      href={`https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`}
+                                      href={`https://drive.internxt.com/new`}
                                       target="_blank"
                                       rel="noopener noreferrer"
                                       className="button-primary"
@@ -388,7 +388,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                   <>
                     <div className="flex h-60 w-full flex-col items-center justify-center rounded-xl border-2 border-dashed border-primary bg-opacity-3 sm:h-96">
                       <Image
-                        src={getImage('/images/virus-scanner/FileArrowUp.webp')}
+                        src={getImage('/images/virus-scanner/FileArrowUp.png')}
                         alt="File Arrow Up icon"
                         width={80}
                         height={80}
@@ -463,23 +463,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
           </div>
         </div>
         <div id="incontent_1" className="flex w-full max-w-[1000px] justify-center"></div>
-      </div>
-      <div className="flex w-full flex-col items-center justify-center px-6 ">
-        <Image
-          src={getImage(`/banners/Ban_Internxt_728x90.webp`)}
-          alt="File Arrow Up icon"
-          width={728}
-          height={90}
-          quality={100}
-          style={{ cursor: 'pointer' }}
-          onClick={() =>
-            window.open(
-              `https://www.bitdefender.com/pages/consumer/en/new/avfree/internxt?vcampaign=avfreeinternxt&cid=aff%7Cc%7Cpartnership%7Cinternxt`,
-              '_blank',
-              'noopener noreferrer',
-            )
-          }
-        />
       </div>
     </section>
   );

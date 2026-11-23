@@ -28,9 +28,9 @@
       "unableToProcess": "Não foi possível processar",
       "noVirusesDetected": {
         "message": "Nenhum vírus detectado",
-        "title": "Mantenha seus arquivos livres de vírus",
-        "subtitle": "A Internxt recomenda o Bitdefender para ajudar a proteger seu dispositivo com tecnologias antivírus premiadas. Obtenha proteção vitalícia para Windows, com segurança em tempo real que ajuda a deter ameaças antes que cheguem aos seus arquivos.",
-        "cta": "Obtenha o Antivirus grátis"
+        "title": "Quer manter seus arquivos seguros?",
+        "subtitle": "A Internxt é um serviço de armazenamento em nuvem privado com verificação de vírus integrada e criptografia de ponta a ponta.",
+        "cta": "Comece agora"
       },
       "analyzing": "Analisando arquivo...",
       "scanTime": "Tempo de análise",
