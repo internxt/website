@@ -240,7 +240,7 @@ export const HeroSection = ({ textContent }) => {
       <div className="flex w-full flex-col items-center justify-center ">
         <Image
           src={getImage(`/banners/Ban-Intenxt-160x600-en.webp`)}
-          alt=" Bitdefender x Internxt Banner"
+          alt="Internxt Banner"
           width={180}
           height={180}
           quality={100}
@@ -288,7 +288,7 @@ export const HeroSection = ({ textContent }) => {
       <div className="flex w-full flex-col items-center justify-center">
         <Image
           src={getImage(`/banners/Ban-Intenxt-160x600-en.webp`)}
-          alt="Bitdefender x Internxt Banner"
+          alt="Internxt Banner"
           width={180}
           height={180}
           quality={100}
