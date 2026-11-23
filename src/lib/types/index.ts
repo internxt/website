@@ -499,6 +499,9 @@ export enum PromoCodeName {
   gyan = 'GYAN',
   davidtech = 'DAVIDTECH',
   adslzone90 = 'ADSLZONE90',
+  gpuk85 = 'GPUK85',
+  gpukbf90 = 'GPUKBF90',
+  gpukcw90 = 'GPUKCW90'
 }
 
 export interface PromoCodeProps {
