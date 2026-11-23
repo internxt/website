@@ -32,6 +32,7 @@ export const CAMPAIGN_BY_PATH: Record<string, AffiliatesBlackFridayCampaign> = {
   gpitbf90: 'black-week',
   chollobf90: 'black-week',
   awbf90: 'black-week',
+  adslzone90: 'black-week',
 
   cyberweek90: 'cyber-week',
   cyberweekcn90: 'cyber-week',
@@ -78,6 +79,7 @@ export const COUPON_CODES: Record<string, PromoCodeName> = {
   gpitbf90: PromoCodeName.gpitbf90,
   chollobf90: PromoCodeName.chollobf90,
   awbf90: PromoCodeName.awbf90,
+  adslzone90: PromoCodeName.adslzone90,
 
   cyberweek90: PromoCodeName.cyberweek90,
   cyberweekcn90: PromoCodeName.cyberweekcn90,
@@ -114,6 +116,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   chollobm87: 'es',
   chollobf90: 'es',
   chollocw90: 'es',
+  adslzone90: 'es',
 
   clubicbm87: 'fr',
   clubicbf90: 'fr',

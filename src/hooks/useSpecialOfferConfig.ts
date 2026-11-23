@@ -236,6 +236,10 @@ export const ALLOWED_PATHS = [
   'fabio',
   'suneja',
   'techiq',
+  'satish',
+  'jignesh',
+  'gyan',
+  'davidtech',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -335,6 +339,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   alaniz: 'es',
   hixec: 'es',
   xataka85: 'es',
+  davidtech: 'es',
 
   // fr
   benjamin: 'fr',
@@ -424,6 +429,7 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'ition',
   'luca',
   'pietro',
+  'gaito',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -655,6 +661,10 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'fabio',
   'suneja',
   'techiq',
+  'satich',
+  'jignesh',
+  'gyan',
+  'davidtech',
 ]);
 
 export const COUPON_CODES = {
@@ -891,6 +901,10 @@ export const COUPON_CODES = {
   fabio: PromoCodeName.fabio,
   suneja: PromoCodeName.suneja,
   techiq: PromoCodeName.techiq,
+  satish: PromoCodeName.satish,
+  jignesh: PromoCodeName.jignesh,
+  gyan: PromoCodeName.gyan,
+  davidtech: PromoCodeName.davidtech,
 };
 
 interface OfferConfig {

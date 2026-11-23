@@ -493,7 +493,12 @@ export enum PromoCodeName {
   gaito = 'GAITO',
   fabio = 'FABIO',
   suneja = 'SUNEJA',
-  techiq = 'techiq',
+  techiq = 'TECHIQ',
+  satish = 'SATISH',
+  jignesh = 'JIGNESH',
+  gyan = 'GYAN',
+  davidtech = 'DAVIDTECH',
+  adslzone90 = 'ADSLZONE90',
 }
 
 export interface PromoCodeProps {
