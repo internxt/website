@@ -32,6 +32,8 @@ export const CAMPAIGN_BY_PATH: Record<string, AffiliatesBlackFridayCampaign> = {
   gpitbf90: 'black-week',
   chollobf90: 'black-week',
   awbf90: 'black-week',
+  adslzone90: 'black-week',
+  gpukbf90: 'black-week',
 
   cyberweek90: 'cyber-week',
   cyberweekcn90: 'cyber-week',
@@ -47,6 +49,7 @@ export const CAMPAIGN_BY_PATH: Record<string, AffiliatesBlackFridayCampaign> = {
   gpitcw90: 'cyber-week',
   chollocw90: 'cyber-week',
   awcw90: 'cyber-week',
+  gpukcw90: 'cyber-week',
 };
 
 export const COUPON_CODES: Record<string, PromoCodeName> = {
@@ -78,6 +81,8 @@ export const COUPON_CODES: Record<string, PromoCodeName> = {
   gpitbf90: PromoCodeName.gpitbf90,
   chollobf90: PromoCodeName.chollobf90,
   awbf90: PromoCodeName.awbf90,
+  adslzone90: PromoCodeName.adslzone90,
+  gpukbf90: PromoCodeName.gpukbf90,
 
   cyberweek90: PromoCodeName.cyberweek90,
   cyberweekcn90: PromoCodeName.cyberweekcn90,
@@ -93,6 +98,7 @@ export const COUPON_CODES: Record<string, PromoCodeName> = {
   gpitcw90: PromoCodeName.gpitcw90,
   chollocw90: PromoCodeName.chollocw90,
   awcw90: PromoCodeName.awcw90,
+  gpukcw90: PromoCodeName.gpukcw90,
 };
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -101,6 +107,9 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   heisecm90: 'de',
   awbf90: 'de',
   awcw90: 'de',
+
+  gpukbf90: 'en',
+  gpukcw90: 'en',
 
   xatakabm87: 'es',
   xatakabf90: 'es',
@@ -114,6 +123,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   chollobm87: 'es',
   chollobf90: 'es',
   chollocw90: 'es',
+  adslzone90: 'es',
 
   clubicbm87: 'fr',
   clubicbf90: 'fr',
