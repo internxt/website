@@ -661,7 +661,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'fabio',
   'suneja',
   'techiq',
-  'satich',
+  'satish',
   'jignesh',
   'gyan',
   'davidtech',
