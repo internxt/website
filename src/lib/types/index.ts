@@ -501,7 +501,16 @@ export enum PromoCodeName {
   adslzone90 = 'ADSLZONE90',
   gpuk85 = 'GPUK85',
   gpukbf90 = 'GPUKBF90',
-  gpukcw90 = 'GPUKCW90'
+  gpukcw90 = 'GPUKCW90',
+  techontrend = 'TECHONTREND',
+  manostry = 'MANOSTRY',
+  igraal85 = 'IGRAAL85',
+  shoop85 = 'SHOOP85',
+  voucher85 = 'VOUCHER85',
+  igraalcw90 = 'IGRAALCW90',
+  shoopcw90 = 'SHOOPCW90',
+  voucherbf90 = 'VOUCHERBF90',
+  vouchercw90 = 'VOUCHERCW90',
 }
 
 export interface PromoCodeProps {
