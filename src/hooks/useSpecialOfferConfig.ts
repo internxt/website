@@ -243,6 +243,9 @@ export const ALLOWED_PATHS = [
   'gpuk85',
   'techontrend',
   'manostry',
+  'igraal85',
+  'shoop85',
+  'voucher85',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -286,6 +289,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   gamermeld: 'en',
   danalove: 'en',
   gpuk85: 'en',
+  voucher85: 'en',
 
   // de
   aimentors: 'de',
@@ -315,6 +319,8 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   julian: 'de',
   heise85: 'de',
   awde85: 'de',
+  igraal85: 'de',
+  shoop85: 'de',
 
   // es
   alejavi: 'es',
@@ -672,6 +678,9 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'gpuk85',
   'techontrend',
   'manostry',
+  'igraal85',
+  'shoop85',
+  'voucher85',
 ]);
 
 export const COUPON_CODES = {
@@ -915,6 +924,9 @@ export const COUPON_CODES = {
   gpuk85: PromoCodeName.gpuk85,
   techontrend: PromoCodeName.techontrend,
   manostry: PromoCodeName.manostry,
+  igraal85: PromoCodeName.igraal85,
+  shoop85: PromoCodeName.shoop85,
+  voucher85: PromoCodeName.voucher85,
 };
 
 interface OfferConfig {
