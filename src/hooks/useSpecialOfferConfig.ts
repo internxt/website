@@ -241,6 +241,8 @@ export const ALLOWED_PATHS = [
   'gyan',
   'davidtech',
   'gpuk85',
+  'techontrend',
+  'manostry',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -668,6 +670,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'gyan',
   'davidtech',
   'gpuk85',
+  'techontrend',
+  'manostry',
 ]);
 
 export const COUPON_CODES = {
@@ -909,6 +913,8 @@ export const COUPON_CODES = {
   gyan: PromoCodeName.gyan,
   davidtech: PromoCodeName.davidtech,
   gpuk85: PromoCodeName.gpuk85,
+  techontrend: PromoCodeName.techontrend,
+  manostry: PromoCodeName.manostry,
 };
 
 interface OfferConfig {
