@@ -246,6 +246,8 @@ export const ALLOWED_PATHS = [
   'igraal85',
   'shoop85',
   'voucher85',
+  'isa',
+  'slackjeff',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -350,6 +352,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   hixec: 'es',
   xataka85: 'es',
   davidtech: 'es',
+  isa: 'es',
 
   // fr
   benjamin: 'fr',
@@ -406,6 +409,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   darlan: 'pt-br',
   adrenaline: 'pt-br',
   labs: 'pt-br',
+  slackjeff: 'pt-br',
 };
 
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
@@ -681,6 +685,8 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'igraal85',
   'shoop85',
   'voucher85',
+  'isa',
+  'slackjeff',
 ]);
 
 export const COUPON_CODES = {
@@ -927,6 +933,8 @@ export const COUPON_CODES = {
   igraal85: PromoCodeName.igraal85,
   shoop85: PromoCodeName.shoop85,
   voucher85: PromoCodeName.voucher85,
+  isa: PromoCodeName.isa,
+  slackjeff: PromoCodeName.slackjeff,
 };
 
 interface OfferConfig {
