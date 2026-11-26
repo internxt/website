@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { PromoCodeName } from '@/lib/types';
 
 export enum Campaign {
@@ -60,6 +61,11 @@ const CAMPAIGN_EXCEPTIONS: ReadonlySet<PromoCodeName> = new Set([
   PromoCodeName.gpescw90,
   PromoCodeName.gpitcw90,
   PromoCodeName.chollocw90,
+
+  PromoCodeName.GADS85BF90,
+  PromoCodeName.GADS85CW90,
+  PromoCodeName.META85BF90,
+  PromoCodeName.META85CW90,
 ]);
 
 export const EARLY_RELEASE_CAMPAIGNS: ReadonlySet<Campaign> = new Set([
@@ -72,6 +78,17 @@ const EARLY_RELEASE_CODES: ReadonlySet<PromoCodeName> = new Set([PromoCodeName.s
 
 export const isCampaign = (value: unknown): value is Campaign =>
   typeof value === 'string' && (Object.values(Campaign) as string[]).includes(value);
+
+let activeCampaign: Promise<Campaign | undefined> | undefined;
+
+export const fetchActiveCampaign = (): Promise<Campaign | undefined> => {
+  activeCampaign ??= axios
+    .get('/api/get_active_campaign', { params: { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone } })
+    .then(({ data }) => (isCampaign(data?.campaign) ? data.campaign : undefined))
+    .catch(() => undefined);
+
+  return activeCampaign;
+};
 
 export const hasEarlyRelease = (name: PromoCodeName): boolean => EARLY_RELEASE_CODES.has(name);
 

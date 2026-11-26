@@ -13,6 +13,7 @@ import { FooterText } from '@/assets/types/layout/types';
 import { getImage } from '@/lib/getImage';
 import { Breadcrumb, BreadcrumbItem } from '@/components/shared/Breadcrumb';
 import { addLangToDriveURL } from '@/lib/auth';
+import { Campaign, fetchActiveCampaign } from '@/lib/helpers/campaigns';
 
 export default function Footer({
   textContent,
@@ -36,6 +37,14 @@ export default function Footer({
   const [isS3AlternativeOpen, setIsS3AlternativeOpen] = useState(false);
   const [isAntivirusAlternativeOpen, setIsAntivirusAlternativeOpen] = useState(false);
   const [isCleanerAlternativeOpen, setIsCleanerAlternativeOpen] = useState(false);
+  const [campaign, setCampaign] = useState<Campaign>();
+  useEffect(() => {
+    fetchActiveCampaign().then(setCampaign);
+  }, []);
+  const isCyberWeek = campaign === Campaign.CyberWeek;
+  const campaignDealsHref = isCyberWeek ? '/deals/cyber-week-internxt/cw-cloud-storage-deals' : '/deals/black-friday-internxt/bf-cloud-storage-deals';
+  const { blackFridayCloudStorage, cyberWeekCloudStorage } = textContent.FooterSection.sections.resources;
+  const campaignDealsText = isCyberWeek ? cyberWeekCloudStorage : blackFridayCloudStorage;
 
   const year = moment().format('YYYY');
 
@@ -641,8 +650,8 @@ export default function Footer({
                     <Link href="/deals" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.resources.deals}
                     </Link>
-                    <Link href="/deals/black-friday-internxt/bf-cloud-storage-deals" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.resources.blackFridayCloudStorage}
+                    <Link href={campaignDealsHref} locale={lang} passHref className="items-center hover:text-primary">
+                      {campaignDealsText}
                     </Link>
                   </div>
                 </div>
@@ -1638,8 +1647,8 @@ export default function Footer({
                       <Link href="/deals" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.resources.deals}
                     </Link>
-                    <Link href="/deals/black-friday-internxt/bf-cloud-storage-deals" locale={lang} passHref className="items-center hover:text-primary">
-                      {textContent.FooterSection.sections.resources.blackFridayCloudStorage}
+                    <Link href={campaignDealsHref} locale={lang} passHref className="items-center hover:text-primary">
+                      {campaignDealsText}
                     </Link>
                     </Disclosure.Panel>
                   </Transition>

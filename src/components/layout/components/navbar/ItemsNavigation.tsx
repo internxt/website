@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { CaretDown } from '@phosphor-icons/react';
 import { NavigationBarText } from '@/assets/types/layout/types';
+import { Campaign } from '@/lib/helpers/campaigns';
 
 interface NavigationLinkProps {
   href: string;
@@ -36,6 +37,7 @@ interface ItemsNavigationProps {
     };
   };
   textContent: NavigationBarText;
+  campaign?: Campaign;
   router: {
     pathname: string;
   };
@@ -115,11 +117,14 @@ export const ItemsNavigation = ({
   shouldHideItems,
   getTitles,
   textContent,
+  campaign,
   router,
 }: ItemsNavigationProps) => {
   if (shouldHideItems) return null;
 
   const currentPath = router.pathname.split('/')[1];
+  const isCyberWeek = campaign === Campaign.CyberWeek;
+  const campaignHref = isCyberWeek ? '/cyber-week' : '/black-friday';
 
   return (
     <div className="links">
@@ -132,9 +137,9 @@ export const ItemsNavigation = ({
           lang={lang}
         />
         <NavigationLink
-          href="/black-friday"
-          text={textContent.links.blackFriday}
-          isActive={router.pathname.startsWith('/black-friday')}
+          href={campaignHref}
+          text={isCyberWeek ? textContent.links.cyberWeek : textContent.links.blackFriday}
+          isActive={router.pathname.startsWith(campaignHref)}
           isDarkMode={darkMode}
           isHighlighted
           lang={lang}

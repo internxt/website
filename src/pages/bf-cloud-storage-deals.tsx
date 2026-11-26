@@ -1,6 +1,7 @@
 import { GetStaticPropsContext } from 'next';
 import { getDealsProps } from '@/lib/helpers/deals';
 import { PromoCodeName } from '@/lib/types';
+import { Campaign } from '@/lib/helpers/campaigns';
 import BlackFridayDealsTemplate from '@/components/templates/blackFridayDealsTemplate';
 
 const BlackFridayCloudStorageDeals = (props) => {
@@ -23,6 +24,7 @@ export async function getStaticProps(ctx: GetStaticPropsContext) {
     },
     {
       jsonFileName: 'black-friday-cloud-storage',
+      campaign: Campaign.BlackFriday,
     },
   );
 }
