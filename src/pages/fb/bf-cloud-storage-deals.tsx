@@ -1,6 +1,7 @@
 import { GetStaticPropsContext } from 'next';
 import { getDealsProps } from '@/lib/helpers/deals';
 import { PromoCodeName } from '@/lib/types';
+import { Campaign } from '@/lib/helpers/campaigns';
 import BlackFridayDealsTemplate from '@/components/templates/blackFridayDealsTemplate';
 
 const FbBlackFridayCloudStorageDeals = (props) => {
@@ -13,8 +14,8 @@ export async function getStaticProps(ctx: GetStaticPropsContext) {
     {
       heroImage: '/images/black-friday/bf-cloud-storage.webp',
       metatagsId: 'black-friday-cloud-storage',
-      couponCode: PromoCodeName.META85,
-      couponCodeForLifetime: PromoCodeName.META85,
+      couponCode: PromoCodeName.META85BF90,
+      couponCodeForLifetime: PromoCodeName.META85BF90,
       popularPlanSize: '5TB',
       moreDealsUrls: {
         card1: 'black-friday-deals',
@@ -23,6 +24,7 @@ export async function getStaticProps(ctx: GetStaticPropsContext) {
     },
     {
       jsonFileName: 'black-friday-cloud-storage',
+      campaign: Campaign.BlackFriday,
     },
   );
 }
