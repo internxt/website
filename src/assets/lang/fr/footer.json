@@ -114,7 +114,8 @@
         "ccleanerAlternative": "Alternative à CCleaner",
         "cleanMyMacAlternative": "Alternative à CleanMyMac",
         "deals": "Offres Internxt",
-        "blackFridayCloudStorage": "Stockage cloud du Black Friday"
+        "blackFridayCloudStorage": "Stockage cloud du Black Friday",
+        "cyberWeekCloudStorage": "Stockage cloud de la Cyber Week"
       },
       "tools": {
         "title": "Outils gratuits",

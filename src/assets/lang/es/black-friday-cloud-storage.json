@@ -1,4 +1,14 @@
 {
+  "campaigns": {
+    "blackFriday": {
+      "campaign": "Black Friday",
+      "endDate": "3 de diciembre de 2026"
+    },
+    "cyberWeek": {
+      "campaign": "Cyber Week",
+      "endDate": "4 de diciembre de 2026"
+    }
+  },
   "HeroSection": {
     "products": {
       "drive": "Drive",
@@ -10,44 +20,44 @@
       "ai": "AI",
       "photos": "Photos"
     },
-    "title": "Ofertas de **Black Friday** de Almacenamiento en la Nube",
-    "subtitle": "Consigue la mejor oferta de almacenamiento en la nube de Black Friday de 2026\n ¡con un {{discount}}% de descuento en todos los planes!",
+    "title": "Ofertas de **{{campaign}}** de Almacenamiento en la Nube",
+    "subtitle": "Consigue la mejor oferta de almacenamiento en la nube de {{campaign}} de 2026\n ¡con un {{discount}}% de descuento en todos los planes!",
     "description": "¡Consigue un {{discount}}% de descuento ahora!",
     "features": ["Suite completa de privacidad", "Encriptación post-cuántica", "Código abierto y auditado"],
     "claimDeal": "Conseguir oferta",
     "moreDeals": {
-      "title": "Más ofertas de Black Friday",
-      "description": "Encuentra la oferta de Black Friday adecuada para tus necesidades de almacenamiento en la nube y privacidad",
+      "title": "Más ofertas de {{campaign}}",
+      "description": "Encuentra la oferta de {{campaign}} adecuada para tus necesidades de almacenamiento en la nube y privacidad",
       "links": [
         {
-          "text": "Oferta de Black Friday de Internxt",
+          "text": "Oferta de {{campaign}} de Internxt",
           "url": "/deals/black-friday-internxt"
         },
         {
-          "text": "Ofertas de almacenamiento en la nube personal de Black Friday",
+          "text": "Ofertas de almacenamiento en la nube personal de {{campaign}}",
           "url": "/deals/black-friday-personal-cloud-storage"
         }
       ]
     }
   },
   "DontMissSection": {
-    "title": "El mayor descuento de Black Friday de Internxt en almacenamiento en la nube",
+    "title": "El mayor descuento de {{campaign}} de Internxt en almacenamiento en la nube",
     "description": [
-      "Protege tu privacidad con nuestras ofertas de almacenamiento de Black Friday y consigue una suite de privacidad completamente equipada con almacenamiento en la nube encriptado, copias de seguridad, Antivirus, VPN, Meet, Mail, Photos y mucho más.",
-      "Consigue todo lo que necesitas con el almacenamiento en la nube y la suite de privacidad de Black Friday de Internxt con un {{discount}}% de descuento."
+      "Protege tu privacidad con nuestras ofertas de almacenamiento de {{campaign}} y consigue una suite de privacidad completamente equipada con almacenamiento en la nube encriptado, copias de seguridad, Antivirus, VPN, Meet, Mail, Photos y mucho más.",
+      "Consigue todo lo que necesitas con el almacenamiento en la nube y la suite de privacidad de {{campaign}} de Internxt con un {{discount}}% de descuento."
     ]
   },
   "MoreDealsSection": {
-    "title": "Más ofertas de almacenamiento de Black Friday de Internxt",
+    "title": "Más ofertas de almacenamiento de {{campaign}} de Internxt",
     "description": "Amplía tu protección con descuentos exclusivos en todos los productos de Internxt",
     "cards": {
       "card1": {
-        "title": "Ofertas Black Friday de almacenamiento en la nube",
+        "title": "Ofertas {{campaign}} de almacenamiento en la nube",
         "description": "Ahorra a lo grande en almacenamiento en la nube cifrado para tus archivos",
         "cta": "Ver ofertas de almacenamiento"
       },
       "card2": {
-        "title": "Ofertas de Black Friday en almacenamiento personal en la nube",
+        "title": "Ofertas de {{campaign}} en almacenamiento personal en la nube",
         "description": "Descuentos exclusivos para planes individuales y personales",
         "cta": "Ver ofertas personales"
       }
@@ -88,28 +98,28 @@
     }
   },
   "WhyChooseSection": {
-    "title": "¿Por qué elegir el almacenamiento en la nube de Black Friday de Internxt?",
-    "description": "Con una oferta de almacenamiento en la nube de Black Friday de Internxt, obtienes almacenamiento en la nube encriptado y post-cuántico, y todo lo que necesitas para proteger tu dispositivo y tu privacidad online.",
+    "title": "¿Por qué elegir el almacenamiento en la nube de {{campaign}} de Internxt?",
+    "description": "Con una oferta de almacenamiento en la nube de {{campaign}} de Internxt, obtienes almacenamiento en la nube encriptado y post-cuántico, y todo lo que necesitas para proteger tu dispositivo y tu privacidad online.",
     "cards": {
       "titles": [
         "Un ecosistema completamente privado",
         "La encriptación más avanzada",
-        "Nuestra mayor oferta de Black Friday en almacenamiento en la nube"
+        "Nuestra mayor oferta de {{campaign}} en almacenamiento en la nube"
       ],
       "descriptions": [
         "Todos los planes de pago de Internxt incluyen almacenamiento encriptado post-cuántico, copias de seguridad y Antivirus. Para una protección online completa, también obtienes VPN, Meet, Mail, Photos y todo lo que necesitas para estar seguro online.",
         "Consigue el primer almacenamiento en la nube con encriptación post-cuántica para subir, almacenar y compartir tus archivos con total privacidad con nuestro servicio en la nube encriptado de extremo a extremo. Haz copias de seguridad y sincroniza tus archivos para evitar la pérdida de datos y asegurar una colaboración fluida con amigos, familia o compañeros.",
-        "Aprovecha nuestra mayor oferta de Black Friday hasta la fecha con aún más funciones para proteger tus datos y archivos online. Con un enorme descuento del {{discount}}%, ¡ahora es el momento perfecto para obtener el mejor valor en almacenamiento en la nube seguro y privado, y más!"
+        "Aprovecha nuestra mayor oferta de {{campaign}} hasta la fecha con aún más funciones para proteger tus datos y archivos online. Con un enorme descuento del {{discount}}%, ¡ahora es el momento perfecto para obtener el mejor valor en almacenamiento en la nube seguro y privado, y más!"
       ]
     }
   },
   "CtaSection": {
-    "title": "Almacenamiento en la nube de Black Friday de Internxt",
+    "title": "Almacenamiento en la nube de {{campaign}} de Internxt",
     "description": "{{discount}}% de descuento en todos los planes",
     "cta": "Conseguir oferta"
   },
   "HorizontalScrollableSection": {
-    "title": "Ofertas de almacenamiento en la nube de Black Friday basadas en la privacidad",
+    "title": "Ofertas de almacenamiento en la nube de {{campaign}} basadas en la privacidad",
     "description": "Construimos todos nuestros productos teniendo en mente la privacidad. No basamos nuestro negocio en datos o publicidad; lo construimos sobre confianza. Nuestra encriptación post-cuántica y de conocimiento cero asegura que tú, y solo tú, puedas acceder a tus archivos.",
     "features": [
       "Cancela sin compromiso",
@@ -134,22 +144,22 @@
     }
   },
   "CtaSectionV2": {
-    "title": "Las mejores ofertas de almacenamiento en la nube de Black Friday",
+    "title": "Las mejores ofertas de almacenamiento en la nube de {{campaign}}",
     "description": "{{discount}}% de descuento en todos los planes",
     "cta": "Conseguir oferta"
   },
   "FaqSection": {
-    "title": "Descubre más sobre nuestro descuento de Black Friday en almacenamiento en la nube",
+    "title": "Descubre más sobre nuestro descuento de {{campaign}} en almacenamiento en la nube",
     "faq": [
       {
-        "question": "¿Cómo obtengo el descuento de Black Friday de Internxt en almacenamiento en la nube?",
+        "question": "¿Cómo obtengo el descuento de {{campaign}} de Internxt en almacenamiento en la nube?",
         "answer": [
           "Para reclamar tu descuento, elige entre nuestros planes Essential, Premium o Ultimate y dirígete a la página de pago. Tu descuento del {{discount}}% se aplica automáticamente al finalizar la compra."
         ]
       },
       {
-        "question": "¿Cuándo termina la oferta de Black Friday de Internxt?",
-        "answer": ["La venta de Black Friday termina el 3 de diciembre de 2026."]
+        "question": "¿Cuándo termina la oferta de {{campaign}} de Internxt?",
+        "answer": ["La venta de {{campaign}} termina el {{endDate}}."]
       },
       {
         "question": "¿Quién es elegible para este descuento?",
@@ -158,9 +168,9 @@
         ]
       },
       {
-        "question": "¿Mantendré mi oferta de Black Friday de almacenamiento en la nube cuando se renueve mi suscripción?",
+        "question": "¿Mantendré mi oferta de {{campaign}} de almacenamiento en la nube cuando se renueve mi suscripción?",
         "answer": [
-          "La oferta de Black Friday solo es válida durante el primer mes. Tu suscripción se renovará automáticamente al precio regular una vez que finalice este período de suscripción al final del primer mes. Como los planes de por vida solo requieren un pago, tu descuento durará para siempre."
+          "La oferta de {{campaign}} solo es válida durante el primer mes. Tu suscripción se renovará automáticamente al precio regular una vez que finalice este período de suscripción al final del primer mes. Como los planes de por vida solo requieren un pago, tu descuento durará para siempre."
         ]
       },
       {

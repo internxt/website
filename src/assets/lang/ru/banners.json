@@ -150,9 +150,17 @@
     "title": "Max out your Google privacy settings with our What Google Knows page"
   },
   "TopBarBanner": {
+    "campaigns": {
+      "blackFriday": {
+        "campaignAcc": "Чёрную пятницу"
+      },
+      "cyberWeek": {
+        "campaignAcc": "Cyber Week"
+      }
+    },
     "title": {
       "boldText": "",
-      "normalText": "Огромные скидки в Чёрную пятницу — только ограниченное время!",
+      "normalText": "Огромные скидки в {{campaignAcc}} — только ограниченное время!",
       "cta": "Получить скидку"
     }
   },

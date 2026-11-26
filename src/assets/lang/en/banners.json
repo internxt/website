@@ -176,9 +176,17 @@
     "title": "Max out your Google privacy settings with our What Google Knows page"
   },
   "TopBarBanner": {
+    "campaigns": {
+      "blackFriday": {
+        "campaign": "Black Friday"
+      },
+      "cyberWeek": {
+        "campaign": "Cyber Week"
+      }
+    },
     "title": {
       "boldText": "",
-      "normalText": "Massive Black Friday savings — only for a limited time!",
+      "normalText": "Massive {{campaign}} savings — only for a limited time!",
       "cta": "Claim deal"
     }
   },

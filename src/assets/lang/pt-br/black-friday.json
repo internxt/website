@@ -1,4 +1,14 @@
 {
+  "campaigns": {
+    "blackFriday": {
+      "campaign": "Black Friday",
+      "endDate": "3 de dezembro de 2026"
+    },
+    "cyberWeek": {
+      "campaign": "Cyber Week",
+      "endDate": "4 de dezembro de 2026"
+    }
+  },
   "HeroSection": {
     "products": {
       "drive": "Drive",
@@ -10,17 +20,17 @@
       "ai": "AI",
       "photos": "Photos"
     },
-    "title": "Oferta de **Black Friday** da Internxt",
-    "subtitle": "Aproveite a melhor oferta de Black Friday de 2026\n com {{discount}}% de desconto em todos os planos Internxt",
+    "title": "Oferta de **{{campaign}}** da Internxt",
+    "subtitle": "Aproveite a melhor oferta de {{campaign}} de 2026\n com {{discount}}% de desconto em todos os planos Internxt",
     "description": "Garanta {{discount}}% de desconto agora!",
     "features": ["Suíte completa de privacidade", "Criptografia pós-quântica", "Código aberto e auditado"],
     "claimDeal": "Garantir oferta"
   },
   "DontMissSection": {
-    "title": "Não perca sua oferta de Black Friday da Internxt!",
+    "title": "Não perca sua oferta de {{campaign}} da Internxt!",
     "description": [
       "Proteja seus dados online com a Internxt e nossa suíte de privacidade completa, que inclui backups, Antivirus, VPN, Cleaner, Meet, Mail e muito mais.",
-      "Tenha a melhor privacidade e segurança online com os {{discount}}% de desconto de Black Friday da Internxt."
+      "Tenha a melhor privacidade e segurança online com os {{discount}}% de desconto de {{campaign}} da Internxt."
     ]
   },
   "TableSection": {
@@ -58,22 +68,22 @@
     }
   },
   "WhyChooseSection": {
-    "title": "Por que escolher a oferta de Black Friday da Internxt?",
+    "title": "Por que escolher a oferta de {{campaign}} da Internxt?",
     "cards": {
       "titles": [
         "Um ecossistema totalmente privado",
         "A criptografia mais avançada",
-        "Nossa maior oferta de Black Friday de todos os tempos"
+        "Nossa maior oferta de {{campaign}} de todos os tempos"
       ],
       "descriptions": [
         "Todos os planos pagos da Internxt incluem armazenamento com criptografia pós-quântica, backups e Antivirus. Para proteção online completa, você também recebe VPN, Cleaner, Meet, Mail e Photos: tudo o que precisa para ficar seguro na internet.",
         "Conte com o primeiro armazenamento em nuvem com criptografia pós-quântica para enviar, guardar e compartilhar seus arquivos com total privacidade em nosso serviço de nuvem criptografado de ponta a ponta. Faça backup e sincronize seus arquivos para evitar a perda de dados e garantir uma colaboração fluida com amigos, família ou colegas.",
-        "Aproveite nossa maior oferta de Black Friday até hoje, com ainda mais recursos para proteger seus dados e arquivos online. Com incríveis {{discount}}% de desconto, este é o momento perfeito para conseguir o melhor custo-benefício em armazenamento em nuvem seguro e privado, e muito mais!"
+        "Aproveite nossa maior oferta de {{campaign}} até hoje, com ainda mais recursos para proteger seus dados e arquivos online. Com incríveis {{discount}}% de desconto, este é o momento perfeito para conseguir o melhor custo-benefício em armazenamento em nuvem seguro e privado, e muito mais!"
       ]
     }
   },
   "CtaSection": {
-    "title": "Aproveite descontos enormes na Black Friday",
+    "title": "Aproveite descontos enormes na {{campaign}}",
     "description": "{{discount}}% de desconto em TODOS os nossos planos premium",
     "cta": "Garantir oferta"
   },
@@ -103,21 +113,21 @@
     }
   },
   "CtaSectionV2": {
-    "title": "As melhores ofertas de Black Friday",
+    "title": "As melhores ofertas de {{campaign}}",
     "description": "{{discount}}% de desconto em todos os planos",
     "cta": "Garantir oferta"
   },
   "MoreDealsSection": {
-    "title": "Mais ofertas de Black Friday",
-    "description": "Encontre a oferta de Black Friday ideal para suas necessidades de armazenamento em nuvem e privacidade",
+    "title": "Mais ofertas de {{campaign}}",
+    "description": "Encontre a oferta de {{campaign}} ideal para suas necessidades de armazenamento em nuvem e privacidade",
     "cards": {
       "card1": {
-        "title": "Ofertas de Black Friday em armazenamento em nuvem",
+        "title": "Ofertas de {{campaign}} em armazenamento em nuvem",
         "description": "Economize muito em armazenamento em nuvem criptografado para seus arquivos",
         "cta": "Ver ofertas de armazenamento"
       },
       "card2": {
-        "title": "Ofertas de Black Friday em armazenamento em nuvem pessoal",
+        "title": "Ofertas de {{campaign}} em armazenamento em nuvem pessoal",
         "description": "Descontos exclusivos para pessoas físicas e planos pessoais",
         "cta": "Ver ofertas pessoais"
       }
@@ -127,14 +137,14 @@
     "title": "Dúvidas? Temos as respostas",
     "faq": [
       {
-        "question": "Como consigo o desconto de Black Friday da Internxt?",
+        "question": "Como consigo o desconto de {{campaign}} da Internxt?",
         "answer": [
           "Para garantir seu desconto, escolha entre os planos Essential, Premium ou Ultimate e vá para a página de pagamento. Seus {{discount}}% de desconto são aplicados automaticamente na finalização da compra."
         ]
       },
       {
-        "question": "Quando termina a oferta de Black Friday da Internxt?",
-        "answer": ["A promoção de Black Friday termina em 3 de dezembro de 2026."]
+        "question": "Quando termina a oferta de {{campaign}} da Internxt?",
+        "answer": ["A promoção de {{campaign}} termina em {{endDate}}."]
       },
       {
         "question": "Quem tem direito a este desconto?",
@@ -145,7 +155,7 @@
       {
         "question": "Continuo com o desconto quando meu plano terminar?",
         "answer": [
-          "A oferta de Black Friday é válida até o fim do período de assinatura. Sua assinatura será renovada automaticamente pelo preço normal quando esse período terminar, no fim do primeiro mês. Como os planos vitalícios exigem um único pagamento, seu desconto dura para sempre."
+          "A oferta de {{campaign}} é válida até o fim do período de assinatura. Sua assinatura será renovada automaticamente pelo preço normal quando esse período terminar, no fim do primeiro mês. Como os planos vitalícios exigem um único pagamento, seu desconto dura para sempre."
         ]
       },
       {

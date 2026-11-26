@@ -1,4 +1,14 @@
 {
+  "campaigns": {
+    "blackFriday": {
+      "campaign": "Black Friday",
+      "endDate": "3 de diciembre de 2026"
+    },
+    "cyberWeek": {
+      "campaign": "Cyber Week",
+      "endDate": "4 de diciembre de 2026"
+    }
+  },
   "HeroSection": {
     "products": {
       "drive": "Drive",
@@ -9,8 +19,8 @@
       "photos": "Photos",
       "mail": "Mail"
     },
-    "title": "**Black Friday**: {{discount}}% de descuento en almacenamiento en la nube privado",
-    "titleWithoutDiscount": "**Black Friday**",
+    "title": "**{{campaign}}**: {{discount}}% de descuento en almacenamiento en la nube privado",
+    "titleWithoutDiscount": "**{{campaign}}**",
     "subtitle": "Cifrado en tu dispositivo. Nadie lee tus archivos. Ni siquiera nosotros.",
     "description": "¡Obtén un {{discount}}% de descuento ahora!",
     "features": [
@@ -57,17 +67,17 @@
     "trustpilot": "Montones de espacio privado y seguro. Soporte excelente. Sin duda, una buena relación calidad-precio."
   },
   "WhyChooseSection": {
-    "title": "¿Por qué elegir nuestras ofertas de Black Friday en almacenamiento en la nube?",
+    "title": "¿Por qué elegir nuestras ofertas de {{campaign}} en almacenamiento en la nube?",
     "cards": {
       "titles": [
         "Un ecosistema completamente privado",
         "La encriptación más avanzada",
-        "Nuestra mayor oferta de Black Friday hasta la fecha"
+        "Nuestra mayor oferta de {{campaign}} hasta la fecha"
       ],
       "descriptions": [
         "Todos los planes de pago de Internxt incluyen almacenamiento encriptado post-cuántico, copias de seguridad y Antivirus. Para una protección online completa, también obtienes VPN, Cleaner, Meet y Mail, todo lo que necesitas para estar seguro online.",
         "Consigue el primer almacenamiento en la nube con encriptación post-cuántica para subir, almacenar y compartir tus archivos con total privacidad gracias a nuestro servicio en la nube con encriptación de extremo a extremo. Haz copias de seguridad y sincroniza tus archivos para evitar la pérdida de datos y garantizar una colaboración fluida con amigos, familia o compañeros.",
-        "Aprovecha nuestra mayor oferta de Black Friday hasta la fecha con aún más funciones para proteger tus datos y archivos online. Con un descuento masivo en nuestros planes, ahora es el momento perfecto para obtener el mejor valor en almacenamiento en la nube seguro y privado, ¡y mucho más!"
+        "Aprovecha nuestra mayor oferta de {{campaign}} hasta la fecha con aún más funciones para proteger tus datos y archivos online. Con un descuento masivo en nuestros planes, ahora es el momento perfecto para obtener el mejor valor en almacenamiento en la nube seguro y privado, ¡y mucho más!"
       ]
     }
   },
@@ -100,7 +110,7 @@
     }
   },
   "CtaSection": {
-    "title": "Black Friday: {{discount}}% de descuento en almacenamiento en la nube privado",
+    "title": "{{campaign}}: {{discount}}% de descuento en almacenamiento en la nube privado",
     "description": "",
     "cta": "Consigue la oferta",
     "guarantee": "Garantía de devolución de 30 días"
@@ -109,15 +119,15 @@
     "title": "¿Preguntas? Tenemos respuestas",
     "faq": [
       {
-        "question": "¿Cómo obtengo el descuento de Black Friday de Internxt?",
+        "question": "¿Cómo obtengo el descuento de {{campaign}} de Internxt?",
         "answer": [
           "Para reclamar tu descuento, elige entre nuestros planes Essential, Premium o Ultimate y dirígete a la página de pago. Tu descuento del {{discount}}% se aplica automáticamente al finalizar la compra."
         ]
       },
       {
-        "question": "¿Cuándo termina la oferta de Black Friday de Internxt?",
+        "question": "¿Cuándo termina la oferta de {{campaign}} de Internxt?",
         "answer": [
-          "La venta de Black Friday termina el 3 de diciembre de 2026."
+          "La venta de {{campaign}} termina el {{endDate}}."
         ]
       },
       {
@@ -129,7 +139,7 @@
       {
         "question": "¿Mantendré mi descuento cuando termine mi plan?",
         "answer": [
-          "La oferta de Black Friday es válida hasta el final del período de suscripción. Tu suscripción se renovará automáticamente al precio regular una vez que finalice este período de suscripción a fin de año. Como los planes de por vida solo requieren un pago, tu descuento durará para siempre."
+          "La oferta de {{campaign}} es válida hasta el final del período de suscripción. Tu suscripción se renovará automáticamente al precio regular una vez que finalice este período de suscripción a fin de año. Como los planes de por vida solo requieren un pago, tu descuento durará para siempre."
         ]
       },
       {

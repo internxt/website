@@ -1,4 +1,14 @@
 {
+  "campaigns": {
+    "blackFriday": {
+      "campaign": "Black Friday",
+      "endDate": "December 3rd, 2026"
+    },
+    "cyberWeek": {
+      "campaign": "Cyber Week",
+      "endDate": "December 4th, 2026"
+    }
+  },
   "HeroSection": {
     "products": {
       "drive": "Drive",
@@ -10,17 +20,17 @@
       "ai": "AI",
       "photos": "Photos"
     },
-    "title": "**Black Friday** Internxt Deal",
-    "subtitle": "Get the best Black Friday deal of 2026\n with {{discount}}% off all Internxt plans",
+    "title": "**{{campaign}}** Internxt Deal",
+    "subtitle": "Get the best {{campaign}} deal of 2026\n with {{discount}}% off all Internxt plans",
     "description": "Get {{discount}}% off now!",
     "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
     "claimDeal": "Claim deal"
   },
   "DontMissSection": {
-    "title": "Don’t miss your Black Friday Internxt deal!",
+    "title": "Don’t miss your {{campaign}} Internxt deal!",
     "description": [
       "Protect your data online with Internxt with our fully equipped privacy suite that includes backups, Antivirus, VPN, Cleaner, Meet, Mail, and more.",
-      "Get the best privacy and security online with Internxt’s {{discount}}% Black Friday discount."
+      "Get the best privacy and security online with Internxt’s {{discount}}% {{campaign}} discount."
     ]
   },
   "TableSection": {
@@ -58,18 +68,18 @@
     }
   },
   "WhyChooseSection": {
-    "title": "Why choose Internxt’s Black Friday deal?",
+    "title": "Why choose Internxt’s {{campaign}} deal?",
     "cards": {
-      "titles": ["A fully private ecosystem", "The most advanced encryption", "Our biggest Black Friday deal ever"],
+      "titles": ["A fully private ecosystem", "The most advanced encryption", "Our biggest {{campaign}} deal ever"],
       "descriptions": [
         "All paid Internxt plans include post-quantum encrypted storage, backups, and Antivirus. For complete online protection, you also get VPN, Cleaner, Meet, Mail, and Photos, everything you need to stay secure online.",
         "Get the first cloud storage with post-quantum encryption to upload, store, and share your files in total privacy with our end-to-end encrypted cloud service. Back up and sync your files to prevent data loss and ensure smooth collaboration with friends, family, or colleagues.",
-        "Take advantage of our biggest Black Friday offer yet with even more features to protect your data and files online. With a massive {{discount}}% off, now is the perfect time to get the best value on secure and private cloud storage, and more!"
+        "Take advantage of our biggest {{campaign}} offer yet with even more features to protect your data and files online. With a massive {{discount}}% off, now is the perfect time to get the best value on secure and private cloud storage, and more!"
       ]
     }
   },
   "CtaSection": {
-    "title": "Unlock massive Black Friday savings",
+    "title": "Unlock massive {{campaign}} savings",
     "description": "{{discount}}% off ALL our premium plans",
     "cta": "Claim deal"
   },
@@ -94,21 +104,21 @@
     }
   },
   "CtaSectionV2": {
-    "title": "The best Black Friday deals",
+    "title": "The best {{campaign}} deals",
     "description": "{{discount}}% off all plans",
     "cta": "Claim deal"
   },
   "MoreDealsSection": {
-    "title": "More Black Friday deals",
-    "description": "Find the right Black Friday deal to meet your cloud storage and privacy needs",
+    "title": "More {{campaign}} deals",
+    "description": "Find the right {{campaign}} deal to meet your cloud storage and privacy needs",
     "cards": {
       "card1": {
-        "title": "Cloud storage Black Friday deals",
+        "title": "Cloud storage {{campaign}} deals",
         "description": "Save big on encrypted cloud storage for your files",
         "cta": "See storage deals"
       },
       "card2": {
-        "title": "Personal cloud storage Black Friday offers",
+        "title": "Personal cloud storage {{campaign}} offers",
         "description": "Exclusive discounts for individuals and personal plans",
         "cta": "View personal deals"
       }
@@ -118,14 +128,14 @@
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "How do I get the Internxt Black Friday Discount?",
+        "question": "How do I get the Internxt {{campaign}} Discount?",
         "answer": [
           "To claim your discount, choose from our Essential, Premium, or Ultimate plan and head to the checkout page. Your {{discount}}% discount is automatically applied at checkout."
         ]
       },
       {
-        "question": "When does the Black Friday Internxt Deal end?",
-        "answer": ["The Black Friday sale ends December 3rd, 2026."]
+        "question": "When does the {{campaign}} Internxt Deal end?",
+        "answer": ["The {{campaign}} sale ends {{endDate}}."]
       },
       {
         "question": "Who is eligible for this discount?",
@@ -136,7 +146,7 @@
       {
         "question": "Will I keep my discount when my plan ends?",
         "answer": [
-          "The Black Friday deal is valid until the end of the subscription period. Your subscription will automatically renew at the regular price once this subscription period ends at the end of the first month. As lifetime plans only require one payment, your discount will last forever."
+          "The {{campaign}} deal is valid until the end of the subscription period. Your subscription will automatically renew at the regular price once this subscription period ends at the end of the first month. As lifetime plans only require one payment, your discount will last forever."
         ]
       },
       {

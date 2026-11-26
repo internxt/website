@@ -1,4 +1,18 @@
 {
+  "campaigns": {
+    "blackFriday": {
+      "campaign": "Black Friday",
+      "campaignOf": "del Black Friday",
+      "campaignThe": "il Black Friday",
+      "endDate": "3 dicembre 2026"
+    },
+    "cyberWeek": {
+      "campaign": "Cyber Week",
+      "campaignOf": "della Cyber Week",
+      "campaignThe": "la Cyber Week",
+      "endDate": "4 dicembre 2026"
+    }
+  },
   "HeroSection": {
     "products": {
       "drive": "Drive",
@@ -10,44 +24,44 @@
       "ai": "AI",
       "photos": "Photos"
     },
-    "title": "Migliori Offerte di **Black Friday** per l'Archiviazione Cloud Personale",
-    "subtitle": "Ottieni la migliore offerta di archiviazione cloud personale del Black Friday 2026\n con l'{{discount}}% di sconto su tutti i piani!",
+    "title": "Migliori Offerte di **{{campaign}}** per l'Archiviazione Cloud Personale",
+    "subtitle": "Ottieni la migliore offerta di archiviazione cloud personale {{campaignOf}} 2026\n con l'{{discount}}% di sconto su tutti i piani!",
     "description": "Ottieni il {{discount}}% di sconto ora!",
     "features": ["Suite completa per la privacy", "Crittografia post-quantistica", "Open source e verificato"],
     "claimDeal": "Richiedi l'offerta",
     "moreDeals": {
-      "title": "Più offerte del Black Friday",
-      "description": "Trova l'offerta del Black Friday giusta per le tue esigenze di archiviazione cloud e privacy",
+      "title": "Più offerte {{campaignOf}}",
+      "description": "Trova l'offerta {{campaignOf}} giusta per le tue esigenze di archiviazione cloud e privacy",
       "links": [
         {
-          "text": "Offerta Black Friday di Internxt",
+          "text": "Offerta {{campaign}} di Internxt",
           "url": "/deals/black-friday-internxt"
         },
         {
-          "text": "Offerte di archiviazione cloud del Black Friday",
+          "text": "Offerte di archiviazione cloud {{campaignOf}}",
           "url": "/deals/black-friday-cloud-storage"
         }
       ]
     }
   },
   "DontMissSection": {
-    "title": "Il più grande sconto Black Friday di Internxt sull'archiviazione cloud!",
+    "title": "Il più grande sconto {{campaign}} di Internxt sull'archiviazione cloud!",
     "description": [
-      "Proteggi la tua privacy con le nostre offerte di archiviazione del Black Friday e ottieni una suite per la privacy completamente attrezzata con archiviazione cloud crittografata, backup, Antivirus, VPN, Meet, Mail, Photos e altro ancora.",
-      "Ottieni tutto ciò di cui hai bisogno con l'archiviazione cloud e la suite per la privacy del Black Friday di Internxt con l'{{discount}}% di sconto."
+      "Proteggi la tua privacy con le nostre offerte di archiviazione {{campaignOf}} e ottieni una suite per la privacy completamente attrezzata con archiviazione cloud crittografata, backup, Antivirus, VPN, Meet, Mail, Photos e altro ancora.",
+      "Ottieni tutto ciò di cui hai bisogno con l'archiviazione cloud e la suite per la privacy {{campaignOf}} di Internxt con l'{{discount}}% di sconto."
     ]
   },
   "MoreDealsSection": {
-    "title": "Altre offerte di archiviazione Internxt per il Black Friday",
+    "title": "Altre offerte di archiviazione Internxt per {{campaignThe}}",
     "description": "Renforcez votre protection avec des réductions exclusives sur tous les produits Internxt",
     "cards": {
       "card1": {
-        "title": "Offerte Black Friday archiviazione cloud",
+        "title": "Offerte {{campaign}} archiviazione cloud",
         "description": "Risparmia alla grande sull'archiviazione cloud crittografata per i tuoi file",
         "cta": "Vedi offerte di archiviazione"
       },
       "card2": {
-        "title": "Offerte Black Friday archiviazione cloud",
+        "title": "Offerte {{campaign}} archiviazione cloud",
         "description": "Sconto esclusivo per privati e piani personali",
         "cta": "Vedi offerte personali"
       }
@@ -88,28 +102,28 @@
     }
   },
   "WhyChooseSection": {
-    "title": "Vale la pena l'archiviazione cloud personale del Black Friday?",
+    "title": "Vale la pena l'archiviazione cloud personale {{campaignOf}}?",
     "description": "Con l'offerta di archiviazione cloud personale di Internxt, sì. I nostri piani includono tutto ciò di cui hai bisogno per conservare i tuoi file con archiviazione cloud crittografata e post-quantistica, e tutto ciò che serve per proteggere il tuo dispositivo e la tua privacy online.",
     "cards": {
       "titles": [
         "Un ecosistema completamente privato",
         "La crittografia più avanzata",
-        "La nostra più grande offerta di archiviazione cloud del Black Friday"
+        "La nostra più grande offerta di archiviazione cloud {{campaignOf}}"
       ],
       "descriptions": [
         "Tutti i piani a pagamento di Internxt includono archiviazione crittografata post-quantistica, backup e Antivirus. Per una protezione online completa, ottieni anche VPN, Meet, Mail e Photos, tutto ciò di cui hai bisogno per stare al sicuro online.",
         "Ottieni il primo archiviazione cloud con crittografia post-quantistica per caricare, archiviare e condividere i tuoi file in totale privacy con il nostro servizio cloud crittografato end-to-end. Esegui il backup e sincronizza i tuoi file per prevenire la perdita di dati e garantire una collaborazione fluida con amici, familiari o colleghi.",
-        "Approfitta della nostra più grande offerta del Black Friday fino ad oggi con ancora più funzionalità per proteggere i tuoi dati e file online. Con un enorme sconto dell'{{discount}}%, ora è il momento perfetto per ottenere il miglior rapporto qualità-prezzo su archiviazione cloud sicura e privata, e altro ancora!"
+        "Approfitta della nostra più grande offerta {{campaignOf}} fino ad oggi con ancora più funzionalità per proteggere i tuoi dati e file online. Con un enorme sconto dell'{{discount}}%, ora è il momento perfetto per ottenere il miglior rapporto qualità-prezzo su archiviazione cloud sicura e privata, e altro ancora!"
       ]
     }
   },
   "CtaSection": {
-    "title": "L'archiviazione cloud del Black Friday di Internxt",
+    "title": "L'archiviazione cloud {{campaignOf}} di Internxt",
     "description": "{{discount}}% di sconto su tutti i piani",
     "cta": "Richiedi l'offerta"
   },
   "HorizontalScrollableSection": {
-    "title": "Offerte di archiviazione cloud del Black Friday costruite sulla privacy",
+    "title": "Offerte di archiviazione cloud {{campaignOf}} costruite sulla privacy",
     "description": "Costruiamo tutti i nostri prodotti con la privacy in mente. Non basiamo il nostro business sui dati o sulla pubblicità; lo costruiamo sulla fiducia. La nostra crittografia post-quantistica e a conoscenza zero garantisce che tu, e solo tu, possa accedere ai tuoi file.",
     "features": [
       "Cancella senza impegno",
@@ -134,22 +148,22 @@
     }
   },
   "CtaSectionV2": {
-    "title": "Le migliori offerte di archiviazione cloud del Black Friday",
+    "title": "Le migliori offerte di archiviazione cloud {{campaignOf}}",
     "description": "{{discount}}% di sconto su tutti i piani",
     "cta": "Richiedi l'offerta"
   },
   "FaqSection": {
-    "title": "Scopri di più sul nostro sconto Black Friday sull'archiviazione cloud",
+    "title": "Scopri di più sul nostro sconto {{campaign}} sull'archiviazione cloud",
     "faq": [
       {
-        "question": "Come posso ottenere lo sconto Black Friday di Internxt sull'archiviazione cloud?",
+        "question": "Come posso ottenere lo sconto {{campaign}} di Internxt sull'archiviazione cloud?",
         "answer": [
           "Per richiedere il tuo sconto, scegli tra i nostri piani Essential, Premium o Ultimate e vai alla pagina di checkout. Il tuo sconto dell'{{discount}}% viene applicato automaticamente al momento del pagamento."
         ]
       },
       {
-        "question": "Quando termina l'offerta Black Friday di Internxt?",
-        "answer": ["La vendita del Black Friday termina il 3 dicembre 2026."]
+        "question": "Quando termina l'offerta {{campaign}} di Internxt?",
+        "answer": ["La vendita {{campaignOf}} termina il {{endDate}}."]
       },
       {
         "question": "Chi può usufruire di questo sconto?",
@@ -158,9 +172,9 @@
         ]
       },
       {
-        "question": "Manterrò la mia offerta Black Friday di archiviazione cloud al rinnovo dell'abbonamento?",
+        "question": "Manterrò la mia offerta {{campaign}} di archiviazione cloud al rinnovo dell'abbonamento?",
         "answer": [
-          "L'offerta del Black Friday è valida solo per il primo mese. Il tuo abbonamento si rinnoverà automaticamente al prezzo normale una volta terminato questo periodo di abbonamento alla fine del primo mese. Poiché i piani a vita richiedono un solo pagamento, il tuo sconto durerà per sempre."
+          "L'offerta {{campaignOf}} è valida solo per il primo mese. Il tuo abbonamento si rinnoverà automaticamente al prezzo normale una volta terminato questo periodo di abbonamento alla fine del primo mese. Poiché i piani a vita richiedono un solo pagamento, il tuo sconto durerà per sempre."
         ]
       },
       {

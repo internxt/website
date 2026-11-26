@@ -137,6 +137,7 @@ export interface Resources {
   certifications: string;
   deals: string;
   blackFridayCloudStorage: string;
+  cyberWeekCloudStorage: string;
 }
 
 export interface Tools {

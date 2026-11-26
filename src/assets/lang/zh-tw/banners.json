@@ -153,9 +153,17 @@
     "title": "Max out your Google privacy settings with our What Google Knows page"
   },
   "TopBarBanner": {
+    "campaigns": {
+      "blackFriday": {
+        "campaign": "黑色星期五"
+      },
+      "cyberWeek": {
+        "campaign": "網路週"
+      }
+    },
     "title": {
       "boldText": "",
-      "normalText": "黑色星期五超值優惠——僅限限時搶購！",
+      "normalText": "{{campaign}}超值優惠——僅限限時搶購！",
       "cta": "立即領取"
     }
   },

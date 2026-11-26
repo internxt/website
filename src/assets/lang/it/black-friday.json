@@ -1,4 +1,16 @@
 {
+  "campaigns": {
+    "blackFriday": {
+      "campaign": "Black Friday",
+      "campaignOf": "del Black Friday",
+      "endDate": "3 dicembre 2026"
+    },
+    "cyberWeek": {
+      "campaign": "Cyber Week",
+      "campaignOf": "della Cyber Week",
+      "endDate": "4 dicembre 2026"
+    }
+  },
   "HeroSection": {
     "products": {
       "drive": "Drive",
@@ -10,30 +22,30 @@
       "ai": "AI",
       "photos": "Photos"
     },
-    "title": "Offerta **Black Friday** di Internxt",
-    "subtitle": "Ottieni la migliore offerta Black Friday del 2026\n con l'{{discount}}% di sconto su tutti i piani Internxt",
+    "title": "Offerta **{{campaign}}** di Internxt",
+    "subtitle": "Ottieni la migliore offerta {{campaign}} del 2026\n con l'{{discount}}% di sconto su tutti i piani Internxt",
     "description": "Ottieni il {{discount}}% di sconto ora!",
     "features": ["Suite digitale privata", "Crittografia post-quantistica", "Open source e verificato"],
     "claimDeal": "Richiedi l'offerta"
   },
   "DontMissSection": {
-    "title": "Non perdere la tua offerta Black Friday di Internxt!",
+    "title": "Non perdere la tua offerta {{campaign}} di Internxt!",
     "description": [
       "Proteggi i tuoi dati online con Internxt grazie alla nostra suite di privacy completamente attrezzata che include backup, Antivirus, VPN, Cleaner, Meet, Mail e molto altro.",
-      "Ottieni la migliore privacy e sicurezza online con lo sconto dell'{{discount}}% del Black Friday di Internxt."
+      "Ottieni la migliore privacy e sicurezza online con lo sconto dell'{{discount}}% {{campaignOf}} di Internxt."
     ]
   },
   "MoreDealsSection": {
-    "title": "Altre offerte Black Friday",
-    "description": "Trova l'offerta Black Friday più adatta alle tue esigenze di archiviazione cloud e privacy",
+    "title": "Altre offerte {{campaign}}",
+    "description": "Trova l'offerta {{campaign}} più adatta alle tue esigenze di archiviazione cloud e privacy",
     "cards": {
       "card1": {
-        "title": "Offerte Black Friday archiviazione cloud",
+        "title": "Offerte {{campaign}} archiviazione cloud",
         "description": "Risparmia sull'archiviazione cloud crittografata per i tuoi file",
         "cta": "Vedi offerte di archiviazione"
       },
       "card2": {
-        "title": "Offerte Black Friday archiviazione cloud personale",
+        "title": "Offerte {{campaign}} archiviazione cloud personale",
         "description": "Sconti esclusivi per piani individuali e personali",
         "cta": "Vedi offerte personali"
       }
@@ -69,22 +81,22 @@
     }
   },
   "WhyChooseSection": {
-    "title": "Perché scegliere l'offerta Black Friday di Internxt?",
+    "title": "Perché scegliere l'offerta {{campaign}} di Internxt?",
     "cards": {
       "titles": [
         "Un ecosistema completamente privato",
         "La crittografia più avanzata",
-        "La nostra più grande offerta Black Friday di sempre"
+        "La nostra più grande offerta {{campaign}} di sempre"
       ],
       "descriptions": [
         "Tutti i piani a pagamento di Internxt includono archiviazione crittografata post-quantistica, backup e Antivirus. Per una protezione online completa, ottieni anche VPN, Cleaner, Meet, Mail e Photos, tutto ciò di cui hai bisogno per stare al sicuro online.",
         "Ottieni il primo spazio di archiviazione cloud con crittografia post-quantistica per caricare, archiviare e condividere i tuoi file in totale privacy grazie al nostro servizio cloud con crittografia end-to-end. Esegui il backup e sincronizza i tuoi file per evitare la perdita di dati e garantire una collaborazione fluida con amici, familiari o colleghi.",
-        "Approfitta della nostra più grande offerta Black Friday fino ad oggi con ancora più funzionalità per proteggere i tuoi dati e file online. Con uno sconto massiccio dell'{{discount}}%, ora è il momento perfetto per ottenere il miglior rapporto qualità-prezzo in archiviazione cloud sicura e privata, e molto altro!"
+        "Approfitta della nostra più grande offerta {{campaign}} fino ad oggi con ancora più funzionalità per proteggere i tuoi dati e file online. Con uno sconto massiccio dell'{{discount}}%, ora è il momento perfetto per ottenere il miglior rapporto qualità-prezzo in archiviazione cloud sicura e privata, e molto altro!"
       ]
     }
   },
   "CtaSection": {
-    "title": "Sblocca enormi risparmi del Black Friday",
+    "title": "Sblocca enormi risparmi {{campaignOf}}",
     "description": "{{discount}}% di sconto su TUTTI i nostri piani premium",
     "cta": "Richiedi l'offerta"
   },
@@ -114,7 +126,7 @@
     }
   },
   "CtaSectionV2": {
-    "title": "Le migliori offerte del Black Friday",
+    "title": "Le migliori offerte {{campaignOf}}",
     "description": "{{discount}}% di sconto su tutti i piani",
     "cta": "Richiedi l'offerta"
   },
@@ -122,14 +134,14 @@
     "title": "Domande? Abbiamo le risposte",
     "faq": [
       {
-        "question": "Come posso ottenere lo sconto Black Friday di Internxt?",
+        "question": "Come posso ottenere lo sconto {{campaign}} di Internxt?",
         "answer": [
           "Per richiedere il tuo sconto, scegli tra i nostri piani Essential, Premium o Ultimate e vai alla pagina di checkout. Il tuo sconto dell'{{discount}}% viene applicato automaticamente al momento del pagamento."
         ]
       },
       {
-        "question": "Quando termina l'offerta Black Friday di Internxt?",
-        "answer": ["La vendita del Black Friday termina il 3 dicembre 2026."]
+        "question": "Quando termina l'offerta {{campaign}} di Internxt?",
+        "answer": ["La vendita {{campaignOf}} termina il {{endDate}}."]
       },
       {
         "question": "Chi può usufruire di questo sconto?",
@@ -140,7 +152,7 @@
       {
         "question": "Manterrò il mio sconto quando terminerà il mio piano?",
         "answer": [
-          "L'offerta del Black Friday è valida fino alla fine del periodo di abbonamento. Il tuo abbonamento si rinnoverà automaticamente al prezzo normale una volta terminato questo periodo di abbonamento alla fine del primo mese. Poiché i piani a vita richiedono un solo pagamento, il tuo sconto durerà per sempre."
+          "L'offerta {{campaignOf}} è valida fino alla fine del periodo di abbonamento. Il tuo abbonamento si rinnoverà automaticamente al prezzo normale una volta terminato questo periodo di abbonamento alla fine del primo mese. Poiché i piani a vita richiedono un solo pagamento, il tuo sconto durerà per sempre."
         ]
       },
       {

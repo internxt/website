@@ -153,9 +153,17 @@
     "title": "Ottimizzate le impostazioni sulla privacy di Google con la nostra nuova pagina sulla privacy"
   },
   "TopBarBanner": {
+    "campaigns": {
+      "blackFriday": {
+        "campaignOf": "del Black Friday"
+      },
+      "cyberWeek": {
+        "campaignOf": "della Cyber Week"
+      }
+    },
     "title": {
       "boldText": "",
-      "normalText": "Super sconti del Black Friday — solo per un periodo limitato!",
+      "normalText": "Super sconti {{campaignOf}} — solo per un periodo limitato!",
       "cta": "Approfitta dell'offerta"
     }
   },
