@@ -492,6 +492,9 @@ export const URGENT_CHECKOUT_PATHS = new Set<string>([
   'dinamotech',
   'pietro',
 ]);
+export const MANDATORY_CURRENCY_PATHS: Record<string, string> = {
+  diolinux: 'BR',
+};
 export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'adi4u',
   'drop-offer',
@@ -955,6 +958,7 @@ interface OfferConfig {
   isPrivacyTutor: boolean;
   isPriorityHero: boolean;
   redirectToUrgentCheckout: boolean;
+  mandatoryCurrency: string | undefined;
 }
 
 export const useOfferConfig = (pathname: string): OfferConfig => {
@@ -980,6 +984,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         isPrivacyTutor: false,
         isPriorityHero: false,
         redirectToUrgentCheckout: false,
+        mandatoryCurrency: undefined,
       };
     }
 
@@ -998,6 +1003,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const isPriorityHero = selectedPathname === 'priority-offer-em';
     const requireAnnualDiscount = ANNUAL_DISCOUNT_PLANS_PATHS.has(selectedPathname);
     const redirectToUrgentCheckout = URGENT_CHECKOUT_PATHS.has(selectedPathname);
+    const mandatoryCurrency = MANDATORY_CURRENCY_PATHS[selectedPathname];
 
     const alternativeImages = ALTERNATIVE_IMAGES_PATHS.has(selectedPathname)
       ? selectedPathname
@@ -1021,6 +1027,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
       isPriorityHero,
       requireAnnualDiscount,
       redirectToUrgentCheckout,
+      mandatoryCurrency,
     };
   }, [pathname]);
 };

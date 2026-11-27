@@ -84,6 +84,7 @@ function CombinedSpecialOffer({
     isPriorityHero,
     requireAnnualDiscount,
     redirectToUrgentCheckout,
+    mandatoryCurrency,
   } = useOfferConfig(pathname);
 
   const {
@@ -96,6 +97,7 @@ function CombinedSpecialOffer({
   } = usePricing({
     couponCode: requireAnnualDiscount ? couponCode : undefined,
     couponCodeForLifetime: couponCode,
+    currencySpecified: mandatoryCurrency,
   });
 
 
