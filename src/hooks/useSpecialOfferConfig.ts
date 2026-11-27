@@ -248,6 +248,10 @@ export const ALLOWED_PATHS = [
   'voucher85',
   'isa',
   'slackjeff',
+  'milan',
+  'ks',
+  'aorus',
+  'mithun',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -687,6 +691,10 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'voucher85',
   'isa',
   'slackjeff',
+  'milan',
+  'ks',
+  'aorus',
+  'mithun',
 ]);
 
 export const COUPON_CODES = {
@@ -935,6 +943,10 @@ export const COUPON_CODES = {
   voucher85: PromoCodeName.voucher85,
   isa: PromoCodeName.isa,
   slackjeff: PromoCodeName.slackjeff,
+  milan: PromoCodeName.milan,
+  ks: PromoCodeName.ks,
+  aorus: PromoCodeName.aorus,
+  mithun: PromoCodeName.mithun,
 };
 
 interface OfferConfig {
