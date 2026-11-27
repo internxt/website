@@ -248,6 +248,13 @@ export const ALLOWED_PATHS = [
   'voucher85',
   'isa',
   'slackjeff',
+  'milan',
+  'ks',
+  'aorus',
+  'mithun',
+  'lapaastech',
+  'caleel',
+  'entropywse',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -323,6 +330,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   awde85: 'de',
   igraal85: 'de',
   shoop85: 'de',
+  entropywse: 'de',
 
   // es
   alejavi: 'es',
@@ -386,6 +394,7 @@ export const ENFORCED_LOCALE: Record<string, string> = {
   otto: 'it',
   gaito: 'it',
   fabio: 'it',
+  caleel: 'it',
 
   // zh
   madmoneylabs: 'zh',
@@ -444,6 +453,7 @@ export const ALTERNATIVE_IMAGES_PATHS = new Set<string>([
   'luca',
   'pietro',
   'gaito',
+  'otto',
 ]);
 export const ONLY_ULTIMATE_PLANS_PATHS = new Set<string>(['ultimate']);
 export const ULTIMATE_PREMIUM_PLANS_PATHS = new Set<string>([]);
@@ -491,6 +501,12 @@ export const URGENT_CHECKOUT_PATHS = new Set<string>([
   'howmation',
   'dinamotech',
   'pietro',
+  'gyan',
+  'gaito',
+  'otto',
+  'fabio',
+  'caleel',
+  'entropywse',
 ]);
 export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'adi4u',
@@ -687,6 +703,13 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'voucher85',
   'isa',
   'slackjeff',
+  'milan',
+  'ks',
+  'aorus',
+  'mithun',
+  'lapaastech',
+  'caleel',
+  'entropywse',
 ]);
 
 export const COUPON_CODES = {
@@ -935,6 +958,13 @@ export const COUPON_CODES = {
   voucher85: PromoCodeName.voucher85,
   isa: PromoCodeName.isa,
   slackjeff: PromoCodeName.slackjeff,
+  milan: PromoCodeName.milan,
+  ks: PromoCodeName.ks,
+  aorus: PromoCodeName.aorus,
+  mithun: PromoCodeName.mithun,
+  lapaastech: PromoCodeName.lapaastech,
+  caleel: PromoCodeName.caleel,
+  entropywse: PromoCodeName.entropywse,
 };
 
 interface OfferConfig {

@@ -517,6 +517,13 @@ export enum PromoCodeName {
   vouchercw90 = 'VOUCHERCW90',
   isa = 'ISA',
   slackjeff = 'SLACKJEFF',
+  milan = 'MILAN',
+  ks = 'KS',
+  aorus = 'AORUS',
+  mithun = 'MITHUN',
+  lapaastech = 'LAPAASTECH',
+  caleel = 'CALEEL',
+  entropywse = 'ENTROPYWSE',
 }
 
 export interface PromoCodeProps {
