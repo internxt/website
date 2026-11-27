@@ -252,6 +252,7 @@ export const ALLOWED_PATHS = [
   'ks',
   'aorus',
   'mithun',
+  'lapaastech',
 ];
 
 export const ENFORCED_LOCALE: Record<string, string> = {
@@ -695,6 +696,7 @@ export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'ks',
   'aorus',
   'mithun',
+  'lapaastech',
 ]);
 
 export const COUPON_CODES = {
@@ -947,6 +949,7 @@ export const COUPON_CODES = {
   ks: PromoCodeName.ks,
   aorus: PromoCodeName.aorus,
   mithun: PromoCodeName.mithun,
+  lapaastech: PromoCodeName.lapaastech,
 };
 
 interface OfferConfig {
