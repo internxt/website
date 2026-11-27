@@ -522,6 +522,8 @@ export enum PromoCodeName {
   aorus = 'AORUS',
   mithun = 'MITHUN',
   lapaastech = 'LAPAASTECH',
+  caleel = 'CALEEL',
+  entropywse = 'ENTROPYWSE',
 }
 
 export interface PromoCodeProps {
