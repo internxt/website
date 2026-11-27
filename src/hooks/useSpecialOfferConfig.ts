@@ -496,6 +496,10 @@ export const URGENT_CHECKOUT_PATHS = new Set<string>([
   'howmation',
   'dinamotech',
   'pietro',
+  'gyan',
+  'gaito',
+  'otto',
+  'fabio',
 ]);
 export const ANNUAL_DISCOUNT_PLANS_PATHS = new Set<string>([
   'adi4u',
