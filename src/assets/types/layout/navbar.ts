@@ -12,6 +12,7 @@ export interface Links {
   pricing: string;
   login: string;
   blackFriday: string;
+  cyberWeek: string;
   getStarted: string;
   chooseStorage: string;
   checkout: string;

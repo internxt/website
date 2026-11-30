@@ -1,3 +1,5 @@
+import { Campaign } from '@/lib/helpers/campaigns';
+
 export interface BannersText {
   changeEmailBanner: ChangeEmailBanner;
   LoginBanner: BFBannerClass;
@@ -116,6 +118,7 @@ export interface GoogleLpBanner {
 }
 
 export interface TopBarBanner {
+  campaigns: Partial<Record<Campaign, Record<string, string>>>;
   title: TopBarBannerTitle;
 }
 

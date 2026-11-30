@@ -122,9 +122,17 @@
     "title": "Optimisez vos paramètres de confidentialité Google avec notre nouvelle page sur la confidentialité"
   },
   "TopBarBanner": {
+    "campaigns": {
+      "blackFriday": {
+        "campaignThe": "le Black Friday"
+      },
+      "cyberWeek": {
+        "campaignThe": "la Cyber Week"
+      }
+    },
     "title": {
       "boldText": "",
-      "normalText": "Des réductions massives pour le Black Friday — pour une durée limitée !",
+      "normalText": "Des réductions massives pour {{campaignThe}} — pour une durée limitée !",
       "cta": "Profiter de l'offre"
     }
   },

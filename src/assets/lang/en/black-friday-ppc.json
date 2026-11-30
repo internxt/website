@@ -1,4 +1,14 @@
 {
+  "campaigns": {
+    "blackFriday": {
+      "campaign": "Black Friday",
+      "endDate": "December 3rd, 2026"
+    },
+    "cyberWeek": {
+      "campaign": "Cyber Week",
+      "endDate": "December 4th, 2026"
+    }
+  },
   "HeroSection": {
     "products": {
       "drive": "Drive",
@@ -9,8 +19,8 @@
       "photos": "Photos",
       "mail": "Mail"
     },
-    "title": "**Black Friday**: {{discount}}% off private cloud storage",
-    "titleWithoutDiscount": "**Black Friday**",
+    "title": "**{{campaign}}**: {{discount}}% off private cloud storage",
+    "titleWithoutDiscount": "**{{campaign}}**",
     "subtitle": "Encrypted on your device. Nobody reads your files. Not even us.",
     "description": "Get {{discount}}% off now!",
     "features": [
@@ -62,17 +72,17 @@
     "trustpilot": "Outstanding value given the security and features offered. Excellent service and support."
   },
   "WhyChooseSection": {
-    "title": "Why choose our Black Friday cloud storage deals?",
+    "title": "Why choose our {{campaign}} cloud storage deals?",
     "cards": {
       "titles": [
         "A fully private ecosystem",
         "The most advanced encryption",
-        "Our biggest Black Friday deal ever"
+        "Our biggest {{campaign}} deal ever"
       ],
       "descriptions": [
         "All paid Internxt plans include post-quantum encrypted storage, backups, and Antivirus. For complete online protection, you also get VPN, Cleaner, Meet, and Mail, everything you need to stay secure online.",
         "Get the first cloud storage with post-quantum encryption to upload, store, and share your files in total privacy with our end-to-end encrypted cloud service. Backup and sync your files to prevent data loss and ensure smooth collaboration with friends, family, or colleagues.",
-        "Take advantage of our biggest Black Friday offer yet with even more features to protect your data and files online. With a massive discount on our plans, now is the perfect time to get the best value on secure and private cloud storage, and more! "
+        "Take advantage of our biggest {{campaign}} offer yet with even more features to protect your data and files online. With a massive discount on our plans, now is the perfect time to get the best value on secure and private cloud storage, and more! "
       ]
     }
   },
@@ -105,7 +115,7 @@
     }
   },
   "CtaSection": {
-    "title": "Black Friday: {{discount}}% off private cloud storage",
+    "title": "{{campaign}}: {{discount}}% off private cloud storage",
     "description": "",
     "cta": "Get the deal",
     "guarantee": "30-day money-back guarantee"
@@ -114,15 +124,15 @@
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "How do I get the Internxt Black Friday Discount?",
+        "question": "How do I get the Internxt {{campaign}} Discount?",
         "answer": [
           "To claim your discount, choose from our Essential, Premium, or Ultimate plan and head to the checkout page. Your {{discount}}% discount is automatically applied at checkout."
         ]
       },
       {
-        "question": "When does the Black Friday Internxt Deal end?",
+        "question": "When does the {{campaign}} Internxt Deal end?",
         "answer": [
-          "The Black Friday sale ends December 3rd, 2026."
+          "The {{campaign}} sale ends {{endDate}}."
         ]
       },
       {
@@ -134,7 +144,7 @@
       {
         "question": "Will I keep my discount when my plan ends?",
         "answer": [
-          "The Black Friday deal is valid until the end of the subscription period. Your subscription will automatically renew at the regular price once this subscription period ends at the end of the year. As lifetime plans only require one payment, your discount will last forever."
+          "The {{campaign}} deal is valid until the end of the subscription period. Your subscription will automatically renew at the regular price once this subscription period ends at the end of the year. As lifetime plans only require one payment, your discount will last forever."
         ]
       },
       {

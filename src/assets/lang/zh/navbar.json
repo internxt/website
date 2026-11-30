@@ -10,7 +10,8 @@
     "chooseStorage": "选择存储",
     "checkout": "现在宣称！",
     "business": "商业",
-    "blackFriday": "Black Friday"
+    "blackFriday": "Black Friday",
+    "cyberWeek": "网络周"
   },
   "products": {
     "drive": { "name": "Internxt Drive" },

@@ -147,9 +147,17 @@
     "blueText": "Genießen Sie ein noch privateres Online-Erlebnis mit Internxt"
   },
   "TopBarBanner": {
+    "campaigns": {
+      "blackFriday": {
+        "campaign": "Black-Friday"
+      },
+      "cyberWeek": {
+        "campaign": "Cyber-Week"
+      }
+    },
     "title": {
       "boldText": "",
-      "normalText": "Riesige Black-Friday-Rabatte — nur für kurze Zeit!",
+      "normalText": "Riesige {{campaign}}-Rabatte — nur für kurze Zeit!",
       "cta": "Angebot sichern"
     }
   },

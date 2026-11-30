@@ -1,4 +1,14 @@
 {
+  "campaigns": {
+    "blackFriday": {
+      "campaign": "黑色星期五",
+      "endDate": "2026 年 12 月 3 日"
+    },
+    "cyberWeek": {
+      "campaign": "網路週",
+      "endDate": "2026 年 12 月 4 日"
+    }
+  },
   "HeroSection": {
     "products": {
       "drive": "Drive",
@@ -10,30 +20,30 @@
       "ai": "AI",
       "photos": "Photos"
     },
-    "title": "**黑色星期五** Internxt 優惠",
-    "subtitle": "獲得 2026 年最佳黑色星期五優惠，\n所有 Internxt 方案享 {{discount}}% 折扣",
+    "title": "**{{campaign}}** Internxt 優惠",
+    "subtitle": "獲得 2026 年最佳{{campaign}}優惠，\n所有 Internxt 方案享 {{discount}}% 折扣",
     "description": "立即獲得 {{discount}}% 折扣！",
     "features": ["私人數位套件", "後量子加密", "開源且經過審核"],
     "claimDeal": "領取優惠"
   },
   "DontMissSection": {
-    "title": "別錯過您的 Internxt 黑色星期五優惠！",
+    "title": "別錯過您的 Internxt {{campaign}}優惠！",
     "description": [
       "使用 Internxt 保護您的線上數據，我們完整的隱私套件包括備份、防毒軟體、VPN、Cleaner、Meet、Mail 等更多功能。",
-      "透過 Internxt 的 {{discount}}% 黑色星期五折扣，獲得最佳的線上隱私和安全性。"
+      "透過 Internxt 的 {{discount}}% {{campaign}}折扣，獲得最佳的線上隱私和安全性。"
     ]
   },
   "MoreDealsSection": {
-    "title": "更多黑色星期五優惠",
-    "description": "找到最適合您雲端儲存和隱私需求的黑色星期五優惠",
+    "title": "更多{{campaign}}優惠",
+    "description": "找到最適合您雲端儲存和隱私需求的{{campaign}}優惠",
     "cards": {
       "card1": {
-        "title": "雲端儲存黑色星期五優惠",
+        "title": "雲端儲存{{campaign}}優惠",
         "description": "為您的檔案節省大量加密雲端儲存費用",
         "cta": "查看儲存優惠"
       },
       "card2": {
-        "title": "個人雲端儲存黑色星期五優惠",
+        "title": "個人雲端儲存{{campaign}}優惠",
         "description": "個人和個人方案的獨家折扣",
         "cta": "查看個人優惠"
       }
@@ -69,18 +79,18 @@
     }
   },
   "WhyChooseSection": {
-    "title": "為什麼選擇 Internxt 的黑色星期五優惠?",
+    "title": "為什麼選擇 Internxt 的{{campaign}}優惠?",
     "cards": {
-      "titles": ["完全私密的生態系統", "最先進的加密技術", "我們有史以來最大的黑色星期五優惠"],
+      "titles": ["完全私密的生態系統", "最先進的加密技術", "我們有史以來最大的{{campaign}}優惠"],
       "descriptions": [
         "所有 Internxt 付費方案都包含後量子加密儲存、備份和防毒軟體。為了獲得完整的線上保護，您還可以獲得 VPN、Cleaner、Meet、Mail 和 Photos，這是您在線上保持安全所需的一切。",
         "獲得首個具有後量子加密的雲端儲存，透過我們的端對端加密雲端服務，以完全隱私的方式上傳、儲存和分享您的檔案。備份和同步您的檔案以防止資料遺失，並確保與朋友、家人或同事順暢協作。",
-        "利用我們迄今為止最大的黑色星期五優惠，獲得更多功能來保護您的線上數據和檔案。憑藉高達 {{discount}}% 的巨額折扣，現在是獲得安全且私密的雲端儲存最佳性價比的完美時機，還有更多優惠！"
+        "利用我們迄今為止最大的{{campaign}}優惠，獲得更多功能來保護您的線上數據和檔案。憑藉高達 {{discount}}% 的巨額折扣，現在是獲得安全且私密的雲端儲存最佳性價比的完美時機，還有更多優惠！"
       ]
     }
   },
   "CtaSection": {
-    "title": "發現黑色星期五的巨大優惠",
+    "title": "發現{{campaign}}的巨大優惠",
     "description": "所有優質方案均享 {{discount}}% 折扣",
     "cta": "領取優惠"
   },
@@ -99,7 +109,7 @@
     }
   },
   "CtaSectionV2": {
-    "title": "最佳黑色星期五優惠",
+    "title": "最佳{{campaign}}優惠",
     "description": "所有方案 {{discount}}% 折扣",
     "cta": "領取優惠"
   },
@@ -107,14 +117,14 @@
     "title": "有問題？我們有答案",
     "faq": [
       {
-        "question": "如何獲得 Internxt 黑色星期五折扣？",
+        "question": "如何獲得 Internxt {{campaign}}折扣？",
         "answer": [
           "要獲取折扣，請從我們的 Essential、Premium 或 Ultimate 方案中進行選擇，然後前往結帳頁面。您的 {{discount}}% 折扣將在結帳時自動套用。"
         ]
       },
       {
-        "question": "Internxt 黑色星期五優惠何時結束？",
-        "answer": ["黑色星期五促銷活動將於 2026 年 12 月 3 日結束。"]
+        "question": "Internxt {{campaign}}優惠何時結束？",
+        "answer": ["{{campaign}}促銷活動將於 {{endDate}}結束。"]
       },
       {
         "question": "誰有資格享受此折扣？",
@@ -125,7 +135,7 @@
       {
         "question": "方案結束後我還能保留折扣嗎？",
         "answer": [
-          "黑色星期五優惠在訂閱期結束前有效。訂閱期在第一個月結束後，您的訂閱將自動以正常價格續訂。由於終身方案只需一次付款，您的折扣將永久有效。"
+          "{{campaign}}優惠在訂閱期結束前有效。訂閱期在第一個月結束後，您的訂閱將自動以正常價格續訂。由於終身方案只需一次付款，您的折扣將永久有效。"
         ]
       },
       {

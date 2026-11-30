@@ -176,9 +176,17 @@
     "title": "Aproveite ao máximo suas configurações de privacidade do Google com a nossa página O que o Google sabe"
   },
   "TopBarBanner": {
+    "campaigns": {
+      "blackFriday": {
+        "campaign": "Black Friday"
+      },
+      "cyberWeek": {
+        "campaign": "Cyber Week"
+      }
+    },
     "title": {
       "boldText": "",
-      "normalText": "Descontos enormes de Black Friday — só por tempo limitado!",
+      "normalText": "Descontos enormes de {{campaign}} — só por tempo limitado!",
       "cta": "Aproveitar oferta"
     }
   },

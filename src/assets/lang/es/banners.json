@@ -131,9 +131,17 @@
     "title": "Maximiza tu configuración de privacidad de Google con nuestra nueva página de privacidad"
   },
   "TopBarBanner": {
+    "campaigns": {
+      "blackFriday": {
+        "campaign": "Black Friday"
+      },
+      "cyberWeek": {
+        "campaign": "Cyber Week"
+      }
+    },
     "title": {
       "boldText": "",
-      "normalText": "Grandes descuentos de Black Friday — ¡solo por tiempo limitado!",
+      "normalText": "Grandes descuentos de {{campaign}} — ¡solo por tiempo limitado!",
       "cta": "Consigue la oferta"
     }
   },
