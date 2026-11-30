@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { GetStaticPropsContext } from 'next';
 import { HomeText } from '@/assets/types/home';
@@ -12,7 +11,7 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
-import { Campaign, isCampaign } from '@/lib/helpers/campaigns';
+import { Campaign, fetchActiveCampaign } from '@/lib/helpers/campaigns';
 import TrustedSection from '@/components/home/TrustedSection';
 import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
 import AwardWinningSection from '@/components/home/AwardWinningPrivacySection';
@@ -33,10 +32,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
   const [campaign, setCampaign] = useState<Campaign>();
   useEffect(() => {
-    axios
-      .get('/api/get_active_campaign', { params: { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone } })
-      .then(({ data }) => setCampaign(isCampaign(data?.campaign) ? data.campaign : undefined))
-      .catch(() => undefined);
+    fetchActiveCampaign().then(setCampaign);
   }, []);
   const {
     products,

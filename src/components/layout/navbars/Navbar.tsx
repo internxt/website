@@ -11,6 +11,7 @@ import Image from 'next/image';
 import { ItemsNavigation } from '../components/navbar/ItemsNavigation';
 import { getImage } from '@/lib/getImage';
 import { NavigationBarText } from '@/assets/types/layout/types';
+import { Campaign, fetchActiveCampaign } from '@/lib/helpers/campaigns';
 import LanguageMobileBox from '../components/LanguageMobileBox';
 
 export interface NavbarProps {
@@ -37,6 +38,11 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   const [menuState, setMenuState] = useState(false);
   const [scrolled, setScrolled] = useState(true);
   const [isRibbonHidden, setIsRibbonHidden] = useState<boolean>();
+  const [campaign, setCampaign] = useState<Campaign>();
+  useEffect(() => {
+    fetchActiveCampaign().then(setCampaign);
+  }, []);
+  const isCyberWeek = campaign === Campaign.CyberWeek;
 
   const router = useRouter();
   const lang = router.locale;
@@ -107,6 +113,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               lang={lang as string}
               router={router}
               textContent={props.textContent}
+              campaign={campaign}
             />
           </div>
 
@@ -253,7 +260,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                       </Link>
 
                       <Link
-                        href="/black-friday"
+                        href={isCyberWeek ? '/cyber-week' : '/black-friday'}
                         locale={props.lang}
                         role="link"
                         tabIndex={0}
@@ -264,7 +271,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
                         }`}
                       >
-                        {props.textContent.links.blackFriday}
+                        {isCyberWeek ? props.textContent.links.cyberWeek : props.textContent.links.blackFriday}
                       </Link>
 
                       <Disclosure

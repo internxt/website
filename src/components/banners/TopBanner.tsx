@@ -1,8 +1,11 @@
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { CaretRight } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { ROUTES_WITH_OWN_PAGES } from '@/constants';
+import { Campaign, fetchActiveCampaign } from '@/lib/helpers/campaigns';
 import { COUPON_CODES } from '@/hooks/useAffiliatesCampaignOfferConfig';
+import { formatText } from '@/components/utils/format-text';
 
 interface TopBannerProps {
   isBannerFixed?: boolean;
@@ -11,13 +14,19 @@ interface TopBannerProps {
 
 const TopBanner = ({ isBannerFixed, lang: pageLang }: TopBannerProps) => {
   const router = useRouter();
+  const [campaign, setCampaign] = useState<Campaign>();
+  useEffect(() => {
+    fetchActiveCampaign().then(setCampaign);
+  }, []);
   const lang = pageLang ?? router.locale;
-  const bannersJson = require(`@/assets/lang/${lang}/banners.json`);
-  const textContent = bannersJson.TopBarBanner;
+  const langJson = require(`@/assets/lang/${lang}/banners.json`).TopBarBanner;
+  const campaignText = campaign ? langJson.campaigns[campaign] : undefined;
+  const textContent = formatText(langJson, campaignText ?? langJson.campaigns.blackFriday);
   const routeWithOwnPages = ROUTES_WITH_OWN_PAGES.find((route) => router.pathname.startsWith(`/${route}`));
   const promoCode = [router.query.filename, router.query.coupon].find((code) => COUPON_CODES[code as string]);
   const couponQuery = promoCode ? `?coupon=${promoCode}` : '';
-  const bannerUrl = routeWithOwnPages ? `/${routeWithOwnPages}/black-friday-deals${couponQuery}` : '/black-friday';
+  const page = campaign === Campaign.CyberWeek ? 'cyber-week' : 'black-friday';
+  const bannerUrl = routeWithOwnPages ? `/${routeWithOwnPages}/${page}-deals${couponQuery}` : `/${page}`;
 
   return (
     <>

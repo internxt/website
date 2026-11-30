@@ -2,6 +2,7 @@ import { GetServerSidePropsContext } from 'next';
 import { useRouter } from 'next/router';
 import { getDealsProps } from '@/lib/helpers/deals';
 import { PromoCodeName } from '@/lib/types';
+import { Campaign } from '@/lib/helpers/campaigns';
 import BlackFridayDealsTemplate from '@/components/templates/blackFridayDealsTemplate';
 import { COUPON_CODES } from '@/hooks/useAffiliatesCampaignOfferConfig';
 
@@ -39,6 +40,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     },
     {
       jsonFileName: 'black-friday',
+      campaign: Campaign.BlackFriday,
     },
   );
 }
